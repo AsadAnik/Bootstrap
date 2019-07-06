@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Container/Media Query | Bootstrap Course</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keyword" content="bootstrap, responsive, design, web">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<style type="text/css">/*The CSS*/
+    .green{
+        background: lightgray;
+        min-height: 400px;
+    }
+    .align{
+        padding-top: 100px;
+        color: white;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1080px){
+        .green{
+            background: lightblue;
+        }
+    }
+    @media only screen and (min-width: 450px) and (max-width: 767px){
+        .green{
+            background: orange
+        }
+    }
+</style>
+
+<body>
+    
+    <!--The main body area of here-->
+    <div class="container">
+        <h1 class="display-3">Hello World</h1>
+    </div>  
+    <div class="container-fluid green">
+        <h1 class="display-1 text-center align">Welcome To My World</h1>
+    </div>
+</body>
+
+</html>

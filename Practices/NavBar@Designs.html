@@ -1,0 +1,191 @@
+<html>
+<head>
+    <title>Nav_Bar | Bootstrap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scal=1">
+    <meta name="keyword" content="Jumbotron, bootstrap jumbotron, jumbotron">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/css/tether.min.css">
+   <!--CDN just only for stable internet connection-- 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   -->
+   
+</head>
+
+<style type="text/css">/*The CSS here*/
+    .con{
+        height: auto;
+        background: #c1c1c1;
+        padding: 50px; 
+    }
+</style>
+
+<body>
+    <!--The HTML Body area-->
+<!--The Navbar-->
+    <div class="container text-center">
+        <h1 class="display-1">
+            Bootstrap Navbars
+        </h1>
+    </div>
+    <br>
+
+  <!--The 1st Navbar-->    
+  <div class="container con"> <!--Navbar-->
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+    <br> 
+    <hr> <!--2nd Navbar-->     
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">Navbar</a>
+              
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+     <br>
+     <hr> <!--The 3rd Navbar-->         
+              <div class="pos-f-t">
+                    <div class="collapse" id="navbarToggleExternalContent">
+                      <div class="bg-dark p-4">
+                        <h5 class="text-white h4">Collapsed content</h5>
+                        <span class="text-muted">Toggleable via the navbar brand.</span>
+                      </div>
+                    </div>
+                    <nav class="navbar navbar-dark bg-dark">
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                    </nav>
+                  </div>
+    </div>
+    <br>
+    <hr>
+
+<!--Navs/Sidebar with the JavaScript Behavior-->
+    <div class="container text-center">
+        <h1 class="display-3">
+            Navs On Bootstrap
+        </h1>
+    </div>
+    <br>
+
+    <div class="container con"> <!--NAVS/SIDEBAR with JS Behavior-->
+         <!--The Navs with Tab-->
+             <!--The Navs with JS Behavior-->
+        <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"   href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"   href="#nav-profile" role="tab" aria-controls="nav-profile"    aria-selected="false">Profile</a>
+                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"   href="#nav-contact" role="tab" aria-controls="nav-contact"    aria-selected="false">Contact</a>
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel"    aria-labelledby="nav-home-tab">...</div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel"     aria-labelledby="nav-profile-tab">...</div>
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel"     aria-labelledby="nav-contact-tab">...</div>
+              </div>
+
+        <br>
+        <hr> <!--2nd JS Behavior navs-->
+
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="pills-home-tab" data-toggle="pill"     href="#pills-home" role="tab" aria-controls="pills-home"    aria-selected="true">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill"     href="#pills-profile" role="tab" aria-controls="pills-profile"  aria-selected="false">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill"     href="#pills-contact" role="tab" aria-controls="pills-contact"  aria-selected="false">Contact</a>
+                    </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"  aria-labelledby="pills-home-tab">...</div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"   aria-labelledby="pills-profile-tab">...</div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel"   aria-labelledby="pills-contact-tab">...</div>
+              </div>
+
+        <br>
+        <hr> <!--3rd JS Behavior navs-->
+           <div class="row">
+                <div class="col-3">
+                  <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill"         href="#v-pills-home" role="tab" aria-controls="v-pills-home"        aria-selected="true">Home</a>
+                        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill"         href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"      aria-selected="false">Profile</a>
+                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill"        href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"    aria-selected="false">Messages</a>
+                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill"        href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"    aria-selected="false">Settings</a>
+                  </div>
+                </div>
+                <div class="col-9">
+                  <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"    aria-labelledby="v-pills-home-tab">...</div>
+                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"     aria-labelledby="v-pills-profile-tab">...</div>
+                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"    aria-labelledby="v-pills-messages-tab">...</div>
+                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"    aria-labelledby="v-pills-settings-tab">...</div>
+                  </div>
+                </div>
+              </div>
+    </div>
+</body><!--END of this Body HTML-->
+   
+   <script src="js/jQuery.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/js/tether.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <!--CDN just for stable internet connection--
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   -->
+
+</html>

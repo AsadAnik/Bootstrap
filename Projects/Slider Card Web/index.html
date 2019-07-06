@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!--head start-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap | SliderCards Web</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/css/tether.min.css">
+    <!--CDN for stable internert connection-- 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   -->
+</head><!--END of the head section-->
+
+<style type="text/css">/*The CSS file inner of there*/
+    .imgRnd:hover{
+        transform: rotate(360deg);
+        transition: 3s;
+    }
+    .imgRnd:active{
+        transform: rotate(-360deg);
+        transition: 1s;
+    }
+    .addItem img{
+        height: 600px;
+    }
+    .cardImg{
+        height: 350px;
+    }
+    .footer{
+      background: rgb(233, 230, 230);
+      padding: 20px;
+      height: 200px;
+      width: 100%;
+    }
+</style><!--END of CSS-->
+
+<body>
+    <!--The HTML Body Section-->
+        <!--The Navigation Bar-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <div class="container">
+            <!--Brand name & Images-->    
+                    <img src="assets/logo.png" width="50" height="50" alt="No Company Logo" class="imgRnd">
+                    <a class="navbar-brand" href="#" style="color: rgb(255, 165, 0);">Asad Anik</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                <!--Ul li of this navbar-->  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto"><!--ul start-->
+                    <!--1st li item-->    
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                    <!--2nd li item-->    
+                        <li class="nav-item">
+                          <a class="nav-link" href="#Fruits">Fruits</a>
+                        </li>
+                    <!--3rd li item-->    
+                        <li class="nav-item">
+                          <a class="nav-link" href="#Places">Places</a>
+                        </li>
+                    <!--4th li item-->    
+                        <li class="nav-item">
+                          <a class="nav-link" href="#Habits">Habits</a>
+                        </li>
+                    <!--5th li item-->    
+                        <li class="nav-item dropdown"><!--Drop Down item-->
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Privacy
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Login</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Create One</a>
+                          </div>
+                        </li>
+                      </ul><!--END of this Ul-->
+                      <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                      </form>
+                    </div>
+                </div>
+            </nav><!--The NavBar ENDs-->
+
+     <!--The Slider of this page-->       
+     <div class="bd-example">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+            <!--1st Slider-->     
+                <div class="carousel-item addItem active">
+                  <img src="assets/slider/1.jpg" class="d-block w-100" alt="No Image in 1st Area!">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1 class="display-2">First slide label</h1><!--Text-->
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                  </div>
+                </div>
+            <!--2nd Slider-->    
+                <div class="carousel-item addItem">
+                  <img src="assets/slider/2.jpg" class="d-block w-100" alt="No Image in 2nd Area!">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1 class="display-2">Second slide label</h1><!--Text-->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+            <!--3rd Slider-->    
+                <div class="carousel-item addItem">
+                  <img src="assets/slider/3.jpg" class="d-block w-100" alt="No Image in 3rd Area!">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1 class="display-2">Third slide label</h1><!--Text-->
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                  </div>
+                </div>
+              </div>
+            <!--The Buttons for next and previous-->  
+              <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div><!--END of this slider-->
+          <br>
+
+     <!--The Cards-->
+     <!--Cards & Texts-->      
+          <div id="Fruits" class="container"><!--The Card Container-->
+        <!--Text For Heilighting-->    
+            <h1 class="text-center text-muted">The Fruits You Might Like Most</h1>
+            <hr>
+            <br>
+
+         <!--Row & Column For There Cards Apple, Orange & Banana-->   
+              <div class="row">
+                  <div class="col"><!--1st Card of Apple-->
+                        <div class="card" style="width: 20rem; border: 1px solid red;">
+                                <img src="assets/apple.jpg" class="card-img-top cardImg" alt="No Image Fouded!">
+                                <div class="card-body">
+                                  <h5 class="card-title">Apple Card</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="btn btn-danger">Get Me!</a>
+                                </div>
+                              </div>
+                  </div><!--END of Apple Card-->
+                  <div class="col"><!--2nd Card of Orange-->
+                        <div class="card" style="width: 20rem; border: 1px solid green;">
+                                <img src="assets/orange.jpg" class="card-img-top cardImg" alt="No Image Founded!">
+                                <div class="card-body">
+                                  <h5 class="card-title">Orange Card</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of sthe card's content.</p>
+                                  <a href="#" class="btn btn-success">Get Me!</a>
+                                </div>
+                              </div>
+                  </div>
+                  <div class="col"><!--3rd Card of Banana-->
+                        <div class="card" style="width: 20rem; border: 1px solid Orange;">
+                                <img src="assets/banana.jpg" class="card-img-top cardImg" alt="No Image Founded!">
+                                <div class="card-body">
+                                  <h5 class="card-title">Banana Card</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="btn btn-warning">Get Me!</a>
+                                </div>
+                              </div>
+                  </div><!--END of Banana Card-->
+              </div>
+          </div><!--END of this Card Container-->
+          <br>
+
+    <!--Texts For Place Peoples Like Must-->      
+          <div id="Places" class="container">
+              <h1 class="text-muted text-center">The Place You Like Must</h1>  
+              <hr>
+              <br>
+
+    <!--The Cards for Place You Like Must-->  
+      <div class="card mb-3"><!--Place Card-->
+            <img src="assets/One.jpg" class="card-img-top img_size" alt="No Cap Image Founded!">
+          <!--Card Body-->  
+            <div class="card-body">
+              <h5 class="card-title">South Europe</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+     </div><!--END of Place Card-->
+    </div><!--END of this Container-->
+    <br>
+
+  <!--Habits You Like Must -->  
+     <div id="Habits" class="container">
+          <h1 class="text-muted text-center">The Habits You Enjoy Must</h1>
+          <hr>
+          <br>
+
+          <div class="card-deck"><!--Deck Card-->
+            <!--1st One-->
+                <div class="card"><!--1st One-->
+                  <img src="assets/img_1.jpg" class="card-img-top" alt="No Images Founded!">
+                 <!--Card Body--> 
+                  <div class="card-body">
+                    <h5 class="card-title">Books Reading</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 7 mins ago</small></p>
+                  </div>
+                </div><!--END of 1st One-->
+            
+            <!--2nd One-->    
+                <div class="card"><!--2nd One Deck Card-->
+                  <img src="assets/img_2.jpg" class="card-img-top" alt="No Images Founded!">
+                 <!--Card Body-->
+                  <div class="card-body">
+                    <h5 class="card-title">Megazine Reading</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
+                  </div>
+                </div><!--END of 2nd One-->
+              </div><!--END of Deck Card-->
+     </div>
+     <br>
+
+
+         
+
+    <!--The Footer of this Area-->    
+       <footer class="footer">
+         <div class="container text-center">
+            <h5>About Us</h5>
+            <hr>
+         </div>
+       </footer><!--END of This page Footer-->   
+
+          
+
+   
+</body><!--END of the Body Section-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/js/tether.min.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--CDN for stable internet connection--
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    -->        
+</html>

@@ -1,0 +1,24 @@
+body{
+    background: url('../assets/picSM.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Abril Fatface', cursive;
+}
+*{ color: #000000; }
+.rowHeight{
+    height: 500px;
+}
+.BG{
+    background: #c1c1c1;
+    opacity: .8;
+}
+.img img{
+    height: 200px;
+    width: 300px;
+}
+.footer{
+    background: #ffffff;
+}
+.footer p{
+    font-size: 18px;
+    padding: 20px;
+}

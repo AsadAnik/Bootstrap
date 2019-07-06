@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!--head start-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/css/tether.min.css">
+    <!--CDN for stable internert connection-- 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   -->
+</head><!--END of the head section-->
+
+    <style type="text/css">/*Some CSS for Styling*/
+    /*For Every Container*/   
+        .con{
+            background: #ddd;
+            padding: 20px;
+        }
+    /*For Cards Image*/    
+        .img_size{
+            height: 350px;
+        }
+    </style><!--END of Some CSS-->
+
+<body>
+    <!-------The HTML Body Section-------->
+    <div class="container text-center">
+        <h1 class="display-1">Cards of Bootstrap</h1>
+    </div>
+    <br>
+
+  <!-------1st Container------->  
+    <div class="container con">
+        <div class="row"><!--The Row-->
+            <div class="col"><!--1st Card Col-->
+                <div class="card" style="width: 20rem; border: 1px solid red;">
+                    <img src="assets/apple.jpg" alt="No Image founded!" class="card-img-top img_size">
+                <!--The Body of card-->    
+                    <div class="card-body">
+                        <h5 class="card-title">Apple Card</h5>
+                        <p class="card-text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus sint officia saepe vero voluptas nulla temporibus ex dolorum facere tempore?
+                        </p>
+                        <a href="#" class="btn btn-danger">Get Me!</a>
+                    </div>
+                </div><!--END of 1st Card-->
+            </div><!--END of 1st Col-->
+
+        <!--2nd Col of this row-->    
+            <div class="col"><!--2nd Card-->
+                <div class="card" style="width: 20rem; border: 1px solid green;">
+                    <img src="assets/orange.jpg" alt="No Image founded!" class="card-img-top img_size">
+                <!--Card Body Area-->
+                    <div class="card-body">
+                        <h5 class="card-title">Orange Card</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis a quos vitae enim? A voluptatibus voluptas deleniti voluptatem illum. Sit atque saepe quod iure doloribus?
+                        </p>
+                        <a href="#" class="btn btn-success">Get Me!</a>
+                    </div>    
+                </div><!--END of 2nd Card-->
+            </div><!--END of 2nd Col-->
+
+        <!--3rd Col of this row-->    
+            <div class="col"><!--3rd Card-->
+                <div class="card" style="width: 20rem; border: 1px solid yellow;">
+                    <img src="assets/banana.jpg" alt="No Image founded!" class="card-img-top img_size">
+                    <div class="card-body">
+                        <h5 class="card-title">Banana Card</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, dolores vel tenetur itaque quod culpa aut omnis soluta quidem cumque amet molestias modi atque provident?</p>
+                        <a href="#" class="btn btn-warning">Get Me!</a>
+                    </div>
+                </div><!--END of this card-->
+            </div><!--END of 3rd Col-->
+        </div><!--END of Row-->
+        <br>
+      
+    <!--4th Card-->  
+        <div class="card mb-3" style="max-width: 600px;"><!--Horizontal Card-->
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="assets/win.jpg" class="card-img" alt="Picture Not Founded!">
+                  </div>
+                  <div class="col-md-8">
+                <!--Card Body-->     
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div><!--END of 4th Horizontal Card-->
+    </div><!--END of 1st container-->
+    <br>
+    <hr>
+
+<!------The Cards With Header & Footer------>  
+    <div class="container text-center">
+        <h3 class="display-3">Cards with Header and Footer</h3>
+    </div>
+    <br>
+
+  <!------2nd Container------>  
+    <div class="container con">
+      <!--1st One-->  
+        <div class="card"><!--Card Start here-->
+            <h5 class="card-header">Featured</h5>
+          <!--Card Body-->  
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-info">Go somewhere</a>
+            </div>
+          </div><!--END of 1st Card-->
+          <br>
+
+        <!--2nd One-->  
+          <div class="card"><!--2nd Card Start here-->
+            <div class="card-header">
+              Quote
+            </div>
+          <!--Card Body-->  
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+              </blockquote>
+            </div>
+          </div><!--END of 2nd Card-->
+          <br>
+        
+        <!--3rd One-->  
+          <div class="card text-center"><!--3rd Card Start here-->
+                <div class="card-header">
+                  Featured
+                </div>
+            <!--Card Body-->    
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-success">Go somewhere</a>
+                </div>
+                <div class="card-footer text-muted">
+                  2 days ago
+                </div>
+            </div><!--END of 3rd Card-->
+    </div><!--END of 2nd Container Section-->
+    <br>
+    <hr>
+
+<!--------Navigation Cards-------->
+    <div class="container text-center">
+        <h3 class="display-3">Navigation Cards</h3>
+    </div>
+    <br>
+
+  <!------3rd Container------>  
+    <div class="container con">
+        <!--1st NavCard-->
+            <div class="card text-center"><!--1st NavCard start-->
+                    <div class="card-header">
+                      <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                      </ul>
+                    </div>
+                  <!--Card Body-->  
+                    <div class="card-body">
+                      <h5 class="card-title">Special title treatment</h5>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+            </div><!--END of 1st NavCard-->
+            <br>
+
+         <!--2nd NavCard-->   
+         <div class="card text-center"><!--2nd NavCard start-->
+                <div class="card-header">
+                  <ul class="nav nav-pills card-header-pills">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                  </ul>
+                </div>
+              <!--Card Body-->  
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+          </div><!--END of 2nd NavCard-->
+    </div><!--END of 3rd Container-->    
+    <br>
+    <hr>    
+
+<!--------Image Caps Cards-------->
+    <div class="container text-center">
+        <h3 class="display-3">Image Caps Cards</h3>
+    </div>
+    <br>
+
+  <!------4th Container------>  
+    <div class="container con">
+            <div class="card mb-3"><!--1st One-->
+                    <img src="assets/One.jpg" class="card-img-top img_size" alt="No Cap Image Founded!">
+                  <!--Card Body-->  
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+            </div><!--END of 1st One-->
+            <br>
+
+            <!--2nd Card-->
+                <div class="card">
+                 <!--Card Body-->     
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                    <img src="assets/Two.jpg" class="card-img-top img_size" alt="No Cap Image Founded!">
+                </div><!--END of 2nd Card-->
+    </div><!--END of 4th Container-->
+    <br>
+    <hr>
+
+<!--------Card Decks-------->
+    <div class="container text-center">
+        <h3 class="display-3">Card Decks</h3>
+    </div>
+    <br>
+    
+  <!------5th Container------>   
+    <div class="container con">
+            <div class="card-deck"><!--Deck Card-->
+                <!--1st One-->
+                    <div class="card"><!--1st One-->
+                      <img src="assets/img_1.jpg" class="card-img-top" alt="No Images Founded!">
+                     <!--Card Body--> 
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div><!--END of 1st One-->
+                
+                <!--2nd One-->    
+                    <div class="card"><!--2nd One Deck Card-->
+                      <img src="assets/img_2.jpg" class="card-img-top" alt="No Images Founded!">
+                     <!--Card Body-->  
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div><!--END of 2nd One-->
+                  </div><!--END of Deck Card-->
+    </div><!--END of 5th Container-->
+    <br>
+    <hr>
+    
+
+<!------Colorful Cards------>    
+  <div class="container text-center">
+      <h3 class="display-3">Colorful Cards</h3>
+  </div>
+  <br>
+ <!------6th Container------>
+  <div class="container con"><!--6th Container-->
+  <!--1st Row-->  
+    <div class="row"><!--1st Row-->
+      <div class="col"><!--1st Col-->
+    <!--Primary Color Card-->  
+          <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Primary card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+      </div><!--END of Primary Color Card-->
+      </div><!--END of 1st Col-->
+
+      <div class="col"><!--2nd Col-->
+    <!--Secondary Color Card-->    
+          <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Secondary card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+      </div><!--END of Secondary Color Card-->
+      </div><!--END of 2nd Col-->
+
+      <div class="col"><!--3rd Col-->
+    <!--Success Color Card-->    
+          <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Success card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+      </div><!--END of Success Color Card-->
+      </div><!--END of 3rd Col-->
+
+      <div class="col"><!--4th Col-->
+    <!--Light Color Card-->    
+          <div class="card bg-light mb-3" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Light card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+      </div><!--END of Light Color Card-->
+      </div><!--END of 4th Col-->
+    </div><!--END of 1st Row-->
+
+  <!------2nd Row------>  
+    <div class="row"><!--2nd Row-->
+      <div class="col"><!--1st Col-->
+    <!--Danger Color Card-->    
+          <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Danger card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+      </div><!--END of Danger Color Card-->
+      </div><!--END of 1st Col-->
+
+      <div class="col"><!--2nd Col-->
+    <!--Warning Color Card-->      
+          <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Warning card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+      </div><!--Warning Color Card-->
+      </div><!--END of 2nd Col-->
+
+      <div class="col"><!--3rd Col-->
+    <!--Info Color Card-->    
+          <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Info card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+      </div><!--END of Info Color Card-->
+      </div><!--END of 3rd Col-->
+
+      <div class="col"><!--4th Col-->
+    <!--Dark Color Card-->    
+          <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Dark card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+      </div><!--END of Dark Color Card-->
+      </div><!--END of 4th Col-->
+    </div><!--END of 2nd Row-->
+  </div><!--END of this 6th Container-->
+
+
+
+</body><!--END of the Body Section-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/js/tether.min.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--CDN for stable internet connection--
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    -->        
+</html>

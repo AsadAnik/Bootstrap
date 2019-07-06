@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Card Deck | Bootstrap Practice</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/css/tether.min.css">
+    <!----CDN just for stable internet connection..
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    -->
+</head>
+
+    <style type="text/css">/*CSS for styling*/
+        body{
+         /*The CSS code from uigradients.com*/   
+         /* fallback for old browsers */
+            background: #000046;
+         /* Chrome 10-25, Safari 5.1-6 */
+            background: -webkit-linear-gradient(to left, #1CB5E0, #000046);
+         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to left, #1CB5E0, #000046);
+        }
+
+        .border{
+            border: 3px solid #fff;
+            padding: 10px 15px;
+            margin: 20px 10px;
+        }
+    </style>
+
+<body>
+    <!------The Body area of this page------>
+    <div class="container text-center">
+        <h1 class="display-1">
+            Card Deck
+        </h1>
+    </div>
+    <br>
+
+  <!------Card Deck Container------>   
+    <div class="container">
+        <div class="card-deck border">
+        <!--1st card-->    
+            <div class="card" style="background: blue; color: #fff;"><!--1st One-->
+              <img src="assets/img_1.jpg" class="card-img-top" alt="No Image Founded!">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div><!--END of the 1st One-->
+        
+        <!--2nd card-->    
+            <div class="card" style="background: green; color: #fff;"><!--2nd One-->
+              <img src="assets/img_2.jpg" class="card-img-top" alt="No Image Founded!">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div><!--END of the 2nd One-->
+        
+        <!--3rd card-->    
+            <div class="card" style="background: red; color: #fff;"><!--3rd One-->
+              <img src="assets/img_3.jpg" class="card-img-top" alt="No Image Founded!">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div><!--END of the 3rd One-->
+          </div><!--END of the Card Deck-->
+    </div><!--END of Card Deck Container-->
+    <br>
+    <hr>
+    
+</body><!--END of this Body Area-->
+<!--JavaScript bootstrap-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="js/jQuery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--CDN for stable internet connection...
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+-->
+</html>

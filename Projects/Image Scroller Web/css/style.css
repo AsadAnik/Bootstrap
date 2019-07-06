@@ -1,0 +1,38 @@
+body{
+    background: url('../assets/picSM.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+*{ color: #000000; }
+
+.BOX{
+    width: 100%; 
+    background: #fff;
+    padding: 50px;
+    overflow: hidden;
+}
+.col{
+    margin-left: 10px;
+}
+.BG{
+    padding: 20px;
+    background: #c1c1c1;
+    opacity: .8;
+}
+.txt{
+    cursor: default;
+    color: #fff;
+}
+img{
+    height: 200px;
+    width: 300px;
+}
+section{
+    background: #ffffff;
+    padding: 40px;
+}
+
+/*Footer*/
+footer{
+    background: #fff;
+    padding: 50px;
+}

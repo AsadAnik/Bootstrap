@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/css/tether.min.css">
+    <!--CDN just for when we got the online connection--
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    -->
+
+    <style type="text/css">/*Internal CSS*/
+        .con{
+            padding: 10px;
+            background: lightgray;
+        }
+        img{
+            height: 400px;
+        }
+    </style>
+
+</head><!--END of this head section-->
+<body>
+    <!------HTML main body area------>
+    <div class="container text-center" >
+        <h1 class="display-3">Carousel | Slider In Bootstrap</h1>
+    </div>
+    <br>
+
+<!------Only Slider------>  
+    <div class="container con text-center">
+        <!--The Slider-->
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src="assets/slider/1.jpg" class="d-block w-100" alt="1st Slider">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/slider/2.jpg" class="d-block w-100" alt="2nd Slider">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="assets/slider/3.jpg" class="d-block w-100" alt="3rd Slider">
+                      </div>
+                    </div>
+                  </div>
+         <!--END of the Slider-->
+    </div><!--END Only Slider-->
+    <hr>
+
+<!------Slider with Controls------>
+        <h2 class="display-4 text-center">Carousel with Controls</h2>
+        <br>
+
+      <!----With Controls---->  
+        <div class="container con text-center"><!--Start Slider-->
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <!--Slider-->
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="assets/slider/2.jpg" class="d-block w-100" alt="1st Slider">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/slider/1.jpg" class="d-block w-100" alt="2nd Slider">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/slider/3.jpg" class="d-block w-100" alt="3rd Slider">
+                          </div>
+                        </div> <!--END of Slider-->
+                    <!--Controls-->    
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                </div><!--END of Controls-->
+        </div><!--END Slider with Controls-->
+        <hr>
+
+<!------Slider with Indicators------>        
+        <h2 class="display-4 text-center">Carousel with Indicators</h2>
+        <br>
+      <!----With Indicators---->  
+        <div class="container con text-center">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <!--Indicators-->                       
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol><!--END Indicators-->
+                    <!--Sliders-->        
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="assets/slider/3.jpg" class="d-block w-100" alt="1st Slider">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/slider/2.jpg" class="d-block w-100" alt="2nd Slider">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/slider/1.jpg" class="d-block w-100" alt="3rd Slider">
+                          </div>
+                        </div><!--END Sliders-->
+                    <!--Controls-->        
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                </div><!--END Controls-->
+        </div><!--END of Indicators Slider-->
+</body><!--END of the Body area of here-->
+<!--The JavaScript-->
+<script src="js/jQuery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/js/tether.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!--CDN just for online connection--
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+-->
+</html>
