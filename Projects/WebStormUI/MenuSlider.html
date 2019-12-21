@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+  <!--The jQuery file select here-->  
+    <script src="js/jQuery.js"></script>
+
+    <style type="text/css">
+        nav{
+            background: black;
+            margin: 0;
+            border: 0;
+            padding: 0;
+            padding: 20px;
+            height: 700px;
+            width: 100px;
+            overflow: hidden;
+            display: block;
+            visibility: visible;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        $('document').ready(function(){
+
+            $('#txt2').css({ 'display': 'none' });
+
+            alert('JS is Connected!');
+
+            $('#txt').click(function(){
+                $('#menu').hide(500);
+                $('#txt2').css({ 'display': 'block' });
+            });
+            
+            $('#txt2').click(function(){
+                $('#menu').show(500);
+                $(this).css({ 'display': 'none' });
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+    <nav id="menu">
+        <span id="txt" style="color: #fff; font-family: 'Arial'; font-size: 30px; cursor: pointer">x</span>
+    </nav>
+    <span id="txt2" style="color: #000; font-family: 'Arial'; font-size: 30px; cursor: pointer;">||</span>
+
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,143 @@
+/*Google_fonts API*/
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Roboto&display=swap');
+
+/*Div topBar class of this*/
+.topBar{
+    background: orange;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;;
+}
+
+div.leftOne{
+   float: left;
+}
+div.rightOne{
+    margin-left: 70%;
+}
+div.rightOne a{
+    color: #fff;
+    transition: 0.3s;
+}
+div.rightOne a:hover{
+    color: orange;
+}
+
+.rightOne ul li{
+    list-style: none;
+    display: inline-block;
+    padding-left: 10px;
+}
+.rightOne ul li a{
+    text-decoration: none;
+}
+
+/*The Content Area*/
+div.content{
+    display: grid;
+    grid-template-columns: 70% 40%;
+    grid-auto-columns: minmax(100px, auto);
+}
+#header .txtHeader{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -5px;
+    word-spacing: -2px;
+    color: rgb(117, 117, 116);
+}
+.icons{
+    padding: 0 20px;
+    color: rgb(146, 144, 140);
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/*topContents Section*/
+.topContents{
+    display: -webkit-inline-box;
+    margin-top: 5%;
+}
+.input, input[type="text"]{
+    height: 25px;
+    width: 100px;
+}
+a.btn.btn-warning.inputBtn{
+    position: absolute;
+    left: 100%;
+    top: 15%;
+    transform: translate(-1%, -15%);
+    border-radius: 0;
+    height: 25px;
+}
+i.fab{
+    padding: 0 5px;
+}
+i.fas.fa-search{
+    display: -webkit-box;
+    color: #fff;
+}
+
+/*bottomContants Section*/
+.bottomContents{
+    justify-self: stretch;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(13%, -15%);
+}
+.bottomContents li{
+    display: inline-block;
+    list-style: none;
+}
+.bottomContents li a{
+    text-decoration: none;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: 'PT Sans Narrow', sans-serif;
+    padding: 0 15px;
+    color: rgb(117, 117, 116);
+}
+.bottomContents li a:hover{
+    transition: 0.2s;
+    color: orange;
+}
+
+hr{
+    opacity: 20.8%;
+}
+
+/*Slider Section*/
+.carousel-item ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1em;
+    padding: 0;
+    margin: 0;
+}
+.carousel-item ul li{
+    list-style: none;
+}
+
+
+.txtMasterName{
+    font-family: 'Roboto', sans-serif;
+}
+
+a.carousel-control-next:hover, a.carousel-control-prev:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/*Contact and Log Sections some bootstrap fixes*/
+.contactJumboColor{
+    background: #fff;
+}
+.logImages{ height: 200px; }
+
+.jumbotronBackground{
+    background: url('../images/kitchenCover.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+.backgroundDarkcss{
+    background: rgba(0, 0, 0, 0.8);
+}

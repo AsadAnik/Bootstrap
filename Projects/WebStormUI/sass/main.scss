@@ -1,0 +1,72 @@
+$bg : url('../assets/bgWallpaper.jpg');
+
+$colors : (
+    r : red,
+    g : green,
+    gr : gray,
+    b : black,
+    w : white,
+    bl : blue,
+    lb : lightblue
+);
+
+@function pickCol($user-color){
+    @return map-get($colors, $user-color);
+}
+
+
+body{
+    background: $bg center center fixed;
+    background-size: cover;
+
+    header{
+        // background: map-get($colors, g);
+        // padding: 20px;
+        div.jumbotron{
+           
+            .txt{
+                color: pickCol(w);
+            }
+            a.btn{
+                
+            }
+        }
+
+        /*The Extra Of the CSS way for styling inner here*/
+
+    }
+
+    input[type="color"]{
+        border: 0;
+        background: none;
+        height: 50px;
+        width: 50px;
+        outline: none;
+
+    }
+
+    footer{
+        background: #000;
+        padding: 20px;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
+/*Specially for all jumbotrons*/
+div.jmbtn{
+    background: pickCol(b);
+    height: auto;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+/*For Images of slider*/
+div.card{
+
+    img{
+        height: 450px;
+    }
+}

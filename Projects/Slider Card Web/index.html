@@ -21,6 +21,18 @@
         transform: rotate(-360deg);
         transition: 1s;
     }
+
+ /*For Fixed the position on top*/
+ 	.navbar-toggler{
+ 		position: fixed;
+    	top: 0;
+    	z-index: 999;
+    	width: 100%;
+    	padding: 0px;
+    	margin: 0px;
+    	border-radius: unset;
+ 	}
+
     .addItem img{
         height: 600px;
     }
@@ -38,7 +50,7 @@
 <body>
     <!--The HTML Body Section-->
         <!--The Navigation Bar-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-toggler">
                <div class="container">
             <!--Brand name & Images-->    
                     <img src="assets/logo.png" width="50" height="50" alt="No Company Logo" class="imgRnd">
