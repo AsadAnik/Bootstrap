@@ -83,8 +83,8 @@ i.fas.fa-search{
     justify-self: stretch;
     position: absolute;
     left: 50%;
-    top: 15%;
-    transform: translate(13%, -15%);
+    top: 20%;
+    transform: translate(-10%, 0%);
 }
 .bottomContents li{
     display: inline-block;
@@ -135,9 +135,41 @@ a.carousel-control-next:hover, a.carousel-control-prev:hover {
 .logImages{ height: 200px; }
 
 .jumbotronBackground{
+    background-color: #000;
+    overflow: hidden;
+    position: sticky;
+}
+.jumbotronBackground::after{/*Animation after the background image*/
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
     background: url('../images/kitchenCover.jpg') no-repeat center center fixed;
     background-size: cover;
+    opacity: .2;
+    animation: asadAnik 25s linear infinite;
+    z-index: -1;
 }
-.backgroundDarkcss{
+/* .backgroundDarkcss{
     background: rgba(0, 0, 0, 0.8);
+} */
+
+/*Keyframes*/
+@keyframes asadAnik{
+    50%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+/*Some Media Queries for extra responsive*/
+@media only screen and (max-width: 1260px){
+    .bottomContents{
+        left: 40%;
+        top: 10%;
+        transform: translate(0%, 0%);
+    }
 }
