@@ -1,0 +1,76 @@
+/***********The Login & Register CSS***********/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+div.form-row{
+    border: 5px solid lightgray;
+    margin: 2rem;
+    padding: 40px 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px lightgray;
+}
+div.login-section{
+    width: 30rem;
+    float: left;
+    border-right: 1px solid lightgray;
+    padding-right: 5rem;
+}
+div.register-section{
+    width: 30rem;
+    float: right;
+    padding-left: 3rem;
+}
+div.form-label h1{
+    font-size: 27px;
+    font-family: 'Quicksand', sans-serif;
+    color: #cf3d27;
+    font-weight: bold;
+}
+div.form-label p{
+    font-family: 'Quicksand', sans-serif;
+}
+button[type="submit"].login-btn, button[type="button"].register-btn{
+    width: 100%;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+
+/**The Media Quries for Phone Screen Confortable**/
+/**iPhone 6,7,8 or Uppper Screen Comfortable**/
+@media only screen and (max-width: 720px){
+    div.form-row{
+        margin: 0;
+        border-radius: 0;
+        border: 0;
+    }
+    section#login-register {
+        margin-bottom: 0 !important;
+    }
+    div.login-section{
+        width: 100%;
+        float: unset;
+        border-right: 0;
+        padding: 0;
+        border-bottom: 1px solid lightgray;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: center;
+    }
+    form.form-section {
+        margin-bottom: 3rem;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    /**Registation Form**/
+    div.register-section{
+        width: 100%;
+        float: unset;
+        padding: 0;
+        margin-top: 2rem;
+        text-align: center;
+        display: grid;
+        justify-items: center;
+    }
+}

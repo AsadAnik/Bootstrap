@@ -1,0 +1,191 @@
+/**********CSS FOR ABOUT US PAGE***************/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+section#about-cover .jumbotron{
+    background: url('../assets/img/aboutUsCover.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 80vh;
+}
+div.about-text-section{
+    float: left; 
+    margin-left: 5rem; 
+    margin-top: 3rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+div.about-text-section div.about-cover{
+    line-height: 30px;
+}
+
+/********ABOut Content********/
+section#about-content h1{   
+    color: #cf3d27;
+    font-weight: lighter;
+    font-family: 'Quicksand', sans-serif;
+}
+section#about-content p{
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+/*******About Content 2nd*********/
+section#about-content-2nd ul{
+    float: left;
+    margin-left: 10%;
+    margin-top: 2rem;
+}
+section#about-content-2nd ul li{
+    font-weight: lighter;
+    color: rgb(49, 49, 49);
+    font-size: 14px;
+    word-spacing: 2px;
+    line-height: 2rem;
+}
+section#about-content-2nd img{
+    float: right;
+}
+
+/********Founders Section About*******/
+section#about-founders div.jumbotron{
+    margin: 0 !important;
+    background: rgb(243, 243, 243);
+}
+section#about-founders h1{
+    font-family: 'Quicksand', sans-serif;
+    color: #cf3d27;
+}
+section#about-founders div.row h5{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color: #cf3d27;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+section#about-founders div.row p{
+    margin-bottom: 0.4rem;
+}
+section#about-founders div.row p.text-body-muted{
+    font-family: 'Quicksand', sans-serif;
+}
+section#about-founders div.row div.underline-hr{
+    width: 50px;
+    border: 2px solid;
+    margin-bottom: 1rem;
+}
+
+/**-----------Animation with Image Hover-------------**/
+section#about-founders .image{
+	width: 200px;
+    height: 200px;
+    border-radius: 100%;
+	overflow: hidden;
+	cursor: pointer;
+}
+/*The Image-content of this HTML*/
+section#about-founders .image-content {
+    position: absolute;
+    top: 0px;
+    /* left: -13px; */
+    /* width: 100%; */
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    /* padding: 2px; */
+    box-sizing: border-box;
+}
+/*Create the animation*/
+section#about-founders .image-content h1{
+	color: #fff;
+	text-transform: uppercase;
+	transform: translateY(20px);
+	transition: 0.4s;
+}
+
+section#about-founders .image:hover .image-content h1{
+	transform: translateY(0px);
+}
+section#about-founders .icons{
+	position: absolute;
+	right: 40px;
+	bottom: 40px;
+}
+section#about-founders .icon{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    margin: 0px 5px;
+    transform: translateY(80px);
+}
+
+section#about-founders .image:hover .icon{
+	transform: translateY(0px);
+}
+
+/*Some CSS animations*/
+section#about-founders .icon:nth-child(1){
+	transition: transform 0.4s 0.05s, color 0.4s;
+}
+section#about-founders .icon:nth-child(2){
+	transition: transform 0.4s 0.05s, color 0.1s;
+}
+section#about-founders .icon:nth-child(3){
+	transition: transform 0.4s 0.05s, color 0.1s;
+}
+section#about-founders .icon:hover{
+	color: #cf3d27;
+}
+
+/*Now the image content Area*/
+section#about-founders .image-content::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    /* clip-path: polygon(0 100%,100% 0,100% 100%); */
+    transition: 0.5s;
+}
+section#about-founders .image-content:hover::before{
+	height: 140px;
+}
+
+/**Media Queries for Mobile View**/
+/**iPhone 6,7,8 to Uppper Screens Confortable**/
+@media only screen and (max-width: 720px){
+    .display-3{
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    div.about-text-section{
+        float: unset;
+        margin-left: 0;
+        position: unset;
+        margin-top: 13rem;
+        
+    }
+    section#about-content{
+        margin-bottom: 0 !important;
+    }
+    section#about-content-2nd img{
+        margin-top: 2rem;
+    }
+    section#about-founders h1{
+        font-size: 2rem;
+    }
+    section#about-content h1{
+        font-size: 3rem;
+    }
+    section#about-founders div.col-md-3{
+        padding: 0;
+        display: grid;
+        justify-items: center;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    section#about-founders div.row div.underline-hr{
+        margin: auto;
+    }
+
+}

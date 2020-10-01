@@ -1,0 +1,210 @@
+/************CSS for Food List Section***********/
+section.food-list-home-banner{
+    max-height: 40vh;
+}
+div#intro-section .intro-title {
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+    font-weight: 100 !important;
+    text-transform: uppercase;
+    padding-bottom: 0;
+}
+section.food-list-home-banner .dark-bg {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+section#food-list div.food-list-header h2{
+    color: tomato;
+}
+section#food-list div.food-list-body input[type="text"],
+section#food-list div.food-list-body button,
+section#food-list div.food-list-body div.select-input select{
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 15px;
+    width: 100%;
+}
+section#food-list div.food-list-body input[type="text"]{
+    width: 190px;
+}
+section#food-list div.food-list-body button{
+    width: 20px;
+    padding-left: 10px;
+}
+div.search-input,
+section#food-list div.food-list-body div.select-input{
+    width: 250px !important;
+}
+
+/**----Checkbox Of Filtering----**/
+div.checkbox-list h6{
+    font-size: 18px;
+}
+div.checkbox-list li span{
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+/****----Right Sides List Card----****/
+div.list-area div.list-img{
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+}
+div.list-area div.list-body{
+    width: 30rem;
+}
+div.list-area div.list-body ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 5px;
+}
+div.list-area div.list-body ul li a{
+    color: darkslategray;
+    font-size: 13px;
+}
+div.list-area div.list-body ul li:first-child{
+    padding: 0;
+}
+
+/*The LIst Footer*/
+div.list-footer{
+    margin-left: 3rem;
+}
+div.list-area div.list-footer button.btn-list-order{
+    background: #ff6347 !important;
+    width: 100% !important;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+div.list-area div.list-footer button.btn-list-order:hover,
+div.list-area div.list-footer button.btn-list-order:focus,
+div.list-area div.list-footer button.btn-list-order:active{
+    background: none !important;
+    border: 2px solid #ff6347 !important;
+    color: darkslategray;
+    font-weight: bold;
+}
+
+div.list-area ul li.all-food-list{
+    border-bottom: 1px solid rgb(211, 211, 211);
+    padding-bottom: 2rem;
+}
+
+/**The Pagination bar**/
+div.pagination{
+    float: right;
+}
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #ff6347;
+    border-color: #ff6347;
+}
+.page-item .page-link{
+    color: #000;
+}
+
+/**********FOOD GRID PAGE's Styles**********/
+h5.card-title {
+    color: #d2232a;
+}
+div.grid-area div.grid-body ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 5px;
+}
+div.grid-area div.grid-body ul li a{
+    color: darkslategray;
+    font-size: 12px;
+}
+div.grid-area div.grid-body ul li:first-child{
+    padding: 0;
+}
+div.grid-area div.grid-body ul li a:hover,
+div.grid-area div.grid-body ul li a:active,
+div.grid-area div.grid-body ul li a:focus{
+    font-weight: bold;
+}
+div.grid-area div.grid-footer button.btn-grid-order{
+    background: rgb(255, 99, 71) !important;
+    width: 100% !important;
+    color: #fff;
+    padding: 5px 5px !important;
+    border: 1px solid rgb(255, 99, 71) !important;
+    border-radius: 3px;
+}
+div.grid-area div.grid-footer button.btn-grid-order:hover,
+div.grid-area div.grid-footer button.btn-grid-order:focus,
+div.grid-area div.grid-footer button.btn-grid-order:active{
+    background: none !important;
+    color: darkslategray;
+}
+.grid-card-img{
+    max-height: 150px;
+}
+
+/**The Media Quries for Mobile View**/
+/**iPhone 6,7,8 and Upper Screen Confortable**/
+@media only screen and (max-width: 720px){
+    div#intro-section .intro-title{
+        font-size: 2rem;
+    }
+    section.food-list-home-banner{
+        max-height: 48vh;
+    }
+    .checkbox-list.mt-3{
+        margin-bottom: 3rem;
+    }
+    div.list-area ul li.all-food-list{
+        display: grid !important;
+    }
+    div.list-area div.list-body{
+        width: 100%;
+    }
+    section#food-list div.food-list-body button.btn-list-order{
+        width: 100% !important;
+    }
+    div.list-footer{
+        margin-left: 0 !important;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .list-body.ml-4.mr-2{
+        margin: 0 !important;
+        display: grid;
+        justify-items: center;
+        text-align: center;
+        margin-top: 1rem !important;
+    }
+    div.list-area div.list-img{
+        justify-self: center;
+    }
+    div.search-input, section#food-list div.food-list-body div.select-input {
+        /* width: 250px !important; */
+        width: 100% !important;
+    }
+    section#food-list div.food-list-body button{
+        width: 20px;
+        padding-left: 10px;
+        float: right;
+        padding-right: 10px;
+    }
+    button.btn-food-search{
+        width: 20px !important;
+    }
+    h3.text-capitalize.text-danger {
+        font-size: 20px;
+    }
+}

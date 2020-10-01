@@ -1,0 +1,48 @@
+/************TERMS & POLICY***********/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+section#about-cover .jumbotron{
+    background: url('../assets/img/aboutUsCover.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 80vh;
+}
+div.about-text-section{
+    float: left; 
+    margin-left: 5rem; 
+    margin-top: 3rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+div.about-text-section div.about-cover{
+    line-height: 30px;
+}
+section#about-content h3{   
+    color: #cf3d27;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+}
+section#about-content p{
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+/**The Media quries for Responsive**/
+@media only screen and (max-width: 720px){
+    div.about-text-section{
+        float: unset;
+        margin-left: 0;
+        text-align: center;
+    }
+    .display-3 {
+        font-size: 3rem;
+        font-weight: 300;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    div.about-text-section {
+        position: unset;
+        margin-top: 13rem;
+    }
+    
+}

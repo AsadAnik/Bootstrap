@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MaiThai Kitchen | Login & Register</title>
+  <link rel="icon" href="assets/logo/logo.png">
+
+  <!-- CSS only -->
+  <link rel="stylesheet" href="assets/fontAwesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/fontAwesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/css/tether.min.css">
+
+  <!-- Style.css -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/loginRegister.css">
+</head>
+
+<body>
+  <!--------------- HEADER ------------------>
+  <header>
+    <div class="container">
+      <!----Left Side Of Header---->
+      <div class="leftHeaderItem">
+        <img src="assets/logo/logo.png" alt="Mai Thai" />
+      </div>
+
+      <!----Right Side Of Header---->
+      <div class="d-flex rightHeaderItem">
+        <div class="items mr-4 rightHeaderItem">
+          <!-- Top Menu -->
+          <div class="topMenu">
+            <ul>
+              <li><a href="#" class="text-capitalize">help</a></li>
+              <li><a href="#" class="text-capitalize">request call back</a></li>
+              <li><a href="#" class="text-capitalize">register</a></li>
+              <li><a href="#" class="text-capitalize">login</a></li>
+            </ul>
+          </div>
+          <!-- Phone Contact -->
+          <div class="mt-3 top-contact">
+            <div class="phone-num-bar">
+              <i class="fas fa-phone-alt icon"></i>
+              <div class="num">call: <span class="font-weight-bold">0199 2641 133</span></div>
+            </div>
+            <!-- Charts Total -->
+            <div class="ml-3 cart-bar">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="badge badge-light">4</span>
+              <div class="carts-section text-uppercase">
+                <span class="mr-2">total carts: <span class="text-danger font-weight-bold">4</span></span>
+                <div style="border-left: 2px solid tomato;"></div>
+                <span>price amount: <span class="text-danger font-weight-bold">1200TK</span></span>
+              </div>
+            </div>
+            <!-- Clock for Opening and closing time -->
+            <div class="ml-3 buisness-hour">
+              <i class="far fa-clock"></i>
+              <div class="time-table">
+                <span class="text-uppercase font-weight-bold">GET ON 5 DAYS A WEEK FROM 10.00 AM TO 6PM IST</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- QR-Code Section -->
+        <div class="qr-code">
+          <img class="img img-thumbnail img-fluid" src="assets/logo/qr-code.png" alt="QR-CODE">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-------------------- NAVBAR ----------------------->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <button class="navbar-toggler m-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutUs.html">about us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="foodList.html">food list</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="foodGird.html">food grid</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link active-now" href="#">login & register <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactUs.html">contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="termsPolicy.html">terms & policy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-------------------- Login and Register Form ------------------------>
+  <section id="login-register" class="mt-5 mb-5">
+    <div class="container">
+      <div class="formContainer">
+        <div class="row form-row d-flex">
+          <!------------ Login Div Column --------->
+          <div class="login-section ml-2 mr-4">
+            <form action="" class="form-section" style="margin-left: 2rem;">
+             <!-- Labels for Login -->
+              <div class="form-label">
+                <h1 class="text-capitalize">returning customer</h1>
+              </div>
+
+             <!-- Email On Login -->
+              <div class="form-group mt-4">
+                <input type="email" class="form-control" placeholder="Email">
+              </div>
+
+             <!-- Password On Login -->
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="password">
+              </div>
+
+             <!-- Remember Me Checkbox! -->
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Remember me!</label>
+              </div>
+
+             <!-- Button for Submit Login -->
+              <button type="submit" class="btn btn-danger login-btn">login</button>
+            </form>
+          </div>
+
+        <!----------- Register Section ------------->
+          <div class="register-section">
+            <form action="" class="form-section" style="margin-right: 2rem;">
+             <!-- Form Label -->
+              <div class="form-label">
+                <h1 class="text-capitalize mb-4">login for first time user?</h1>
+                <p class="mb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maiores perspiciatis maxime nostrum,
+                  corrupti laboriosam esse laudantium dolores.
+                </p>
+              </div>
+
+             <!-- Register Button -->
+              <div class="form-group">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-lg btn-warning register-btn text-capitalize" data-toggle="modal"
+                  data-target="#exampleModal">
+                  continue to register
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-------------- MODALS RESGISTER FORM -------------->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background: #d2232a; color: #fff;">
+          <h5 class="modal-title" id="exampleModalLabel">Register Account!</h5>
+          <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <form action="">
+            <div class="row">
+             <!-- First Name -->
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="First Name">
+                </div>
+              </div>
+
+             <!-- Last Name -->
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Last Name">
+                </div>
+              </div>
+            </div>
+
+           <!-- Address -->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="from-group">
+                  <textarea name="address" id="adr" cols="30" rows="5" class="form-control"
+                    placeholder="Adress"></textarea>
+                </div>
+              </div>
+            </div>
+
+           <!-- Zip Code -->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group mt-3">
+                  <input type="number" class="form-control" placeholder="Zip Code">
+                </div>
+              </div>
+            </div>
+
+           <!-- Phone Number -->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Phone No.">
+                </div>
+              </div>
+            </div>
+
+           <!-- Email -->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Email">
+                </div>
+              </div>
+            </div>
+
+           <!-- Password -->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password">
+                </div>
+              </div>
+            </div>
+            
+           <!-- Button -->
+            <button type="submit" class="btn btn-lg btn-warning text-capitalize" style="width: 100%;">continue to register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-------------- FOOTER AREA ----------------->
+  <footer class="footer text-light">
+    <!---------- TOP black FOOTER -------->
+    <div id="upper-footer" class="p-5">
+      <div class="container">
+        <!-- One Section -->
+        <div class="row mb-2 footer-list-1st-heading">
+          <div class="col-md-12">
+            <h5 class="text-light text-capitalize">address :</h5>
+          </div>
+        </div>
+        <div class="row mb-4 footer-list-1st-row">
+          <div class="col-md-4 text-capitalize">
+            <ul>
+              <li>28 Jackson Blvd Ste 1020 Chicago</li>
+              <li>IL 60604-2340</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul>
+              <li>Freephone: +1-800-559-1234</li>
+              <li>Telephone: +1-800-603-9874</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul>
+              <li>FAX: +1-800-999-9898</li>
+              <li>E-mail: mail@maithai.com</li>
+            </ul>
+          </div>
+        </div>
+        <br>
+        <div style="border-bottom: 1px dotted gray; width: 90%;"></div>
+
+        <!-- After Footers One Section -->
+        <div class="row mt-5 footer-list-2nd-row">
+          <div class="col-md-4">
+            <h5 class="text-capitalize mb-3">popular foods</h5>
+            <ul class="text-capitalize">
+              <li><a href="" class="text-light">masala pasta</a></li>
+              <li><a href="" class="text-light">veep pasta</a></li>
+              <li><a href="" class="text-light">chicken barger</a></li>
+              <li><a href="" class="text-light">chines fish fry</a></li>
+              <li><a href="" class="text-light">dhaka kacchi</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5 class="text-capitalize mb-3">top rated foods</h5>
+            <ul class="text-capitalize">
+              <li><a href="" class="text-light">chinese masala</a></li>
+              <li><a href="" class="text-light"></a></li>
+              <li><a href="" class="text-light">bread & masala</a></li>
+              <li><a href="" class="text-light">milk cream pizza</a></li>
+              <li><a href="" class="text-light">veep noodles</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 business-hour">
+            <h5 class="text-capitalize mb-3">business hour</h5>
+            <ul>
+              <li>
+                <span>monday</span>
+                <div class="dotted-dateline ml-3 mr-3"></div>
+                <span>closed</span>
+              </li>
+              <li>
+                <span>tue - fri</span>
+                <div class="dotted-dateline ml-3 mr-3"></div>
+                <span>9am - 10pm</span>
+              </li>
+              <li>
+                <span>sat - sun</span>
+                <div class="dotted-dateline ml-3 mr-3"></div>
+                <span>7am - 11pm</span>
+              </li>
+              <li>
+                <span>holidays</span>
+                <div class="dotted-dateline ml-3 mr-3"></div>
+                <span>7am - 11pm</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------- BOTTOM tomato FOOTER -------->
+    <div id="bottom-footer" class="p-2">
+      <div class="container">
+        <div class="row">
+          <!-- Footer App Logo -->
+          <div class="col-md-4">
+            <div class="logo">
+              <img src="assets/logo/logo.png" alt="">
+            </div>
+          </div>
+
+          <!-- Footer SOCIAL ICONS -->
+          <div class="col-md-4 footer-social-icons" style="display: inline-flex; justify-content: center;">
+            <div class="d-flex mt-4">
+              <a href="" class="ml-4">
+                <i class="fab fa-twitter"></i>
+              </a>
+
+              <a href="" class="ml-4">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+
+              <a href="" class="ml-4">
+                <i class="fab fa-instagram"></i>
+              </a>
+
+              <a href="" class="ml-4">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- QR-CODE Section -->
+          <div class="col-md-4 footer-qr-code" style="display: inline-flex; justify-content: flex-end;">
+            <img class="img img-fluid img-thumbnail" src="assets/logo/qr-code.png" alt="QR-CODE">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="/assets/fontAwesome/js/all.min.js"></script>
+<script src="/assets/fontAwesome/js/fontawesome.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</html>
