@@ -8,10 +8,12 @@
     <link rel="icon" href="assets/logo/logo.png">
 
     <!-- CSS only -->
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="assets/fontAwesome/css/all.min.css">
     <link rel="stylesheet" href="assets/fontAwesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/css/tether.min.css">
+
+    <!-- Bootstrap (4.5.2) -->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
 
     <!-- Style.css -->
     <link rel="stylesheet" href="css/style.css">
@@ -33,10 +35,9 @@
                     <!-- Top Menu -->
                     <div class="topMenu">
                         <ul>
-                            <li><a href="#" class="text-capitalize">help</a></li>
-                            <li><a href="#" class="text-capitalize">request call back</a></li>
-                            <li><a href="#" class="text-capitalize">register</a></li>
-                            <li><a href="#" class="text-capitalize">login</a></li>
+                            <li><a href="contactUs.html" class="text-capitalize">request call back</a></li>
+                            <li><a href="register.html" class="text-capitalize">register</a></li>
+                            <li><a href="loginRegister.html" class="text-capitalize">login</a></li>
                         </ul>
                     </div>
                     <!-- Phone Contact -->
@@ -50,18 +51,26 @@
                             <i class="fas fa-shopping-cart"></i>
                             <span class="badge badge-light">4</span>
                             <div class="carts-section text-uppercase">
-                                <span class="mr-2">total carts: <span
+                                <!-- <span class="mr-2">total carts: <span
                                         class="text-danger font-weight-bold">4</span></span>
                                 <div style="border-left: 2px solid tomato;"></div>
-                                <span>price amount: <span class="text-danger font-weight-bold">1200TK</span></span>
+                                <span>price amount: <span class="text-danger font-weight-bold">1200TK</span></span> -->
+
+                                <span class="text-uppercase font-weight-bold">
+                                    total carts: <span class="text-danger font-weight-bold">4</span>
+                                    <span class="ml-2 mr-2"> | </span>
+                                    price amount: <span class="text-danger font-weight-bold">1200TK</span>
+                                </span>
                             </div>
                         </div>
                         <!-- Clock for Opening and closing time -->
                         <div class="ml-3 buisness-hour">
                             <i class="far fa-clock"></i>
                             <div class="time-table">
-                                <span class="text-uppercase font-weight-bold">GET ON 5 DAYS A WEEK FROM 10.00 AM TO 6PM
-                                    IST</span>
+                                <a href="#time-table-bookmark" class="bookmark-text">
+                                    <span class="text-uppercase font-weight-bold">opening time & delivery time
+                                        slot</span>
+                                </a>
                             </div>
                         </div>
 
@@ -70,11 +79,183 @@
 
                 <!-- QR-Code Section -->
                 <div class="qr-code">
-                    <img class="img img-thumbnail img-fluid" src="assets/logo/qr-code.png" alt="QR-CODE">
+                    <img class="img img-thumbnail img-qr-code img-fluid" src="assets/logo/qr-code.png" alt="QR-CODE">
                 </div>
             </div>
         </div>
     </header>
+
+
+     <!-----****** The Shopping Cart Drawer System... ******------>
+     <div class="shopping-cart sticky">
+        <!-- Close Icons Button -->
+        <div class="shoppingCartButton"></div>
+
+        <!-- Drawer Opening Button When Drawer will close this will appear -->
+        <!-- Showing Icon and Drawer opening Bar(When Drawer is Close) -->
+        <section class="stickyHeader sticky-open-btn">
+            <!-- Item Couter with Icon SVG -->
+            <div class="shopping-badget-items-counter">
+                <!-- The Shopping Bag Icon -->
+                <svg version="1.1" id="Calque_1" x="0px" y="0px" style="fill:#FDD670; stroke:#FDD670;" width="16px"
+                    height="24px" viewBox="0 0 100 160.13">
+                    <polygon points="11.052,154.666 21.987,143.115 35.409,154.666"></polygon>
+                    <path
+                        d="M83.055,36.599c-0.323-7.997-1.229-15.362-2.72-19.555c-2.273-6.396-5.49-7.737-7.789-7.737   c-6.796,0-13.674,11.599-16.489,25.689l-3.371-0.2l-0.19-0.012l-5.509,1.333c-0.058-9.911-1.01-17.577-2.849-22.747   c-2.273-6.394-5.49-7.737-7.788-7.737c-8.618,0-17.367,18.625-17.788,37.361l-13.79,3.336l0.18,1.731h-0.18v106.605l17.466-17.762   l18.592,17.762V48.06H9.886l42.845-10.764l2.862,0.171c-0.47,2.892-0.74,5.865-0.822,8.843l-8.954,1.75v106.605l48.777-10.655   V38.532l0.073-1.244L83.055,36.599z M36.35,8.124c2.709,0,4.453,3.307,5.441,6.081c1.779,5.01,2.69,12.589,2.711,22.513   l-23.429,5.667C21.663,23.304,30.499,8.124,36.35,8.124z M72.546,11.798c2.709,0,4.454,3.308,5.44,6.081   c1.396,3.926,2.252,10.927,2.571,18.572l-22.035-1.308C61.289,21.508,67.87,11.798,72.546,11.798z M58.062,37.612l22.581,1.34   c0.019,0.762,0.028,1.528,0.039,2.297l-23.404,4.571C57.375,42.986,57.637,40.234,58.062,37.612z M83.165,40.766   c-0.007-0.557-0.01-1.112-0.021-1.665l6.549,0.39L83.165,40.766z">
+                    </path>
+                </svg>
+                <p class="shopping-cart-items">
+                    <span class="mr-1">4</span>
+                    <span>ITEMS</span>
+                </p>
+            </div>
+            <!-- Shopping Badgets Bottom -->
+            <div class="total shopping-badget-total">
+                <span class="dollar">$</span>
+                <span class="price">1200</span>
+            </div>
+        </section><!--END of The Drawer Opening Button-->
+
+        <!-- Shopping Cart Header -->
+        <div class="cart-header d-flex">
+            <div class="left-header-item">
+                <!-- Shopping bag Icon -->
+                <svg class="mr-1" version="1.1" id="Calque_1" x="0px" y="0px" style="fill:#fff; stroke:#fff; margin-top: -1px;" width="20px"
+                    height="30px" viewBox="0 0 100 160.13">
+                    <polygon points="11.052,154.666 21.987,143.115 35.409,154.666"></polygon>
+                    <path
+                        d="M83.055,36.599c-0.323-7.997-1.229-15.362-2.72-19.555c-2.273-6.396-5.49-7.737-7.789-7.737   c-6.796,0-13.674,11.599-16.489,25.689l-3.371-0.2l-0.19-0.012l-5.509,1.333c-0.058-9.911-1.01-17.577-2.849-22.747   c-2.273-6.394-5.49-7.737-7.788-7.737c-8.618,0-17.367,18.625-17.788,37.361l-13.79,3.336l0.18,1.731h-0.18v106.605l17.466-17.762   l18.592,17.762V48.06H9.886l42.845-10.764l2.862,0.171c-0.47,2.892-0.74,5.865-0.822,8.843l-8.954,1.75v106.605l48.777-10.655   V38.532l0.073-1.244L83.055,36.599z M36.35,8.124c2.709,0,4.453,3.307,5.441,6.081c1.779,5.01,2.69,12.589,2.711,22.513   l-23.429,5.667C21.663,23.304,30.499,8.124,36.35,8.124z M72.546,11.798c2.709,0,4.454,3.308,5.44,6.081   c1.396,3.926,2.252,10.927,2.571,18.572l-22.035-1.308C61.289,21.508,67.87,11.798,72.546,11.798z M58.062,37.612l22.581,1.34   c0.019,0.762,0.028,1.528,0.039,2.297l-23.404,4.571C57.375,42.986,57.637,40.234,58.062,37.612z M83.165,40.766   c-0.007-0.557-0.01-1.112-0.021-1.665l6.549,0.39L83.165,40.766z">
+                    </path>
+                </svg>
+                <span class="mr-1 mt-2">4</span>
+                <span class="text-uppercase mt-2">items</span>
+            </div>
+
+            <div class="right-header-item">
+                <button class="shopping-car-close-btn">
+                    close
+                </button>
+            </div>
+        </div><!--END of Shopping-Cart Header-->
+
+        <!-- Shopping cart Content (When Bag Is Empty!) -->
+        <div class="cart-content-empty">
+            <div class="content-item-empty">
+                <img src="assets/logo/shopping-beg-1.png" alt="">
+
+                <div class="shopping-title-empty text-capitalize">
+                    <p class="text-muted">Your shopping bag is empty!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shopping cart Content/Body (When Bag Is Not-Empty!) -->
+        <!-- <div class="cart-content">
+            <div class="row content-title">
+                <div class="col-md-12 body-heading-title">
+                    <p>Your delivery items</p>
+                </div>
+            </div>
+
+            <div class="row content-title items-nav sticky-top">
+                <div class="col-md-3">Quantity</div>
+                <div class="col-md-3">Image</div>
+                <div class="col-md-3">Name</div>
+                <div class="col-md-3">Price</div>
+            </div>
+
+            <div class="row content-items-list">
+                <div class="col-md-3 delivery-counter">
+                    <button type="button" class="counter-left-btn">
+                        <span>
+                            < </span>
+                    </button>
+                    <span class="counter-num font-weight-bold">1</span>
+                    <button type="button" class="counter-right-btn">
+                        <span> > </span>
+                    </button>
+                </div>
+
+                <div class="col-md-3 delivery-img">
+                    <img src="assets/img/gellary/ma1.jpg" alt="maiThai-1">
+                </div>
+
+                <div class="col-md-3 delivery-name">
+                    <h6>Thai Italian Masala</h6>
+                </div>
+
+                <div class="col-md-3 delivery-price">
+                    <span class="text-danger font-weight-bold">$40</span>
+                    <span class="text-muted"><del>$70</del></span>
+                </div>
+            </div>
+
+            <div class="row content-items-list">
+                <div class="col-md-3 delivery-counter">
+                    <button type="button" class="counter-left-btn">
+                        <span> < </span>
+                    </button>
+                    <span class="counter-num">2</span>
+                    <button type="button" class="counter-right-btn">
+                        <span> > </span>
+                    </button>
+                </div>
+                <div class="col-md-3 delivery-img">
+                    <img src="assets/img/gellary/ma1.jpg" alt="maiThai-1">
+                </div>
+                <div class="col-md-3 delivery-name">
+                    <h6>Petty Rice</h6>
+                </div>
+                <div class="col-md-3 delivery-price">
+                    <span class="text-danger font-weight-bold">$120</span>
+                    <span class="text-muted"><del>$150</del></span>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Shopping Cart Footer -->
+        <div class="cart-footer">
+
+            <div class="accordion shopping-special-code" id="accordionExample">
+                <div class="special-code-card">
+                  <div id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left toggle-special-code" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <span class="special-code-arrow-up">
+                            <i class="fa fa-chevron-circle-up mr-2" aria-hidden="true"></i>
+                        </span>
+                        <span class="special-code-arrow-down">
+                            <i class="fa fa-chevron-circle-down mr-2" aria-hidden="false"></i>
+                        </span>
+                        <span class="special-code-title">Have a special code?</span>
+                      </button>
+                    </h2>
+                  </div>
+              
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <form action="" method="" class="special-code-form">
+                            <input type="text" placeholder="Special Code" name="special-code" class="special-input">
+                            <input type="submit" name="special-go" value="Go" class="special-go">
+                        </form>
+                    </div>
+                  </div>
+                </div>
+            </div><!---END of Accordion for Speicial Code Send-->
+
+            <!-- Place Order Footer -->
+            <div class="place-order-footer">
+                <a href="" class="btn btn-outline-danger text-capitalize">
+                    <span class="mr-2">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    </span>
+                    <span>place order</span>
+                </a>
+            </div>
+            <!-- END of Place-Order's Footer -->
+        </div><!--END of Shopping-Cart's Footer-->
+    </div><!--END of Shopping Cart Drawer-->
+
 
     <!-------------------- NAVBAR ----------------------->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
@@ -87,26 +268,26 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto">
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="index.html">home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="aboutUs.html">about us</a>
+                        <a class="nav-link" href="foodOrder.html">food order</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="foodList.html">food list</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="foodGird.html">food grid</a>
+                        <a class="nav-link" href="foodPackage.html">food package</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="loginRegister.html">login & register</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="aboutUs.html">about us</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="contactUs.html">contact us</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link active-now" href="#">terms & policy <span
+                    <li class="nav-item">
+                        <a class="nav-link active-now" href="termsPolicy.html">terms & policy <span
                                 class="sr-only">(current)</span></a>
                     </li>
                 </ul>
@@ -120,7 +301,7 @@
             <div class="about-text-section">
                 <div class="about-cover text-light text-capitalize text-center">
                     <h1 class="display-3">terms<br>policy</h1>
-                    <p>MaiThai is an online portal.</p>
+                    <p>MaiThai is a restaurant.</p>
                     <p>Ordering Food & Delivery from restaurants of choice.</p>
                     <p>Table booking & Restaurants.</p>
                     <p>Deals & Discounts</p>
@@ -134,168 +315,110 @@
     <!--------------- All Terms and The Policies ---------------->
     <section id="about-content" class="mb-5 mt-5">
         <div class="container text-center">
-            <h3 class="text-capitalize text-center mb-4">What information we collect about you?</h3>
+            <h3 class="text-capitalize text-center mb-4">General</h3>
 
             <p class="text-muted">
-                It is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at
-                its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                as
-                opposed to using 'Content here, content here', making it look like readable English.
-            </p>
-            <br>
-
-            <p class="text-muted">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
-                to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic
-                typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                containing
-                Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-                versions of
-                Lorem Ipsum.
-            </p>
-
-            <h3 class="text-capitalize text-center mb-4 mt-5">Cookies and Google Analytics
-            </h3>
-            <p class="text-muted">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
-                <br>
-                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                We value creativity, hard work, initiative and radical ideas. If this sounds exciting to you, then come
-                have a chat with us ASAP. There are many variations of passages of Lorem Ipsum available, but the
-                majority have suffered alteration in some form, by injected humour, or randomised words which don't look
-                even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there
-                isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet
-                tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It
-                uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to
-                generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from
-                repetition, injected humour, or non-characteristic words etc.
-            </p>
-
-            <h3 class="text-capitalize text-center mb-4 mt-5">The information we collect on or through our
-                Services
-                may include:</h3>
-            <p class="text-muted">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
-                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                We value creativity, hard work, initiative and radical ideas. If this sounds exciting to you, then come
-                have a chat with us ASAP. There are many variations of passages of Lorem Ipsum available, but the
-                majority have suffered alteration in some form, by injected humour, or randomised words which don't look
-                even slightly believable.
-                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing
-                hidden in the middle of text.
-                All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making
-                this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined
-                with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
-                The generated Lorem Ipsum is therefore always free from repetition, injected humour, or
-                non-characteristic words etc.
+                The terms <span class="headline-p">“Mai Thai Kitchen”</span> is Significant of our customer. The terms
+                "you" & "your" refer to a visitor
+                or customer.
+                <br> <br>
+                We reserve the right to access and to disclose personal information to comply with applicable laws and
+                lawful government requests or requests by applicable regulatory bodies, to operate our systems properly
+                or to protect either ourselves or our other users.
+                <br> <br>
+                We may transfer, sell or assign any of the information described in this policy to our <span
+                    class="headline-p">"Mai Thai
+                    Kitchen"</span> as a result of a sale, merger, consolidation, change of control, transfer of assets
+                or
+                reorganisation.
+                <br> <br>
+                You consent to the transfer of your personal information outside of the european economic area (which
+                may not provide the same protection for such information as the united kingdom provides) in the event
+                that the processing of your information involves such a transfer
             </p>
             <br>
             <hr>
 
-            <h3 class="mb-4 mt-5">1. ACCEPTANCE OF TERMS</h3>
+            <h3 class="text-capitalize text-center mb-4 mt-5">Monitoring Emails</h3>
             <p class="text-muted">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
+                We may monitor and keep records of email communications which you send to us and other communications
+                with you in accordance with this policy and our other business interests.
+            </p>
+            <br>
+            <hr>
 
-                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                We value creativity, hard work, initiative and radical ideas. If this sounds exciting to you, then come
-                have a chat with us ASAP.
-                <br><br>
-                <strong>It is a long established fact that a reader will be distracted by the readable content of a page
-                    when
-                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                    distribution
-                    of letters, as opposed to using 'Content here, content here', making it look like readable English.
-                    Many
-                    desktop publishing packages and web page editors now use Lorem Ipsum as their default model text,
-                    and a
-                    search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
-                    evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the
-                    like).</strong>
+            <h3 class="text-capitalize text-center mb-4 mt-5">Safeguards and Security</h3>
+            <p class="text-muted">
+                No data transmission over the internet can be entirely secure, and therefore we cannot guarantee the
+                security of your personal information and/or use of our sites. however we use our reasonable endeavours
+                to protect the security of your personal information from unauthorised access or use by using secure
+                sockets layer 120-bit encryption.
+            </p>
+            <br>
+            <hr>
+
+            <h3 class="text-capitalize text-center mb-4 mt-5">Card Method </h3>
+            <p class="text-muted">
+                Mai Thai Kitchen takes great care to ensure your PayPal card information is safe. we use a secure
+                connection (secure transaction (https)) and once your transaction is completed, <span
+                    class="headline-p">"Mai Thai Kitchen"</span> does
+                not keep a record of your Paypal card number nor do we share customer details with any 3rd parties. the
+                only record <span class="headline-p">"Mai Thai Kitchen"</span> keeps is the authorisation number
+                received from the bank. this is to
+                ensure against the use of stolen cards.
+            </p>
+            <br>
+            <hr>
+
+            <h3 class="text-capitalize text-center mb-4 mt-5">Email Alerts</h3>
+            <p class="text-muted">
+                Emails may contain ids and information that are unique to each user. please do not divulge your password
+                or forward sensitive emails onto others as they could access your personal details stored in mango tree
+                systems.
+                <br> <br>
+                In addition to our safeguards your personal information is protected in the uk by the data protection
+                act. this provides that the information which we hold about you should be processed fairly and lawfully
+                and should be accurate, relevant and not excessive. the information should, where necessary, be kept up
+                to date and not retained for longer than is necessary. please help us to keep your personal information
+                accurate by updating your registration details on the website.
+            </p>
+            <br>
+            <hr>
+
+            <h3 class="text-capitalize text-center mb-4 mt-5">Cancellation Policy</h3>
+            <p class="text-muted">
+                A 50% deposit of the total food bill is required once you have confirmed your group booking with us,
+                please note this need to be done via bank transfer or online. please note that the deposit is
+                non-refundable in the event of late cancellation or not re-booked.
+                <br> <br>
+                Please note that a 48hrs notice is required if you want to cancel or drop the number of booking,
+                otherwise, you will be charged £20/person. we will only hold the table for 30 minutes from your
+                reservation time and if the party is not complete within the 30 minutes, your table will be released
+            </p>
+            <br>
+            <hr>
+
+            <h3 class="text-capitalize text-center mb-4 mt-5">More Information</h3>
+            <p class="text-muted">
+                For more information on the data protection act and the information commissioner please see
+                <mark><a
+                        href="http://www.informationcommissioner.gov.uk">http://www.informationcommissioner.gov.uk</a></mark>
+            </p>
+            <br>
+            <hr>
+
+            <h3 class="text-capitalize text-center mb-4 mt-5">Changing or accessing your information</h3>
+            <p class="text-muted">
+                You can inspect your personal details at any time and modify them by contacting the mango tree. should
+                you no longer wish to receive newsletters or services you have signed up for, or if you wish to review
+                or receive copies of the personal information we hold about you, or have any other queries please email
+                registration <mark><a href="register.html">registration@Maithai.uk</a></mark> including full details of
+                your request.
+                <br> <br>
+                We may charge a small administration fee in relation to fulfilling a request for access to personal
+                information.
             </p>
 
-            <h3 class="mb-4 mt-5">2. USE OF SERVICES BY YOU OR USER</h3>
-            <p class="text-muted">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
-
-                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                We value creativity, hard work, initiative and radical ideas. If this sounds exciting to you, then come
-                have a chat with us ASAP.
-                <br><br>
-                <strong>It is a long established fact that a reader will be distracted by the readable content of a page
-                    when
-                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                    distribution
-                    of letters, as opposed to using 'Content here, content here', making it look like readable English.
-                    Many
-                    desktop publishing packages and web page editors now use Lorem Ipsum as their default model text,
-                    and a
-                    search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
-                    evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the
-                    like).</strong>
-            </p>
-
-            <h3 class="mb-4 mt-5">3. CHANGES TO THE TERMS & CONDITIONS</h3>
-            <p class="text-muted">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
-
-                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                We value creativity, hard work, initiative and radical ideas. If this sounds exciting to you, then come
-                have a chat with us ASAP.
-
-
-            </p>
-
-            <h3 class="mb-4 mt-5">4. USE THE SERVICES</h3>
-            <p class="text-muted">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
-
-                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                We value creativity, hard work, initiative and radical ideas. If this sounds exciting to you, then come
-                have a chat with us ASAP.
-            </p>
-
-            <h3 class="mb-4 mt-5">5. RESTRICTIONS ON USE</h3>
-            <p class="text-muted">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
-            <ol style="text-align: left; font-size: 14px; line-height: 35px; margin-top: 30px;">
-                <li>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                    alteration in some form, by injected humour.</li>
-                <li>Randomised words which don't look even slightly believable</li>
-                <li>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
-                    embarrassing hidden in the middle of text.</li>
-                <li>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making
-                    this the first true generator on the Internet.</li>
-                <li>It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures,
-                    to generate Lorem Ipsum reasonable.</li>
-                <li>The generated Lorem Ipsum is therefore always free from repetition, injected humour, or
-                    non-characteristic words etc.</li>
-            </ol>
-            </p>
 
         </div>
     </section>
@@ -306,8 +429,31 @@
         <!---------- TOP black FOOTER -------->
         <div id="upper-footer" class="p-5">
             <div class="container">
-                <!-- One Section -->
-                <div class="row mb-2 footer-list-1st-heading">
+
+                <!-- Footers Top Menu -->
+                <div class="row mb-4">
+                    <div class="col-md-12 text-center">
+                        <ul class="footer-top-menu">
+                            <li>
+                                <a href="aboutUs.html">About</a>
+                                <span class="ml-2 mr-2 line"> - </span>
+                            </li>
+                            <li>
+                                <a href="termsPolicy.html">Refund Policy</a>
+                                <span class="ml-2 mr-2 line"> - </span>
+                            </li>
+                            <li>
+                                <a href="contactUs.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="border-bottom: 1px dotted gray;"></div>
+
+                <!-- Two Section -->
+                <!-- Address -->
+                <div class="row mb-2 footer-list-1st-heading mt-5">
                     <div class="col-md-12">
                         <h5 class="text-light text-capitalize">address :</h5>
                     </div>
@@ -315,74 +461,87 @@
                 <div class="row mb-4 footer-list-1st-row">
                     <div class="col-md-4 text-capitalize">
                         <ul>
-                            <li>28 Jackson Blvd Ste 1020 Chicago</li>
-                            <li>IL 60604-2340</li>
+                            <li>35 High street Cheshunt, Waltham Cross</li>
+                            <li>EN80BS, UK.</li>
                         </ul>
                     </div>
                     <div class="col-md-4">
                         <ul>
-                            <li>Freephone: +1-800-559-1234</li>
-                            <li>Telephone: +1-800-603-9874</li>
+                            <li>Phone: 01992 641133</li>
+                            <li>E-mail: maithaikitchen@hotmail.com</li>
                         </ul>
                     </div>
                     <div class="col-md-4">
                         <ul>
-                            <li>FAX: +1-800-999-9898</li>
-                            <li>E-mail: mail@maithai.com</li>
+                            <li>Company Registration Number: 12333551</li>
+                            <li>VAT: 340075044</li>
                         </ul>
                     </div>
                 </div>
                 <br>
-                <div style="border-bottom: 1px dotted gray; width: 90%;"></div>
+                <div style="border-bottom: 1px dotted gray;"></div>
 
                 <!-- After Footers One Section -->
-                <div class="row mt-5 footer-list-2nd-row">
-                    <div class="col-md-4">
-                        <h5 class="text-capitalize mb-3">popular foods</h5>
-                        <ul class="text-capitalize">
-                            <li><a href="" class="text-light">masala pasta</a></li>
-                            <li><a href="" class="text-light">veep pasta</a></li>
-                            <li><a href="" class="text-light">chicken barger</a></li>
-                            <li><a href="" class="text-light">chines fish fry</a></li>
-                            <li><a href="" class="text-light">dhaka kacchi</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h5 class="text-capitalize mb-3">top rated foods</h5>
-                        <ul class="text-capitalize">
-                            <li><a href="" class="text-light">chinese masala</a></li>
-                            <li><a href="" class="text-light"></a></li>
-                            <li><a href="" class="text-light">bread & masala</a></li>
-                            <li><a href="" class="text-light">milk cream pizza</a></li>
-                            <li><a href="" class="text-light">veep noodles</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 business-hour">
-                        <h5 class="text-capitalize mb-3">business hour</h5>
+                <div class="row mt-5 footer-list-2nd-row mb-5">
+                    <div class="col-md-4 business-hour" id="time-table-bookmark">
+                        <h5 class="text-capitalize mb-3">opening time:</h5>
                         <ul>
                             <li>
-                                <span>monday</span>
-                                <div class="dotted-dateline ml-3 mr-3"></div>
-                                <span>closed</span>
+                                <span>Sunday - Saturday (Everyday)</span>
                             </li>
                             <li>
-                                <span>tue - fri</span>
+                                <span>Lunch Time</span>
                                 <div class="dotted-dateline ml-3 mr-3"></div>
-                                <span>9am - 10pm</span>
+                                <span>12pm - 3pm</span>
                             </li>
                             <li>
-                                <span>sat - sun</span>
+                                <span>Dinner Time</span>
                                 <div class="dotted-dateline ml-3 mr-3"></div>
-                                <span>7am - 11pm</span>
-                            </li>
-                            <li>
-                                <span>holidays</span>
-                                <div class="dotted-dateline ml-3 mr-3"></div>
-                                <span>7am - 11pm</span>
+                                <span>5pm - 10pm</span>
                             </li>
                         </ul>
                     </div>
+
+                    <div class="col-md-4 business-hour" id="time-table-bookmark">
+                        <h5 class="text-capitalize mb-3">delivery time:</h5>
+                        <ul>
+                            <li>
+                                <span>Everyday</span>
+                                <div class="dotted-dateline ml-3 mr-3"></div>
+                                <span>5pm - 10pm</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- The Footers Business Card's  -->
+                    <div class="col-md-4">
+                        <h5 class="text-capitalize mb-3">Payment Methods:</h5>
+
+                        <ul class="d-flex business-logo-section">
+                            <li class="business-logo">
+                                <img class="paypal" src="assets/logo/paypal.png" alt="">
+                            </li>
+                            <li class="business-logo">
+                                <img class="visa" src="assets/logo/visa.png" alt="">
+                            </li>
+                            <li class="business-logo">
+                                <img class="master" src="assets/logo/master.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
+
+                <div style="border-bottom: 1px dotted gray;"></div>
+
+                <div class="row mt-5">
+                    <div class="col-md-12 text-center">
+                        <span class="text-muted">
+                            <small>&copy; Copyright 2020, Mai Thai Kitchen. All Rights Reserved</small>
+                        </span>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -400,27 +559,28 @@
                     <!-- Footer SOCIAL ICONS -->
                     <div class="col-md-4 footer-social-icons" style="display: inline-flex; justify-content: center;">
                         <div class="d-flex mt-4">
-                            <a href="" class="ml-4">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-
-                            <a href="" class="ml-4">
+                            <a href="https://www.facebook.com/mai1thaikitchen" class="ml-4">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
 
-                            <a href="" class="ml-4">
+                            <a href="https://www.instagram.com/maithaikitchencheshunt" class="ml-4">
                                 <i class="fab fa-instagram"></i>
                             </a>
 
-                            <a href="" class="ml-4">
+                            <a href="https://youtube.com/channel/UCDHzPwaAsL3CORkpLSf-JEQ" class="ml-4">
                                 <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="" class="ml-4">
+                                <i class="fab fa-twitter"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- QR-CODE Section -->
                     <div class="col-md-4 footer-qr-code" style="display: inline-flex; justify-content: flex-end;">
-                        <img class="img img-fluid img-thumbnail" src="assets/logo/qr-code.png" alt="QR-CODE">
+                        <img class="img img-fluid img-qr-code img-thumbnail" src="assets/logo/qr-code.png"
+                            alt="QR-CODE">
                     </div>
                 </div>
             </div>
@@ -429,18 +589,22 @@
 </body>
 
 <!-- JS, Popper.js, and jQuery -->
+<!-- FontAwesome 5 -->
 <script src="/assets/fontAwesome/js/all.min.js"></script>
 <script src="/assets/fontAwesome/js/fontawesome.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-    crossorigin="anonymous"></script>
+
+<!-- Bootstrap jQuery (3.5.1) -->
+<script src="assets/bootstrap/jquery.min.js"></script>
+
+<!-- Bootstrap Popper.js (1.16.1) -->
+<script src="assets/bootstrap/popper.min.js"></script>
+
+<!-- Bootstrap bootstrap.min.js (4.5.2) -->
+<script src="assets/bootstrap/bootstrap.min.js"></script>
+
+<!-- Custom JS for FoodList DropDown CheckBar Filtering Items -->
+<!-- Also for Shopping-Carts Carousels Control -->
+<script src="js/collapse_button.js"></script>
 
 
 </html>

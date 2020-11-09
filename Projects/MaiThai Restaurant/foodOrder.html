@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MaiThai Kitchen | Food Grid</title>
+  <link rel="icon" href="assets/logo/logo.png">
+
+  <!-- CSS only -->
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="assets/fontAwesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/fontAwesome/css/fontawesome.min.css">
+
+  <!-- Bootstrap (4.5.2) -->
+  <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+
+  <!-- Style.css -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/foodList.css">
+</head>
+
+<body>
+  <!--------------- HEADER ------------------>
+  <header>
+    <div class="container">
+      <!----Left Side Of Header---->
+      <div class="leftHeaderItem">
+        <img src="assets/logo/logo.png" alt="Mai Thai" />
+      </div>
+
+      <!----Right Side Of Header---->
+      <div class="d-flex rightHeaderItem">
+        <div class="items mr-4 rightHeaderItem">
+          <!-- Top Menu -->
+          <div class="topMenu">
+            <ul>
+              <li><a href="contactUs.html" class="text-capitalize">request call back</a></li>
+              <li><a href="register.html" class="text-capitalize">register</a></li>
+              <li><a href="loginRegister.html" class="text-capitalize">login</a></li>
+            </ul>
+          </div>
+          <!-- Phone Contact -->
+          <div class="mt-3 top-contact">
+            <div class="phone-num-bar">
+              <i class="fas fa-phone-alt icon"></i>
+              <div class="num">call: <span class="font-weight-bold">0199 2641 133</span></div>
+            </div>
+            <!-- Charts Total -->
+            <div class="ml-3 cart-bar">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="badge badge-light">4</span>
+              <div class="carts-section text-uppercase">
+                <!-- <span class="mr-2">total carts: <span class="text-danger font-weight-bold">4</span></span>
+                <div style="border-left: 2px solid tomato;"></div>
+                <span>price amount: <span class="text-danger font-weight-bold">$1200</span></span> -->
+
+                <span class="text-uppercase font-weight-bold">
+                  total carts: <span class="text-danger font-weight-bold">4</span>
+                  <span class="ml-2 mr-2"> | </span>
+                  price amount: <span class="text-danger font-weight-bold">$1200</span>
+                </span>
+              </div>
+            </div>
+            <!-- Clock for Opening and closing time -->
+            <div class="ml-3 buisness-hour">
+              <i class="far fa-clock"></i>
+              <div class="time-table">
+                <a href="#time-table-bookmark" class="bookmark-text">
+                  <span class="text-uppercase font-weight-bold">opening time & delivery time slot</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- QR-Code Section -->
+        <div class="qr-code">
+          <img class="img img-thumbnail img-qr-code img-fluid" src="assets/logo/qr-code.png" alt="QR-CODE">
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-----****** The Shopping Cart Drawer System... ******------>
+  <div class="shopping-cart sticky">
+    <!-- Close Icons Button -->
+    <div class="shoppingCartButton"></div>
+
+    <!-- Drawer Opening Button When Drawer will close this will appear -->
+    <!-- Showing Icon and Drawer opening Bar(When Drawer is Close) -->
+    <section class="stickyHeader sticky-open-btn">
+      <!-- Item Couter with Icon SVG -->
+      <div class="shopping-badget-items-counter">
+        <!-- The Shopping Bag Icon -->
+        <svg version="1.1" id="Calque_1" x="0px" y="0px" style="fill:#FDD670; stroke:#FDD670;" width="16px"
+          height="24px" viewBox="0 0 100 160.13">
+          <polygon points="11.052,154.666 21.987,143.115 35.409,154.666"></polygon>
+          <path
+            d="M83.055,36.599c-0.323-7.997-1.229-15.362-2.72-19.555c-2.273-6.396-5.49-7.737-7.789-7.737   c-6.796,0-13.674,11.599-16.489,25.689l-3.371-0.2l-0.19-0.012l-5.509,1.333c-0.058-9.911-1.01-17.577-2.849-22.747   c-2.273-6.394-5.49-7.737-7.788-7.737c-8.618,0-17.367,18.625-17.788,37.361l-13.79,3.336l0.18,1.731h-0.18v106.605l17.466-17.762   l18.592,17.762V48.06H9.886l42.845-10.764l2.862,0.171c-0.47,2.892-0.74,5.865-0.822,8.843l-8.954,1.75v106.605l48.777-10.655   V38.532l0.073-1.244L83.055,36.599z M36.35,8.124c2.709,0,4.453,3.307,5.441,6.081c1.779,5.01,2.69,12.589,2.711,22.513   l-23.429,5.667C21.663,23.304,30.499,8.124,36.35,8.124z M72.546,11.798c2.709,0,4.454,3.308,5.44,6.081   c1.396,3.926,2.252,10.927,2.571,18.572l-22.035-1.308C61.289,21.508,67.87,11.798,72.546,11.798z M58.062,37.612l22.581,1.34   c0.019,0.762,0.028,1.528,0.039,2.297l-23.404,4.571C57.375,42.986,57.637,40.234,58.062,37.612z M83.165,40.766   c-0.007-0.557-0.01-1.112-0.021-1.665l6.549,0.39L83.165,40.766z">
+          </path>
+        </svg>
+        <p class="shopping-cart-items">
+          <span class="mr-1">4</span>
+          <span>ITEMS</span>
+        </p>
+      </div>
+      <!-- Shopping Badgets Bottom -->
+      <div class="total shopping-badget-total">
+        <span class="dollar">$</span>
+        <span class="price">1200</span>
+      </div>
+    </section>
+    <!--END of The Drawer Opening Button-->
+
+    <!-- Shopping Cart Header -->
+    <div class="cart-header d-flex">
+      <div class="left-header-item">
+        <!-- Shopping bag Icon -->
+        <svg class="mr-1" version="1.1" id="Calque_1" x="0px" y="0px" style="fill:#fff; stroke:#fff; margin-top: -1px;"
+          width="20px" height="30px" viewBox="0 0 100 160.13">
+          <polygon points="11.052,154.666 21.987,143.115 35.409,154.666"></polygon>
+          <path
+            d="M83.055,36.599c-0.323-7.997-1.229-15.362-2.72-19.555c-2.273-6.396-5.49-7.737-7.789-7.737   c-6.796,0-13.674,11.599-16.489,25.689l-3.371-0.2l-0.19-0.012l-5.509,1.333c-0.058-9.911-1.01-17.577-2.849-22.747   c-2.273-6.394-5.49-7.737-7.788-7.737c-8.618,0-17.367,18.625-17.788,37.361l-13.79,3.336l0.18,1.731h-0.18v106.605l17.466-17.762   l18.592,17.762V48.06H9.886l42.845-10.764l2.862,0.171c-0.47,2.892-0.74,5.865-0.822,8.843l-8.954,1.75v106.605l48.777-10.655   V38.532l0.073-1.244L83.055,36.599z M36.35,8.124c2.709,0,4.453,3.307,5.441,6.081c1.779,5.01,2.69,12.589,2.711,22.513   l-23.429,5.667C21.663,23.304,30.499,8.124,36.35,8.124z M72.546,11.798c2.709,0,4.454,3.308,5.44,6.081   c1.396,3.926,2.252,10.927,2.571,18.572l-22.035-1.308C61.289,21.508,67.87,11.798,72.546,11.798z M58.062,37.612l22.581,1.34   c0.019,0.762,0.028,1.528,0.039,2.297l-23.404,4.571C57.375,42.986,57.637,40.234,58.062,37.612z M83.165,40.766   c-0.007-0.557-0.01-1.112-0.021-1.665l6.549,0.39L83.165,40.766z">
+          </path>
+        </svg>
+        <span class="mr-1 mt-2">4</span>
+        <span class="text-uppercase mt-2">items</span>
+      </div>
+
+      <div class="right-header-item">
+        <button class="shopping-car-close-btn">
+          close
+        </button>
+      </div>
+    </div>
+    <!--END of Shopping-Cart Header-->
+
+     <!-- Shopping cart Content (When Bag Is Empty!) -->
+     <div class="cart-content-empty">
+      <div class="content-item-empty">
+          <img src="assets/logo/shopping-beg-1.png" alt="">
+
+          <div class="shopping-title-empty text-capitalize">
+              <p class="text-muted">Your shopping bag is empty!</p>
+          </div>
+      </div>
+  </div>
+
+  <!-- Shopping cart Content/Body (When Bag Is Not-Empty!) -->
+  <!-- <div class="cart-content">
+      <div class="row content-title">
+          <div class="col-md-12 body-heading-title">
+              <p>Your delivery items</p>
+          </div>
+      </div>
+
+      <div class="row content-title items-nav sticky-top">
+          <div class="col-md-3">Quantity</div>
+          <div class="col-md-3">Image</div>
+          <div class="col-md-3">Name</div>
+          <div class="col-md-3">Price</div>
+      </div>
+
+      <div class="row content-items-list">
+          <div class="col-md-3 delivery-counter">
+              <button type="button" class="counter-left-btn">
+                  <span>
+                      < </span>
+              </button>
+              <span class="counter-num font-weight-bold">1</span>
+              <button type="button" class="counter-right-btn">
+                  <span> > </span>
+              </button>
+          </div>
+
+          <div class="col-md-3 delivery-img">
+              <img src="assets/img/gellary/ma1.jpg" alt="maiThai-1">
+          </div>
+
+          <div class="col-md-3 delivery-name">
+              <h6>Thai Italian Masala</h6>
+          </div>
+
+          <div class="col-md-3 delivery-price">
+              <span class="text-danger font-weight-bold">$40</span>
+              <span class="text-muted"><del>$70</del></span>
+          </div>
+      </div>
+
+      <div class="row content-items-list">
+          <div class="col-md-3 delivery-counter">
+              <button type="button" class="counter-left-btn">
+                  <span> < </span>
+              </button>
+              <span class="counter-num">2</span>
+              <button type="button" class="counter-right-btn">
+                  <span> > </span>
+              </button>
+          </div>
+          <div class="col-md-3 delivery-img">
+              <img src="assets/img/gellary/ma1.jpg" alt="maiThai-1">
+          </div>
+          <div class="col-md-3 delivery-name">
+              <h6>Petty Rice</h6>
+          </div>
+          <div class="col-md-3 delivery-price">
+              <span class="text-danger font-weight-bold">$120</span>
+              <span class="text-muted"><del>$150</del></span>
+          </div>
+      </div>
+  </div> -->
+
+    <!-- Shopping Cart Footer -->
+    <div class="cart-footer">
+
+      <div class="accordion shopping-special-code" id="accordionExample">
+        <div class="special-code-card">
+          <div id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-block text-left toggle-special-code" type="button" data-toggle="collapse"
+                data-target="#shoppingCollapse" aria-expanded="false" aria-controls="shoppingCollapse">
+                <span class="special-code-arrow-up">
+                  <i class="fa fa-chevron-circle-up mr-2" aria-hidden="true"></i>
+                </span>
+                <span class="special-code-arrow-down">
+                  <i class="fa fa-chevron-circle-down mr-2" aria-hidden="false"></i>
+                </span>
+                <span class="special-code-title">Have a special code?</span>
+              </button>
+            </h2>
+          </div>
+
+          <div id="shoppingCollapse" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <form action="" method="" class="special-code-form">
+                <input type="text" placeholder="Special Code" name="special-code" class="special-input">
+                <input type="submit" name="special-go" value="Go" class="special-go">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---END of Accordion for Speicial Code Send-->
+
+      <!-- Place Order Footer -->
+      <div class="place-order-footer">
+        <a href="" class="btn btn-outline-danger text-capitalize">
+            <span class="mr-2">
+              <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+            </span>
+            <span>place order</span>
+        </a>
+    </div>
+    <!-- END of Place-Order's Footer -->
+    </div>
+    <!--END of Shopping-Cart's Footer-->
+  </div>
+  <!--END of Shopping Cart Drawer-->
+
+
+  <!-------------------- NAVBAR ----------------------->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <button class="navbar-toggler m-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active-now" href="#">food order <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="foodPackage.html">food package</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="loginRegister.html">login & register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutUs.html">about us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactUs.html">contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="termsPolicy.html">terms & policy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!------------- SECTION of Banners Page ----------------->
+  <section id="home-cover" class=" food-list-home-banner">
+    <div class="jumbotron">
+      <div class="dark-bg">
+        <div id="intro">
+          <div id="intro-section" class="mb-4">
+            <h5 class="intro-title text-uppercase mb-4">stock food grid combo</h5>
+          </div>
+
+          <div class="search-food mb-5">
+            <input type="text" placeholder="Find Your Choice!" class="form-control">
+            <button type="submit" class="btn btn-danger btn-custom text-uppercase">
+              <i class="fas fa-search"></i>
+              <span> </span>
+              <span>Search</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------- The Search Collapse DropDown Bar ------->
+    <ul class="search-dropdown-menu" style="display: none;">
+      <li class="search-item mt-2"><a href="#">
+          <div class="image">
+            <img src="assets/img/card1.jpg" alt="card1" class="search-bar-image">
+          </div>
+          <div class="nameAndPrice">
+            <div class="name">Big 8</div>
+            <div class="price">$800.</div>
+          </div>
+        </a></li>
+      <hr>
+
+      <li class="search-item"><a href="#">
+          <div class="image">
+            <img src="assets/img/card1.jpg" alt="card1" class="search-bar-image">
+          </div>
+
+          <div class="nameAndPrice">
+            <div class="name">Pizza</div>
+            <div class="price">$700.</div>
+          </div>
+        </a></li>
+      <hr>
+
+      <li class="search-item"><a href="#">
+          <div class="image">
+            <img src="assets/img/card1.jpg" alt="card1" class="search-bar-image">
+          </div>
+
+          <div class="nameAndPrice">
+            <div class="name">Fish Kabab</div>
+            <div class="price">$430.</div>
+          </div>
+        </a></li>
+      <hr>
+
+      <li class="search-item"><a href="#">
+          <div class="image">
+            <img src="assets/img/card1.jpg" alt="card1" class="search-bar-image">
+          </div>
+
+          <div class="nameAndPrice">
+            <div class="name">Mutton Biriyani</div>
+            <div class="price">$860.</div>
+          </div>
+        </a></li>
+      <hr>
+
+      <li class="search-item mb-2"><a href="#">
+          <div class="image">
+            <img src="assets/img/card1.jpg" alt="card1" class="search-bar-image">
+          </div>
+
+          <div class="nameAndPrice">
+            <div class="name">Masala Pasta</div>
+            <div class="price">$600.</div>
+          </div>
+        </a></li>
+    </ul>
+  </section>
+
+  <!-------------- Food Grid Section ------------>
+  <section id="food-list" class="mt-5 mb-5">
+    <div class="container">
+      <div class="food-list-header">
+        <h3 class="text-capitalize text-danger">food grids, combo food catagories</h3>
+      </div>
+      <hr>
+
+      <!------- The Main Food Grid and Food Search, Filtering Section ----------->
+      <div class="food-list-body row">
+        <div class="filter-item left-aside col-md-3 col-sm-4 col-xs-12">
+          <div class="forms">
+            <!------- Food Search Bar ------->
+            <div class="form-control search-input mb-3">
+              <input type="text" placeholder="Search for...">
+              <button class="btn-food-search"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!------ Select Catagories Bar ------->
+            <!-- <div class="form-control select-input mb-4">
+              <select name="parent" id="select">
+                <option value="1">Sort by: Popularity</option>
+                <option value="2">Top Rated</option>
+                <option value="3">Special Cuisins</option>
+                <option value="4">Cost</option>
+                <option value="5">Latest</option>
+              </select>
+            </div> -->
+          </div>
+
+
+          <!----------- Collapse Bar ----------->
+          <div class="food-menu-title mb-2">
+            <h3 class="text-light">Food Menu</h3>
+          </div>
+
+          <div id="accordion" class="mb-2">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <h6 class="text-capitalize toggle-click-1" data-toggle="collapse" data-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <span>
+                      <img class="collapse-img-1" src="assets/icons/minus_collapse.png" alt="+" width="20">
+                    </span>
+                    <span class="ml-1">stir fried dishes</span>
+                  </h6>
+                </h5>
+              </div>
+
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                  <!----- Food Filtering Area with Checkboxes ----->
+                  <div class="checkbox-list">
+                    <ul>
+                      <li class="checkbox">
+                        <input type="checkbox" value="pad graprao">
+                        <span class="text-capitalize ml-2">pad graprao</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="pad priew wan">
+                        <span class="text-capitalize ml-2">pad priew wan</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="pad nam man hol">
+                        <span class="text-capitalize ml-2">pad nam man hol</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="pad med mamuang">
+                        <span class="text-capitalize ml-2">pad med mamuang</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="pad khing">
+                        <span class="text-capitalize ml-2">pad khing</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="pad pak (v)">
+                        <span class="text-capitalize ml-2">pad pak (v)</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="pad kratiem prik thai">
+                        <span class="text-capitalize ml-2">pad kratiem prik thai</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!---------------------- 2nd Collapse Bar --------------------------->
+          <div id="accordion-2" class="mb-2">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <h6 class="text-capitalize toggle-click-2" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="false" aria-controls="collapseTwo">
+                    <span>
+                      <img class="collapse-img-2" src="assets/icons/plus_collapse.png" alt="+" width="20">
+                    </span>
+                    <span class="ml-1">duck dishes</span>
+                  </h6>
+                </h5>
+              </div>
+
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-2">
+                <div class="card-body">
+                  <!----- Food Filtering Area with Checkboxes ----->
+                  <div class="checkbox-list">
+                    <ul>
+                      <li class="checkbox">
+                        <input type="checkbox" value="tamarind duck">
+                        <span class="text-capitalize ml-2">tamarind duck</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="pad kee maow duck">
+                        <span class="text-capitalize ml-2">pad kee maow duck</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--------------------- 3rd Collapse Bar ---------------------->
+          <div id="accordion-3" class="mb-2">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <h6 class="text-capitalize toggle-click-3" data-toggle="collapse" data-target="#collapseThree"
+                    aria-expanded="false" aria-controls="collapseThree">
+                    <span>
+                      <img class="collapse-img-3" src="assets/icons/plus_collapse.png" alt="+" width="20">
+                    </span>
+                    <span class="ml-1">noodle dishes</span>
+                  </h6>
+                </h5>
+              </div>
+
+              <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-3">
+                <div class="card-body">
+                  <!----- Food Filtering Area with Checkboxes ----->
+                  <div class="checkbox-list">
+                    <ul>
+                      <li class="checkbox">
+                        <input type="checkbox" value="pad thai">
+                        <span class="text-capitalize ml-2">pad thai</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="pad see-ew">
+                        <span class="text-capitalize ml-2">pad see-ew</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="pad kee maow">
+                        <span class="text-capitalize ml-2">pad kee maow</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="pad sen mee">
+                        <span class="text-capitalize ml-2">pad sen mee</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!------------------- 4th Collapse Bar ------------------------->
+          <div id="accordion-4" class="mb-2">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <h6 class="text-capitalize toggle-click-4" data-toggle="collapse" data-target="#collapseFour"
+                    aria-expanded="false" aria-controls="collapseFour">
+                    <span>
+                      <img class="collapse-img-4" src="assets/icons/plus_collapse.png" alt="+" width="20">
+                    </span>
+                    <span class="ml-1">Rice</span>
+                  </h6>
+                </h5>
+              </div>
+
+              <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-4">
+                <div class="card-body">
+                  <!----- Food Filtering Area with Checkboxes ----->
+                  <div class="checkbox-list">
+                    <ul>
+                      <li class="checkbox">
+                        <input type="checkbox" value="steamed jesmine rice">
+                        <span class="text-capitalize ml-2">steamed jesmine rice</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="egg fried rice">
+                        <span class="text-capitalize ml-2">egg fried rice</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="kao pad prik pao">
+                        <span class="text-capitalize ml-2">kao pad prik pao</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="kao pad supparot">
+                        <span class="text-capitalize ml-2">kao pad supparot</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!------------------- 5th Collapse Bar ------------------------->
+          <div id="accordion-5" class="mb-2">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <h6 class="text-capitalize toggle-click-5" data-toggle="collapse" data-target="#collapseFive"
+                    aria-expanded="false" aria-controls="collapseFive">
+                    <span>
+                      <img class="collapse-img-5" src="assets/icons/plus_collapse.png" alt="+" width="20">
+                    </span>
+                    <span class="ml-1">starters</span>
+                  </h6>
+                </h5>
+              </div>
+
+              <div id="collapseFive" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-5">
+                <div class="card-body">
+                  <!----- Food Filtering Area with Checkboxes ----->
+                  <div class="checkbox-list">
+                    <ul>
+                      <li class="checkbox">
+                        <input type="checkbox" value="chicken satay (n)">
+                        <span class="text-capitalize ml-2">chicken satay (n)</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="vegetable spring rolls">
+                        <span class="text-capitalize ml-2">vegetable spring rolls</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="thai fish cakes (n)">
+                        <span class="text-capitalize ml-2">thai fish cakes (n)</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="tempura prawns">
+                        <span class="text-capitalize ml-2">tempura prawns</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="prawns on toast">
+                        <span class="text-capitalize ml-2">prawns on toast</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="dumplings (dim sum)">
+                        <span class="text-capitalize ml-2">dumplings (dim sum)</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="spare ribs">
+                        <span class="text-capitalize ml-2">spare ribs</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="vagetable tempura (v)">
+                        <span class="text-capitalize ml-2">vagetable tempura (v)</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="mix platter (n)">
+                        <span class="text-capitalize ml-2">mix platter (n)</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!------------------- 6th Collapse Bar ------------------------->
+          <div id="accordion-6" class="mb-2">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <h6 class="text-capitalize toggle-click-6" data-toggle="collapse" data-target="#collapseSix"
+                    aria-expanded="false" aria-controls="collapseSix">
+                    <span>
+                      <img class="collapse-img-6" src="assets/icons/plus_collapse.png" alt="+" width="20">
+                    </span>
+                    <span class="ml-1">soups</span>
+                  </h6>
+                </h5>
+              </div>
+
+              <div id="collapseSix" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-6">
+                <div class="card-body">
+                  <!----- Food Filtering Area with Checkboxes ----->
+                  <div class="checkbox-list">
+                    <ul>
+                      <li class="checkbox">
+                        <input type="checkbox" value="tom yum">
+                        <span class="text-capitalize ml-2">tom yum</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="tom kha">
+                        <span class="text-capitalize ml-2">tom kha</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!------------------- 7th Collapse Bar ------------------------->
+          <div id="accordion-7" class="mb-2">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <h6 class="text-capitalize toggle-click-7" data-toggle="collapse" data-target="#collapseSeven"
+                    aria-expanded="false" aria-controls="collapseSeven">
+                    <span>
+                      <img class="collapse-img-7" src="assets/icons/plus_collapse.png" alt="+" width="20">
+                    </span>
+                    <span class="ml-1">thai salads</span>
+                  </h6>
+                </h5>
+              </div>
+
+              <div id="collapseSeven" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-7">
+                <div class="card-body">
+                  <!----- Food Filtering Area with Checkboxes ----->
+                  <div class="checkbox-list">
+                    <ul>
+                      <li class="checkbox">
+                        <input type="checkbox" value="larb gai">
+                        <span class="text-capitalize ml-2">larb gai</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="yum talay">
+                        <span class="text-capitalize ml-2">yum talay</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="yum nua">
+                        <span class="text-capitalize ml-2">yum nua</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!------------------- 8th Collapse Bar ------------------------->
+          <div id="accordion-8" class="mb-2">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <h6 class="text-capitalize toggle-click-8" data-toggle="collapse" data-target="#collapseEight"
+                    aria-expanded="false" aria-controls="collapseEight">
+                    <span>
+                      <img class="collapse-img-8" src="assets/icons/plus_collapse.png" alt="+" width="20">
+                    </span>
+                    <span class="ml-1">thai curries</span>
+                  </h6>
+                </h5>
+              </div>
+
+              <div id="collapseEight" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-8">
+                <div class="card-body">
+                  <!----- Food Filtering Area with Checkboxes ----->
+                  <div class="checkbox-list">
+                    <ul>
+                      <li class="checkbox">
+                        <input type="checkbox" value="green curry">
+                        <span class="text-capitalize ml-2">green curry</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="red curry">
+                        <span class="text-capitalize ml-2">red curry</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="kao pad prik pao">
+                        <span class="text-capitalize ml-2">kao pad prik pao</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="panang">
+                        <span class="text-capitalize ml-2">panang</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="duck curry">
+                        <span class="text-capitalize ml-2">duck curry</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="massaman (n)">
+                        <span class="text-capitalize ml-2">massaman (n)</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="jungle curry">
+                        <span class="text-capitalize ml-2">jungle curry</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!------------------- 9th Collapse Bar ------------------------->
+          <div id="accordion-9" class="mb-2">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <h6 class="text-capitalize toggle-click-9" data-toggle="collapse" data-target="#collapseNine"
+                    aria-expanded="false" aria-controls="collapseNine">
+                    <span>
+                      <img class="collapse-img-9" src="assets/icons/plus_collapse.png" alt="+" width="20">
+                    </span>
+                    <span class="ml-1">scafood and fish</span>
+                  </h6>
+                </h5>
+              </div>
+
+              <div id="collapseNine" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-9">
+                <div class="card-body">
+                  <!----- Food Filtering Area with Checkboxes ----->
+                  <div class="checkbox-list">
+                    <ul>
+                      <li class="checkbox">
+                        <input type="checkbox" value="pla priew wan">
+                        <span class="text-capitalize ml-2">pla priew wan</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="pla chu chee">
+                        <span class="text-capitalize ml-2">pla chu chee</span>
+                      </li>
+
+                      <li class="checkbox">
+                        <input type="checkbox" value="pad talay prik pao">
+                        <span class="text-capitalize ml-2">pad talay prik pao</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END of Left Side Bar -->
+
+        </div>
+        <!--END of The Left Side Section  -->
+
+
+
+        <!------------- Food List Area Here -------------->
+        <div class="grid-area col-md-9 col-sm-8 col-xs-12">
+          <!------- Food Grid Cards With Row & Cols --------->
+          <div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="assets/img/wideCard1.jpg" class="card-img-top img-thumbnail grid-card-img" alt="...">
+                <div class="card-body grid-body">
+                  <h5 class="card-title">Eagle Boys Village Plaza</h5>
+                  <ul class="list-body-mini-list">
+                    <li><a href="#">Pizza</a></li>
+                    <li><a href="#">American</a></li>
+                    <li><a href="#">Sandwiches</a></li>
+                    <li><a href="#">Pasta</a></li>
+                  </ul>
+                  <hr>
+                  <div class="d-grid grid-footer text-center">
+                    <div class="discount-title">
+                      <h5 class="text-danger">$25 / <del>$24</del></h5>
+                    </div>
+                    <div class="grid-footer-btn mt-2">
+                      <button class="btn-grid-order text-capitalize">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>add cart</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="assets/img/wideCard2.jpg" class="card-img-top img-thumbnail grid-card-img" alt="...">
+                <div class="card-body grid-body">
+                  <h5 class="card-title">Eagle Boys Village Plaza</h5>
+                  <ul class="list-body-mini-list">
+                    <li><a href="#">Pizza</a></li>
+                    <li><a href="#">American</a></li>
+                    <li><a href="#">Sandwiches</a></li>
+                    <li><a href="#">Pasta</a></li>
+                  </ul>
+                  <hr>
+                  <div class="d-grid grid-footer text-center">
+                    <div class="discount-title">
+                      <h5 class="text-danger">$10 / <del>$24</del></h5>
+                    </div>
+                    <div class="grid-footer-btn mt-2">
+                      <button class="btn-grid-order text-capitalize">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>add cart</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="assets/img/wideCard3.jpg" class="card-img-top img-thumbnail grid-card-img" alt="...">
+                <div class="card-body grid-body">
+                  <h5 class="card-title">Eagle Boys Village Plaza</h5>
+                  <ul class="list-body-mini-list">
+                    <li><a href="#">Pizza</a></li>
+                    <li><a href="#">American</a></li>
+                    <li><a href="#">Sandwiches</a></li>
+                    <li><a href="#">Pasta</a></li>
+                  </ul>
+                  <hr>
+                  <div class="d-grid grid-footer text-center">
+                    <div class="discount-title">
+                      <h5 class="text-danger">$45 / <del>$74</del></h5>
+                    </div>
+                    <div class="grid-footer-btn mt-2">
+                      <button class="btn-grid-order text-capitalize">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>add cart</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="assets/img/2.jpg" class="card-img-top img-thumbnail grid-card-img" alt="...">
+                <div class="card-body grid-body">
+                  <h5 class="card-title">Eagle Boys Village Plaza</h5>
+                  <ul class="list-body-mini-list">
+                    <li><a href="#">Pizza</a></li>
+                    <li><a href="#">American</a></li>
+                    <li><a href="#">Sandwiches</a></li>
+                    <li><a href="#">Pasta</a></li>
+                  </ul>
+                  <hr>
+                  <div class="d-grid grid-footer text-center">
+                    <div class="discount-title">
+                      <h5 class="text-danger">$15 / <del>$24</del></h5>
+                    </div>
+                    <div class="grid-footer-btn mt-2">
+                      <button class="btn-grid-order text-capitalize">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>add cart</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="assets/img/1.jpg" class="card-img-top img-thumbnail grid-card-img" alt="...">
+                <div class="card-body grid-body">
+                  <h5 class="card-title">Eagle Boys Village Plaza</h5>
+                  <ul class="list-body-mini-list">
+                    <li><a href="#">Pizza</a></li>
+                    <li><a href="#">American</a></li>
+                    <li><a href="#">Sandwiches</a></li>
+                    <li><a href="#">Pasta</a></li>
+                  </ul>
+                  <hr>
+                  <div class="d-grid grid-footer text-center">
+                    <div class="discount-title">
+                      <h5 class="text-danger">$33 / <del>$44</del></h5>
+                    </div>
+                    <div class="grid-footer-btn mt-2">
+                      <button class="btn-grid-order text-capitalize">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>add cart</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="assets/img/coverA.jpg" class="card-img-top img-thumbnail grid-card-img" alt="...">
+                <div class="card-body grid-body">
+                  <h5 class="card-title">Eagle Boys Village Plaza</h5>
+                  <ul class="list-body-mini-list">
+                    <li><a href="#">Pizza</a></li>
+                    <li><a href="#">American</a></li>
+                    <li><a href="#">Sandwiches</a></li>
+                    <li><a href="#">Pasta</a></li>
+                  </ul>
+                  <hr>
+                  <div class="d-grid grid-footer text-center">
+                    <div class="discount-title">
+                      <h5 class="text-danger">$50 / <del>$100</del></h5>
+                    </div>
+                    <div class="grid-footer-btn mt-2">
+                      <button class="btn-grid-order text-capitalize">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>add cart</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="assets/img/cover2.jpg" class="card-img-top img-thumbnail grid-card-img" alt="...">
+                <div class="card-body grid-body">
+                  <h5 class="card-title">Eagle Boys Village Plaza</h5>
+                  <ul class="list-body-mini-list">
+                    <li><a href="#">Pizza</a></li>
+                    <li><a href="#">American</a></li>
+                    <li><a href="#">Sandwiches</a></li>
+                    <li><a href="#">Pasta</a></li>
+                  </ul>
+                  <hr>
+                  <div class="d-grid grid-footer text-center">
+                    <div class="discount-title">
+                      <h5 class="text-danger">$120 / <del>$240</del></h5>
+                    </div>
+                    <div class="grid-footer-btn mt-2">
+                      <button class="btn-grid-order text-capitalize">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>add cart</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="assets/img/cover3.jpg" class="card-img-top img-thumbnail grid-card-img" alt="...">
+                <div class="card-body grid-body">
+                  <h5 class="card-title">Eagle Boys Village Plaza</h5>
+                  <ul class="list-body-mini-list">
+                    <li><a href="#">Pizza</a></li>
+                    <li><a href="#">American</a></li>
+                    <li><a href="#">Sandwiches</a></li>
+                    <li><a href="#">Pasta</a></li>
+                  </ul>
+                  <hr>
+                  <div class="d-grid grid-footer text-center">
+                    <div class="discount-title">
+                      <h5 class="text-danger">$15 / <del>$54</del></h5>
+                    </div>
+                    <div class="grid-footer-btn mt-2">
+                      <button class="btn-grid-order text-capitalize">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>add cart</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col mb-4">
+              <div class="card h-100">
+                <img src="assets/img/cover1.jpg" class="card-img-top img-thumbnail grid-card-img" alt="...">
+                <div class="card-body grid-body">
+                  <h5 class="card-title">Eagle Boys Village Plaza</h5>
+                  <ul class="list-body-mini-list">
+                    <li><a href="#">Pizza</a></li>
+                    <li><a href="#">American</a></li>
+                    <li><a href="#">Sandwiches</a></li>
+                    <li><a href="#">Pasta</a></li>
+                  </ul>
+                  <hr>
+                  <div class="d-grid grid-footer text-center">
+                    <div class="discount-title">
+                      <h5 class="text-danger">$150 / <del>$240</del></h5>
+                    </div>
+                    <div class="grid-footer-btn mt-2">
+                      <button class="btn-grid-order text-capitalize">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>add cart</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!------------- Page Pagination Bar ------------->
+          <div class="pagination" aria-label="...">
+            <ul class="pagination pagination-sm">
+              <li class="page-item active" aria-current="page">
+                <span class="page-link">
+                  1
+                  <span class="sr-only">(current)</span>
+                </span>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item"><a class="page-link" href="#">6</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-------------- FOOTER AREA ----------------->
+  <footer class="footer text-light">
+    <!---------- TOP black FOOTER -------->
+    <div id="upper-footer" class="p-5">
+      <div class="container">
+
+        <!-- Footers Top Menu -->
+        <div class="row mb-4">
+          <div class="col-md-12 text-center">
+            <ul class="footer-top-menu">
+              <li>
+                <a href="aboutUs.html">About</a>
+                <span class="ml-2 mr-2 line"> - </span>
+              </li>
+              <li>
+                <a href="termsPolicy.html">Refund Policy</a>
+                <span class="ml-2 mr-2 line"> - </span>
+              </li>
+              <li>
+                <a href="contactUs.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="border-bottom: 1px dotted gray;"></div>
+
+        <!-- Two Section -->
+        <!-- Address -->
+        <div class="row mb-2 footer-list-1st-heading mt-5">
+          <div class="col-md-12">
+            <h5 class="text-light text-capitalize">address :</h5>
+          </div>
+        </div>
+        <div class="row mb-4 footer-list-1st-row">
+          <div class="col-md-4 text-capitalize">
+            <ul>
+              <li>35 High street Cheshunt, Waltham Cross</li>
+              <li>EN80BS, UK.</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul>
+              <li>Phone: 01992 641133</li>
+              <li>E-mail: maithaikitchen@hotmail.com</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul>
+              <li>Company Registration Number: 12333551</li>
+              <li>VAT: 340075044</li>
+            </ul>
+          </div>
+        </div>
+        <br>
+        <div style="border-bottom: 1px dotted gray;"></div>
+
+        <!-- After Footers One Section -->
+        <div class="row mt-5 footer-list-2nd-row mb-5">
+          <div class="col-md-4 business-hour" id="time-table-bookmark">
+            <h5 class="text-capitalize mb-3">opening time:</h5>
+            <ul>
+              <li>
+                <span>Sunday - Saturday (Everyday)</span>
+              </li>
+              <li>
+                <span>Lunch Time</span>
+                <div class="dotted-dateline ml-3 mr-3"></div>
+                <span>12pm - 3pm</span>
+              </li>
+              <li>
+                <span>Dinner Time</span>
+                <div class="dotted-dateline ml-3 mr-3"></div>
+                <span>5pm - 10pm</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 business-hour" id="time-table-bookmark">
+            <h5 class="text-capitalize mb-3">delivery time:</h5>
+            <ul>
+              <li>
+                <span>Everyday</span>
+                <div class="dotted-dateline ml-3 mr-3"></div>
+                <span>5pm - 10pm</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- The Footers Business Card's  -->
+          <div class="col-md-4">
+            <h5 class="text-capitalize mb-3">Payment Methods:</h5>
+
+            <ul class="d-flex business-logo-section">
+              <li class="business-logo">
+                <img class="paypal" src="assets/logo/paypal.png" alt="">
+              </li>
+              <li class="business-logo">
+                <img class="visa" src="assets/logo/visa.png" alt="">
+              </li>
+              <li class="business-logo">
+                <img class="master" src="assets/logo/master.png" alt="">
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div style="border-bottom: 1px dotted gray;"></div>
+
+        <div class="row mt-5">
+          <div class="col-md-12 text-center">
+            <span class="text-muted">
+              <small>&copy; Copyright 2020, Mai Thai Kitchen. All Rights Reserved</small>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!------- BOTTOM tomato FOOTER -------->
+    <div id="bottom-footer" class="p-2">
+      <div class="container">
+        <div class="row">
+          <!-- Footer App Logo -->
+          <div class="col-md-4">
+            <div class="logo">
+              <img src="assets/logo/logo.png" alt="">
+            </div>
+          </div>
+
+          <!-- Footer SOCIAL ICONS -->
+          <div class="col-md-4 footer-social-icons" style="display: inline-flex; justify-content: center;">
+            <div class="d-flex mt-4">
+              <a href="https://www.facebook.com/mai1thaikitchen" class="ml-4">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+
+              <a href="https://www.instagram.com/maithaikitchencheshunt" class="ml-4">
+                <i class="fab fa-instagram"></i>
+              </a>
+
+              <a href="https://youtube.com/channel/UCDHzPwaAsL3CORkpLSf-JEQ" class="ml-4">
+                <i class="fab fa-youtube"></i>
+              </a>
+
+              <a href="" class="ml-4">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- QR-CODE Section -->
+          <div class="col-md-4 footer-qr-code" style="display: inline-flex; justify-content: flex-end;">
+            <img class="img img-fluid img-qr-code img-thumbnail" src="assets/logo/qr-code.png" alt="QR-CODE">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<!-- JS, Popper.js, and jQuery -->
+<!-- FontAwesome 5 -->
+<script src="/assets/fontAwesome/js/all.min.js"></script>
+<script src="/assets/fontAwesome/js/fontawesome.min.js"></script>
+
+<!-- Bootstrap jQuery (3.5.1) -->
+<script src="assets/bootstrap/jquery.min.js"></script>
+
+<!-- Bootstrap Popper.js (1.16.1) -->
+<script src="assets/bootstrap/popper.min.js"></script>
+
+<!-- Bootstrap bootstrap.min.js (4.5.2) -->
+<script src="assets/bootstrap/bootstrap.min.js"></script>
+
+<!-- Custom JS for FoodList DropDown CheckBar Filtering Items -->
+<!-- Also for Shopping-Carts Carousels Control -->
+<script src="js/collapse_button.js"></script>
+
+</html>

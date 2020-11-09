@@ -8,12 +8,14 @@
     <link rel="icon" href="assets/logo/logo.png">
 
     <!-- CSS only -->
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="assets/fontAwesome/css/all.min.css">
     <link rel="stylesheet" href="assets/fontAwesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/css/tether.min.css">
 
-    <!-- Style.css -->
+    <!-- Bootstrap (4.5.2) -->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+
+    <!-- Style.css, Custom CSS Here -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/gellarySlider.css">
 
@@ -34,9 +36,8 @@
                     <!-- Top Menu -->
                     <div class="topMenu">
                         <ul>
-                            <li><a href="#" class="text-capitalize">help</a></li>
-                            <li><a href="#" class="text-capitalize">request call back</a></li>
-                            <li><a href="loginRegister.html" class="text-capitalize">register</a></li>
+                            <li><a href="contactUs.html" class="text-capitalize">request call back</a></li>
+                            <li><a href="register.html" class="text-capitalize">register</a></li>
                             <li><a href="loginRegister.html" class="text-capitalize">login</a></li>
                         </ul>
                     </div>
@@ -51,16 +52,26 @@
                             <i class="fas fa-shopping-cart"></i>
                             <span class="badge badge-light">4</span>
                             <div class="carts-section text-uppercase">
-                                <span class="mr-2">total carts: <span class="text-danger font-weight-bold">4</span></span>
+                                <!-- <span class="mr-2">total carts: <span class="text-danger font-weight-bold">4</span></span>
                                 <div style="border-left: 2px solid tomato;"></div>
-                                <span>price amount: <span class="text-danger font-weight-bold">1200TK</span></span>
+                                <span>price amount: <span class="text-danger font-weight-bold">$1200</span></span> -->
+
+                                <span class="text-uppercase font-weight-bold">
+                                    total carts: <span class="text-danger font-weight-bold">4</span>
+                                    <span class="ml-2 mr-2"> | </span>
+                                    price amount: <span class="text-danger font-weight-bold">$1200</span>
+                                </span>
+
                             </div>
                         </div>
                         <!-- Clock for Opening and closing time -->
                         <div class="ml-3 buisness-hour">
                             <i class="far fa-clock"></i>
                             <div class="time-table">
-                                <span class="text-uppercase font-weight-bold">GET ON 5 DAYS A WEEK FROM 10.00 AM TO 6PM IST</span>
+                                <a href="#time-table-bookmark" class="bookmark-text">
+                                    <span class="text-uppercase font-weight-bold">opening time & delivery time
+                                        slot</span>
+                                </a>
                             </div>
                         </div>
 
@@ -69,18 +80,203 @@
 
                 <!-- QR-Code Section -->
                 <div class="qr-code">
-                    <img class="img img-thumbnail img-fluid" src="assets/logo/qr-code.png" alt="QR-CODE">
+                    <img class="img img-thumbnail img-qr-code img-fluid" src="assets/logo/qr-code.png" alt="QR-CODE">
                 </div>
             </div>
         </div>
     </header>
 
+
+
+
+    <!-----****** The Shopping Cart Drawer System... ******------>
+    <div class="shopping-cart sticky">
+        <!-- Close Icons Button -->
+        <div class="shoppingCartButton"></div>
+
+        <!-- Drawer Opening Button When Drawer will close this will appear -->
+        <!-- Showing Icon and Drawer opening Bar(When Drawer is Close) -->
+        <section class="stickyHeader sticky-open-btn">
+            <!-- Item Couter with Icon SVG -->
+            <div class="shopping-badget-items-counter">
+                <!-- The Shopping Bag Icon -->
+                <svg version="1.1" id="Calque_1" x="0px" y="0px" style="fill:#FDD670; stroke:#FDD670;" width="16px"
+                    height="24px" viewBox="0 0 100 160.13">
+                    <polygon points="11.052,154.666 21.987,143.115 35.409,154.666"></polygon>
+                    <path
+                        d="M83.055,36.599c-0.323-7.997-1.229-15.362-2.72-19.555c-2.273-6.396-5.49-7.737-7.789-7.737   c-6.796,0-13.674,11.599-16.489,25.689l-3.371-0.2l-0.19-0.012l-5.509,1.333c-0.058-9.911-1.01-17.577-2.849-22.747   c-2.273-6.394-5.49-7.737-7.788-7.737c-8.618,0-17.367,18.625-17.788,37.361l-13.79,3.336l0.18,1.731h-0.18v106.605l17.466-17.762   l18.592,17.762V48.06H9.886l42.845-10.764l2.862,0.171c-0.47,2.892-0.74,5.865-0.822,8.843l-8.954,1.75v106.605l48.777-10.655   V38.532l0.073-1.244L83.055,36.599z M36.35,8.124c2.709,0,4.453,3.307,5.441,6.081c1.779,5.01,2.69,12.589,2.711,22.513   l-23.429,5.667C21.663,23.304,30.499,8.124,36.35,8.124z M72.546,11.798c2.709,0,4.454,3.308,5.44,6.081   c1.396,3.926,2.252,10.927,2.571,18.572l-22.035-1.308C61.289,21.508,67.87,11.798,72.546,11.798z M58.062,37.612l22.581,1.34   c0.019,0.762,0.028,1.528,0.039,2.297l-23.404,4.571C57.375,42.986,57.637,40.234,58.062,37.612z M83.165,40.766   c-0.007-0.557-0.01-1.112-0.021-1.665l6.549,0.39L83.165,40.766z">
+                    </path>
+                </svg>
+                <p class="shopping-cart-items">
+                    <span class="mr-1">4</span>
+                    <span>ITEMS</span>
+                </p>
+            </div>
+            <!-- Shopping Badgets Bottom -->
+            <div class="total shopping-badget-total">
+                <span class="dollar">$</span>
+                <span class="price">1200</span>
+            </div>
+        </section>
+        <!--END of The Drawer Opening Button-->
+
+        <!-- Shopping Cart Header -->
+        <div class="cart-header d-flex">
+            <div class="left-header-item">
+                <!-- Shopping bag Icon -->
+                <svg class="mr-1" version="1.1" id="Calque_1" x="0px" y="0px"
+                    style="fill:#fff; stroke:#fff; margin-top: -1px;" width="20px" height="30px"
+                    viewBox="0 0 100 160.13">
+                    <polygon points="11.052,154.666 21.987,143.115 35.409,154.666"></polygon>
+                    <path
+                        d="M83.055,36.599c-0.323-7.997-1.229-15.362-2.72-19.555c-2.273-6.396-5.49-7.737-7.789-7.737   c-6.796,0-13.674,11.599-16.489,25.689l-3.371-0.2l-0.19-0.012l-5.509,1.333c-0.058-9.911-1.01-17.577-2.849-22.747   c-2.273-6.394-5.49-7.737-7.788-7.737c-8.618,0-17.367,18.625-17.788,37.361l-13.79,3.336l0.18,1.731h-0.18v106.605l17.466-17.762   l18.592,17.762V48.06H9.886l42.845-10.764l2.862,0.171c-0.47,2.892-0.74,5.865-0.822,8.843l-8.954,1.75v106.605l48.777-10.655   V38.532l0.073-1.244L83.055,36.599z M36.35,8.124c2.709,0,4.453,3.307,5.441,6.081c1.779,5.01,2.69,12.589,2.711,22.513   l-23.429,5.667C21.663,23.304,30.499,8.124,36.35,8.124z M72.546,11.798c2.709,0,4.454,3.308,5.44,6.081   c1.396,3.926,2.252,10.927,2.571,18.572l-22.035-1.308C61.289,21.508,67.87,11.798,72.546,11.798z M58.062,37.612l22.581,1.34   c0.019,0.762,0.028,1.528,0.039,2.297l-23.404,4.571C57.375,42.986,57.637,40.234,58.062,37.612z M83.165,40.766   c-0.007-0.557-0.01-1.112-0.021-1.665l6.549,0.39L83.165,40.766z">
+                    </path>
+                </svg>
+                <span class="mr-1 mt-2">4</span>
+                <span class="text-uppercase mt-2">items</span>
+            </div>
+
+            <div class="right-header-item">
+                <button class="shopping-car-close-btn">
+                    close
+                </button>
+            </div>
+        </div>
+        <!--END of Shopping-Cart Header-->
+
+        <!-- Shopping cart Content (When Bag Is Empty!) -->
+        <div class="cart-content-empty">
+            <div class="content-item-empty">
+                <img src="assets/logo/shopping-beg-1.png" alt="">
+
+                <div class="shopping-title-empty text-capitalize">
+                    <p class="text-muted">Your shopping bag is empty!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shopping cart Content/Body (When Bag Is Not-Empty!) -->
+        <!-- <div class="cart-content">
+            <div class="row content-title">
+                <div class="col-md-12 body-heading-title">
+                    <p>Your delivery items</p>
+                </div>
+            </div>
+
+            <div class="row content-title items-nav sticky-top">
+                <div class="col-md-3">Quantity</div>
+                <div class="col-md-3">Image</div>
+                <div class="col-md-3">Name</div>
+                <div class="col-md-3">Price</div>
+            </div>
+
+            <div class="row content-items-list">
+                <div class="col-md-3 delivery-counter">
+                    <button type="button" class="counter-left-btn">
+                        <span>
+                            < </span>
+                    </button>
+                    <span class="counter-num font-weight-bold">1</span>
+                    <button type="button" class="counter-right-btn">
+                        <span> > </span>
+                    </button>
+                </div>
+
+                <div class="col-md-3 delivery-img">
+                    <img src="assets/img/gellary/ma1.jpg" alt="maiThai-1">
+                </div>
+
+                <div class="col-md-3 delivery-name">
+                    <h6>Thai Italian Masala</h6>
+                </div>
+
+                <div class="col-md-3 delivery-price">
+                    <span class="text-danger font-weight-bold">$40</span>
+                    <span class="text-muted"><del>$70</del></span>
+                </div>
+            </div>
+
+            <div class="row content-items-list">
+                <div class="col-md-3 delivery-counter">
+                    <button type="button" class="counter-left-btn">
+                        <span> < </span>
+                    </button>
+                    <span class="counter-num">2</span>
+                    <button type="button" class="counter-right-btn">
+                        <span> > </span>
+                    </button>
+                </div>
+                <div class="col-md-3 delivery-img">
+                    <img src="assets/img/gellary/ma1.jpg" alt="maiThai-1">
+                </div>
+                <div class="col-md-3 delivery-name">
+                    <h6>Green Vagetable</h6>
+                </div>
+                <div class="col-md-3 delivery-price">
+                    <span class="text-danger font-weight-bold">$120</span>
+                    <span class="text-muted"><del>$150</del></span>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Shopping Cart Footer -->
+        <div class="cart-footer">
+            <!-- The Collapse Accordion -->
+            <div class="accordion shopping-special-code" id="accordionExample">
+                <div class="special-code-card">
+                    <div id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-block text-left toggle-special-code" type="button"
+                                data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                                aria-controls="collapseOne">
+                                <span class="special-code-arrow-up">
+                                    <i class="fa fa-chevron-circle-up mr-2" aria-hidden="true"></i>
+                                </span>
+                                <span class="special-code-arrow-down">
+                                    <i class="fa fa-chevron-circle-down mr-2" aria-hidden="false"></i>
+                                </span>
+                                <span class="special-code-title">Have a special code?</span>
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <form action="" method="" class="special-code-form">
+                                <input type="text" placeholder="Special Code" name="special-code" class="special-input">
+                                <input type="submit" name="special-go" value="Go" class="special-go">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---END of Accordion for Speicial Code Send-->
+
+            <!-- Place Order Footer -->
+            <div class="place-order-footer">
+                <a href="" class="btn btn-outline-danger text-capitalize">
+                    <span class="mr-2">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    </span>
+                    <span>place order</span>
+                </a>
+            </div>
+            <!-- END of Place-Order's Footer -->
+        </div>
+        <!--END of Shopping-Cart's Footer-->
+    </div>
+    <!--END of Shopping Cart Drawer-->
+
+
+
     <!-------------------- NAVBAR ----------------------->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <button class="navbar-toggler m-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+            <button class="navbar-toggler m-1" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto">
@@ -88,16 +284,16 @@
                         <a class="nav-link active-now" href="#">home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="aboutUs.html">about us</a>
+                        <a class="nav-link" href="foodOrder.html">food order</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="foodList.html">food list</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="foodGird.html">food grid</a>
+                        <a class="nav-link" href="foodPackage.html">food package</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="loginRegister.html">login & register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUs.html">about us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contactUs.html">contact us</a>
@@ -111,36 +307,151 @@
     </nav>
 
     <!------------- SECTION of Banners Page ----------------->
-    <section id="home-cover">
-        <div class="jumbotron">
-            <div class="dark-bg">
-                <div id="intro">
-                    <div id="intro-section" class="mb-4">
-                        <h1 class="intro-title text-uppercase mb-4">
-                            mai thai
-                            <br>
-                            <span>
-                <small class="small">kitchen</small>
-              </span>
-                        </h1>
-                        <h5 class="intro-info text-capitalize mb-3">find the best food, cafes & cuisine.</h5>
-                    </div>
+    <div id="homeCarouselIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#homeCarouselIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#homeCarouselIndicators" data-slide-to="1"></li>
+        </ol>
 
-                    <div class="search-food mb-5">
-                        <input type="text" placeholder="Find Your Choice!" class="form-control">
-                        <button type="submit" class="btn btn-danger btn-custom text-uppercase">
-            <i class="fas fa-search"></i>
-            <span> </span>
-            <span>Search</span>
-          </button>
-                    </div>
+        <!---------- All Sliders Carousel's Here! --------->
+        <div class="carousel-inner">
+            <!----------- The Carousels First Item here ------------->
+            <div class="carousel-item active">
+                <section id="home-cover">
+                    <div class="jumbotron">
+                        <div class="dark-bg">
+                            <div id="intro">
+                                <div id="intro-section" class="mb-4">
+                                    <h1 class="intro-title text-uppercase mb-4">
+                                        mai thai
+                                        <br>
+                                        <span>
+                                            <small class="small">kitchen</small>
+                                        </span>
+                                    </h1>
+                                    <h5 class="intro-info text-capitalize mb-3">find the best food, cafes & cuisine.
+                                    </h5>
+                                </div>
 
-                    <a href="#" class="about-btn mt-4">About The Restaurant</a>
-                    <a href="#" class="order-btn mt-4 ml-3">Order Food Online!</a>
-                </div>
+                                <!-- 1st Home Carousels Search bar -->
+                                <div class="search-food mb-5">
+                                    <input type="text" placeholder="Find Your Choice!" class="form-control">
+                                    <button type="submit" class="btn btn-danger btn-custom text-uppercase">
+                                        <i class="fas fa-search"></i>
+                                        <span> </span>
+                                        <span>Search</span>
+                                    </button>
+                                </div>
+
+                                <a href="aboutUs.html" class="about-btn mt-4">About The Restaurant</a>
+                                <a href="foodOrder.html" class="order-btn mt-4 ml-3">Order Food Online!</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-------- Carousels 2nd Item here -------->
+            <div class="carousel-item">
+                <section id="home-cover-2">
+                    <div class="jumbotron">
+                        <div class="dark-bg">
+                            <div id="intro">
+                                <div id="intro-section" class="mb-4">
+                                    <h1 class="intro-title home-slide-intro-2 mb-4"
+                                        style="font-weight: 500; font-size: 50px;">
+                                        <span style="font-weight: lighter;">
+                                            "Short of screaming-hot Thai food,
+                                        </span>
+                                        <span class="text-light" style="font-weight: bold;">
+                                            everything can be suitable for kids too"
+                                        </span>
+                                    </h1>
+                                </div>
+
+                                <a href="aboutUs.html" class="about-btn mt-4">About The Restaurant</a>
+                                <a href="foodOrder.html" class="order-btn mt-4 ml-3">Order Food Online!</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
-    </section>
+
+
+        <!-- Carousel's Arrow Buttons for Next & Previous -->
+        <a class="carousel-control-prev home-slide-prev" href="#homeCarouselIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next home-slide-next" href="#homeCarouselIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!---- END of The Banners Slider Section of Home page ---->
+
+
+    <!--------- The Search Collapse DropDown Bar For Home Carousel ------->
+    <ul class="search-dropdown-menu" style="display: none;">
+        <li class="search-item mt-2"><a href="#">
+                <div class="image">
+                    <img src="assets/img/card1.jpg" alt="card1" class="search-bar-image">
+                </div>
+                <div class="nameAndPrice">
+                    <div class="name">Big 8</div>
+                    <div class="price">$800.</div>
+                </div>
+            </a></li>
+        <hr>
+
+        <li class="search-item"><a href="#">
+                <div class="image">
+                    <img src="assets/img/card1.jpg" alt="card1" class="search-bar-image">
+                </div>
+
+                <div class="nameAndPrice">
+                    <div class="name">Pizza</div>
+                    <div class="price">$700.</div>
+                </div>
+            </a></li>
+        <hr>
+
+        <li class="search-item"><a href="#">
+                <div class="image">
+                    <img src="assets/img/card1.jpg" alt="card1" class="search-bar-image">
+                </div>
+
+                <div class="nameAndPrice">
+                    <div class="name">Fish Kabab</div>
+                    <div class="price">$430.</div>
+                </div>
+            </a></li>
+        <hr>
+
+        <li class="search-item"><a href="#">
+                <div class="image">
+                    <img src="assets/img/card1.jpg" alt="card1" class="search-bar-image">
+                </div>
+
+                <div class="nameAndPrice">
+                    <div class="name">Mutton Biriyani</div>
+                    <div class="price">$860.</div>
+                </div>
+            </a></li>
+        <hr>
+
+        <li class="search-item mb-2"><a href="#">
+                <div class="image">
+                    <img src="assets/img/card1.jpg" alt="card1" class="search-bar-image">
+                </div>
+
+                <div class="nameAndPrice">
+                    <div class="name">Masala Pasta</div>
+                    <div class="price">$600.</div>
+                </div>
+            </a></li>
+    </ul>
 
     <!---------------- Title Of Delivery and Others ShowCase ------------>
     <section class="jumbotron jumbo-one mt-0 mb-5">
@@ -152,7 +463,7 @@
                 </div>
                 <div class="col-md-3 col-jumbo-one">
                     <div class="rounded-icon"><i class="fas fa-weight"></i></div>
-                    <p>No Minimum Order</p>
+                    <p>Minimum order &#163;10</p>
                 </div>
                 <div class="col-md-3 col-jumbo-one">
                     <div class="rounded-icon"><i class="far fa-credit-card"></i></div>
@@ -175,11 +486,16 @@
                     <div class="card-body">
                         <h1 class="card-title text-capitalize m-4" style="color: tomato;">welcome to MAITHAI</h1>
                         <h6 class="card-subtitle mb-2">Get Best, Feel Happy!</h6>
-                        <p class="card-text text-muted" style="font-size: 13px; word-spacing: 2px; letter-spacing: 0.5px; ">Mai Thai Delivers Deliciously Authentic Thai Mai Kitchen & an atmosphere that is friendly and fun for the whole family. Our authentic Thai Mai Menu balances elements of sweet and sour, salt and spice to bring the best Thai Flavours
-                            to your Table. Prepared by experienced Thai Chefs, We offer a range of dishes from the classic Pad Thai to Sizzling Ginger Blue Cod.</p>
+                        <p class="card-text text-muted"
+                            style="font-size: 13px; word-spacing: 2px; letter-spacing: 0.5px; ">Mai Thai Delivers
+                            Deliciously Authentic Thai Mai Kitchen & an atmosphere that is friendly and fun for the
+                            whole family. Our authentic Thai Mai Menu balances elements of sweet and sour, salt and
+                            spice to bring the best Thai Flavours
+                            to your Table. Prepared by experienced Thai Chefs, We offer a range of dishes from the
+                            classic Pad Thai to Authentic Thai curries.</p>
 
-                        <a href="#" class="btn btn-custom m-4">
-                            <span class="text-uppercase text-light">more info</span>
+                        <a href="aboutUs.html" class="btn btn-custom m-4">
+                            <span class="text-uppercase">more info</span>
                         </a>
                     </div>
                 </div>
@@ -187,7 +503,7 @@
 
             <!-- Aside RightSide -->
             <aside class="col-md-6">
-                <img src="assets/img/cover3.jpg" alt="PIZZAAA" class="img img-fluid" style="min-height: 380px">
+                <img src="assets/img/mai.png" alt="PIZZAAA" class="img img-fluid" style="min-height: 380px">
             </aside>
         </div>
     </section>
@@ -197,21 +513,24 @@
     <!-------------- Food Content ----------------->
     <section class="container mt-5">
         <div class="text-center mb-4 d-block">
-            <h1 style="color: tomato; text-align: center;" class="text-shadow">Our Food Styles</h1>
-            <div class="underline mt-2" style="border-bottom: 4px solid tomato; width: 5rem; position: absolute; left: 50%; transform: translate(-50%, 0); "></div>
+            <h1 style="color: tomato; text-align: center;" class="text-shadow our-food-style-title">Our Food Styles</h1>
+            <div class="underline mt-2"
+                style="border-bottom: 4px solid tomato; width: 5rem; position: absolute; left: 50%; transform: translate(-50%, 0); ">
+            </div>
         </div>
 
         <!-- Top Sale Foods 1st ROW -->
         <div class="row mb-5 mt-5 top-sales-food">
             <div class="col-md-4">
-                <div class="card" style="width: 22rem;">
+                <div class="card special-food-card" style="width: 20rem;">
                     <div class="cart-top-banner"></div>
-                    <img src="assets/img/1.jpg" class="card-img-top cart-img" alt="...">
+                    <img src="assets/img/gellary/ma7.jpg" class="card-img-top cart-img food-style-cart" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-uppercase font-weight-bold">big 8</h5>
-                        <p class="text-danger mb-2 font-weight-bold">Tk 800.00</p>
+                        <p class="text-danger mb-2 font-weight-bold">$800.00</p>
                         <p class="text-muted mb-2">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos fugit blanditiis libero debitis!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos fugit blanditiis libero
+                            debitis!
                         </p>
                         <a href="#" class="btn btn-custom">
                             <i class="fas fa-plus-circle"></i>
@@ -222,14 +541,14 @@
             </div>
             <!-- COL -->
             <div class="col-md-4">
-                <div class="card" style="width: 22rem;">
+                <div class="card special-food-card" style="width: 20rem;">
                     <div class="cart-top-banner"></div>
-                    <img src="assets/img/cover2.jpg" class="card-img-top cart-img" alt="...">
+                    <img src="assets/img/gellary/ma8.jpg" class="card-img-top cart-img food-style-cart" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-uppercase font-weight-bold">triple treat meal</h5>
-                        <p class="text-danger mb-2 font-weight-bold">Tk 999.00</p>
+                        <p class="text-danger mb-2 font-weight-bold">$999.00</p>
                         <p class="text-muted mb-2">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum omnis id, ut cumque dolore rem quasi animi delectus.
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum omnis id, ut cumque.
                         </p>
                         <a href="#" class="btn btn-custom">
                             <i class="fas fa-plus-circle"></i>
@@ -240,14 +559,15 @@
             </div>
             <!-- COL -->
             <div class="col-md-4">
-                <div class="card" style="width: 22rem;">
+                <div class="card special-food-card" style="width: 20rem;">
                     <div class="cart-top-banner"></div>
-                    <img src="assets/img/cover1.jpg" class="card-img-top cart-img" alt="...">
+                    <img src="assets/img/gellary/ma9.jpg" class="card-img-top cart-img food-style-cart" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-uppercase font-weight-bold">Buddy Rice Combo</h5>
-                        <p class="text-danger mb-2 font-weight-bold">Tk 899.00</p>
+                        <p class="text-danger mb-2 font-weight-bold">$899.00</p>
                         <p class="text-muted mb-2">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque sapiente tenetur repellendus necessitatibus.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque sapiente tenetur repellendus
+                            necessitatibus.
                         </p>
                         <a href="#" class="btn btn-custom">
                             <i class="fas fa-plus-circle"></i>
@@ -261,14 +581,15 @@
         <!-- Top Sale Foods 2nd ROW -->
         <div class="row mb-5">
             <div class="col-md-4">
-                <div class="card" style="width: 22rem;">
+                <div class="card special-food-card" style="width: 20rem;">
                     <div class="cart-top-banner"></div>
-                    <img src="assets/img/2.jpg" class="card-img-top cart-img" alt="...">
+                    <img src="assets/img/gellary/ma10.jpg" class="card-img-top cart-img food-style-cart" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-uppercase font-weight-bold">Buddy Zinger Combo</h5>
-                        <p class="text-danger mb-2 font-weight-bold">Tk 800.00</p>
+                        <p class="text-danger mb-2 font-weight-bold">$800.00</p>
                         <p class="text-muted mb-2">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos fugit blanditiis libero debitis!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos fugit blanditiis libero
+                            debitis!
                         </p>
                         <a href="#" class="btn btn-custom">
                             <i class="fas fa-plus-circle"></i>
@@ -279,14 +600,14 @@
             </div>
             <!-- COL -->
             <div class="col-md-4">
-                <div class="card" style="width: 22rem;">
+                <div class="card special-food-card" style="width: 20rem;">
                     <div class="cart-top-banner"></div>
-                    <img src="assets/img/cover3.jpg" class="card-img-top cart-img" alt="...">
+                    <img src="assets/img/gellary/ma5.jpg" class="card-img-top cart-img food-style-cart" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-uppercase font-weight-bold">Zing N Fries Meal</h5>
-                        <p class="text-danger mb-2 font-weight-bold">Tk 999.00</p>
+                        <p class="text-danger mb-2 font-weight-bold">$999.00</p>
                         <p class="text-muted mb-2">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum omnis id, ut cumque dolore rem quasi animi delectus.
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum omnis id, ut cumque.
                         </p>
                         <a href="#" class="btn btn-custom">
                             <i class="fas fa-plus-circle"></i>
@@ -297,14 +618,15 @@
             </div>
             <!-- COL -->
             <div class="col-md-4">
-                <div class="card" style="width: 22rem;">
+                <div class="card special-food-card" style="width: 20rem;">
                     <div class="cart-top-banner"></div>
-                    <img src="assets/img/cover.jpg" class="card-img-top cart-img" alt="...">
+                    <img src="assets/img/gellary/ma6.jpg" class="card-img-top cart-img food-style-cart" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-uppercase font-weight-bold">Stay at Home Bucket</h5>
-                        <p class="text-danger mb-2 font-weight-bold">Tk 899.00</p>
+                        <p class="text-danger mb-2 font-weight-bold">$899.00</p>
                         <p class="text-muted mb-2">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque sapiente tenetur repellendus necessitatibus.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque sapiente tenetur repellendus
+                            necessitatibus.
                         </p>
                         <a href="#" class="btn btn-custom">
                             <i class="fas fa-plus-circle"></i>
@@ -318,14 +640,21 @@
     <hr>
 
     <!----------- FOOD OFFERS Tab ------------->
-    <section class="mt-5 mb-0">
-        <div id="carouselExampleControls" class="carousel slide container" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="row carousel-item active">
+    <section class="mt-5 mb-5">
+        <div class="text-center mb-5 d-block">
+            <h1 style="color: tomato; text-align: center;" class="text-shadow food-menu-title">Food Menu</h1>
+            <div class="underline mt-2"
+                style="border-bottom: 4px solid tomato; width: 5rem; position: absolute; left: 50%; transform: translate(-50%, 0); ">
+            </div>
+        </div>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner container">
+                <div class="row carousel-item food-menu-carousel active">
                     <div class="col-md-6 carousel-image">
-                        <img src="assets/img/offer.png" class="d-block img img-fluid img-offer food-image" alt="...">
+                        <img src="assets/img/gellary/ma8.jpg"
+                            class="d-block img img-fluid img-offer food-image img-thumbnail" alt="...">
                     </div>
-                    <div class="col-md-6 float-right text-dark indian-list">
+                    <div class="col-md-6 float-right text-dark food-menu-list">
                         <h1 class="text-uppercase display-2 text-shadow">Indian</h1>
 
                         <div class="d-flex offer-list">
@@ -347,11 +676,12 @@
                     </div>
                 </div>
                 <!-- Fast Food List -->
-                <div class="row carousel-item fast-food-row">
+                <div class="row carousel-item food-menu-carousel fast-food-row">
                     <div class="col-md-6 carousel-image">
-                        <img src="assets/img/offer3.png" class="d-block img img-fluid img-offer food-image" alt="...">
+                        <img src="assets/img/gellary/ma9.jpg"
+                            class="d-block img img-fluid img-offer food-image img-thumbnail" alt="...">
                     </div>
-                    <div class="col-md-6 float-right text-dark fast-list">
+                    <div class="col-md-6 float-right text-dark food-menu-list">
                         <h1 class="text-uppercase display-2 text-shadow">Fast</h1>
 
                         <div class="d-flex offer-list">
@@ -365,20 +695,49 @@
                             <ul class="list-group list-group-flush offer-list-ul">
                                 <li class="list-group-item">- kabab meet</li>
                                 <li class="list-group-item">- fish kabab</li>
-                                <li class="list-group-item">- thai</li>
                                 <li class="list-group-item">- malai kofta</li>
                                 <li class="list-group-item">- pizza</li>
+                                <li class="list-group-item">- tandoori</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <!-- Junk Food List -->
-                <div class="row carousel-item">
+                <div class="row carousel-item food-menu-carousel">
                     <div class="col-md-6 carousel-image">
-                        <img src="assets/img/offer2.png" class="d-block img img-fluid img-offer food-image" alt="...">
+                        <img src="assets/img/gellary/ma7.jpg"
+                            class="d-block img img-fluid img-offer food-image img-thumbnail" alt="...">
                     </div>
-                    <div class="col-md-6 float-right text-dark junk-list">
+                    <div class="col-md-6 float-right text-dark food-menu-list">
                         <h1 class="text-uppercase display-2 text-shadow">Thai</h1>
+
+                        <div class="d-flex offer-list">
+                            <ul class="list-group list-group-flush offer-list-ul">
+                                <li class="list-group-item">- veggie wrap</li>
+                                <li class="list-group-item">- karahi panner</li>
+                                <li class="list-group-item">- tandoori murgi</li>
+                                <li class="list-group-item">- mutton biriyani</li>
+                                <li class="list-group-item">- fish pakora</li>
+                            </ul>
+                            <ul class="list-group list-group-flush offer-list-ul">
+                                <li class="list-group-item">- malai kofta</li>
+                                <li class="list-group-item">- malai ice</li>
+                                <li class="list-group-item">- fish kabab</li>
+                                <li class="list-group-item">- malai kofta</li>
+                                <li class="list-group-item">- chiness</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chineese Food List -->
+                <div class="row carousel-item fast-food-row food-menu-carousel">
+                    <div class="col-md-6 carousel-image">
+                        <img src="assets/img/gellary/ma6.jpg"
+                            class="d-block img img-fluid img-offer food-image img-thumbnail" alt="...">
+                    </div>
+                    <div class="col-md-6 float-right text-dark food-menu-list">
+                        <h1 class="text-uppercase display-2 text-shadow">Chinese</h1>
 
                         <div class="d-flex offer-list">
                             <ul class="list-group list-group-flush offer-list-ul">
@@ -391,20 +750,50 @@
                             <ul class="list-group list-group-flush offer-list-ul">
                                 <li class="list-group-item">- kabab meet</li>
                                 <li class="list-group-item">- fish kabab</li>
-                                <li class="list-group-item">- thai</li>
                                 <li class="list-group-item">- malai kofta</li>
                                 <li class="list-group-item">- pizza</li>
+                                <li class="list-group-item">- tandoori</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Italian Food List -->
+                <div class="row carousel-item fast-food-row food-menu-carousel">
+                    <div class="col-md-6 carousel-image">
+                        <img src="assets/img/gellary/ma5.jpg"
+                            class="d-block img img-fluid img-offer food-image img-thumbnail" alt="...">
+                    </div>
+                    <div class="col-md-6 float-right text-dark food-menu-list">
+                        <h1 class="text-uppercase display-2 text-shadow">Italian</h1>
+
+                        <div class="d-flex offer-list">
+                            <ul class="list-group list-group-flush offer-list-ul">
+                                <li class="list-group-item">- veggie wrap</li>
+                                <li class="list-group-item">- karahi panner</li>
+                                <li class="list-group-item">- tandoori murgi</li>
+                                <li class="list-group-item">- mutton biriyani</li>
+                                <li class="list-group-item">- fish pakora</li>
+                            </ul>
+                            <ul class="list-group list-group-flush offer-list-ul">
+                                <li class="list-group-item">- kabab meet</li>
+                                <li class="list-group-item">- fish kabab</li>
+                                <li class="list-group-item">- malai kofta</li>
+                                <li class="list-group-item">- pizza</li>
+                                <li class="list-group-item">- tandoori</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- The Arrow Buttons For Next Previous -->
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <a class="ml-5 carousel-control-prev menu-btn" href="#carouselExampleControls" role="button"
+                data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <a class="mr-5 carousel-control-next menu-btn" href="#carouselExampleControls" role="button"
+                data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
@@ -424,41 +813,45 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="d-flex justify-content-center cards-group">
-                            <div class="card ml-4 special-card">
+                            <div class="card ml-2 mr-2 special-card">
                                 <!-- <img src="assets/img/card1.jpg" class="card-img-top card-img" alt="..."> -->
                                 <img src="assets/img/mai2.jpg" class="card-img-top card-img" alt="...">
                                 <div class="card-body">
                                     <h3 class="card-title">Food Paradise</h3>
-                                    <p class="card-text text-muted">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text text-muted">This is a wider card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit longer.</p>
                                     <h6 class="text-danger mt-2 font-weight-bold">About 20% Off</h6>
                                 </div>
                             </div>
 
-                            <div class="card ml-4 special-card">
+                            <div class="card ml-2 mr-2 special-card">
                                 <!-- <img src="assets/img/card2.jpg" class="card-img-top card-img" alt="..."> -->
                                 <img src="assets/img/mai3.jpg" class="card-img-top card-img" alt="...">
                                 <div class="card-body">
                                     <h3 class="card-title">Vanilla Food</h3>
-                                    <p class="card-text text-muted">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text text-muted">This is a wider card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit longer.</p>
                                     <h6 class="text-danger mt-2 font-weight-bold">About 20% Off</h6>
                                 </div>
                             </div>
 
-                            <div class="card ml-4 special-card">
+                            <div class="card ml-2 mr-2 special-card">
                                 <!-- <img src="assets/img/card3.jpg" class="card-img-top card-img" alt="..."> -->
                                 <img src="assets/img/mai4.jpg" class="card-img-top card-img" alt="...">
                                 <div class="card-body">
                                     <h3 class="card-title">Food Basera</h3>
-                                    <p class="card-text text-muted">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text text-muted">This is a wider card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit longer.</p>
                                     <h6 class="text-danger mt-2 font-weight-bold">About 50% Off</h6>
                                 </div>
                             </div>
-                            <div class="card ml-4 special-card">
+                            <div class="card ml-2 mr-2 special-card">
                                 <!-- <img src="assets/img/card4.jpg" class="card-img-top card-img" alt="..."> -->
                                 <img src="assets/img/mai5.jpg" class="card-img-top card-img" alt="...">
                                 <div class="card-body">
                                     <h3 class="card-title">Thai Food</h3>
-                                    <p class="card-text text-muted">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text text-muted">This is a wider card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit longer.</p>
                                     <h6 class="text-danger mt-2 font-weight-bold">About 30% Off</h6>
                                 </div>
                             </div>
@@ -467,40 +860,44 @@
                     <!-- Carousel Two -->
                     <div class="carousel-item">
                         <div class="d-flex justify-content-center cards-group">
-                            <div class="card ml-4 special-card">
+                            <div class="card ml-2 mr-2 special-card">
                                 <!-- <img src="assets/img/card5.jpg" class="card-img-top card-img" alt="..."> -->
                                 <img src="assets/img/mai6.jpg" class="card-img-top card-img" alt="...">
                                 <div class="card-body">
                                     <h3 class="card-title">Taj Mahal Food</h3>
-                                    <p class="card-text text-muted">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text text-muted">This is a wider card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit longer.</p>
                                     <h6 class="text-danger mt-2 font-weight-bold">About 20% Off</h6>
                                 </div>
                             </div>
 
-                            <div class="card ml-4 special-card">
+                            <div class="card ml-2 mr-2 special-card">
                                 <!-- <img src="assets/img/card6.jpg" class="card-img-top card-img" alt="..."> -->
                                 <img src="assets/img/mai5.jpg" class="card-img-top card-img" alt="...">
                                 <div class="card-body">
                                     <h3 class="card-title">Indian Biriyani</h3>
-                                    <p class="card-text text-muted">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text text-muted">This is a wider card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit longer.</p>
                                     <h6 class="text-danger mt-2 font-weight-bold">About 10% Off</h6>
                                 </div>
                             </div>
 
-                            <div class="card ml-4 special-card">
+                            <div class="card ml-2 mr-2 special-card">
                                 <!-- <img src="assets/img/kacchi.jpg" class="card-img-top card-img" alt="..."> -->
                                 <img src="assets/img/mai4.jpg" class="card-img-top card-img" alt="...">
                                 <div class="card-body">
                                     <h3 class="card-title">Green Bawarchi</h3>
-                                    <p class="card-text text-muted">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text text-muted">This is a wider card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit longer.</p>
                                     <h6 class="text-danger mt-2 font-weight-bold">About 20% Off</h6>
                                 </div>
                             </div>
-                            <div class="card ml-4 special-card">
-                                <img src="assets/img/food-basera.jpg" class="card-img-top card-img" alt="...">
+                            <div class="card ml-2 mr-2 special-card">
+                                <img src="assets/img/gellary/ma8.jpg" class="card-img-top card-img" alt="...">
                                 <div class="card-body">
                                     <h3 class="card-title">Chineese</h3>
-                                    <p class="card-text text-muted">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text text-muted">This is a wider card with supporting text below as a
+                                        natural lead-in to additional content. This content is a little bit longer.</p>
                                     <h6 class="text-danger mt-2 font-weight-bold">About 5% Off</h6>
                                 </div>
                             </div>
@@ -508,11 +905,13 @@
                     </div>
                 </div>
                 <!-- Carousel Buttons To Control -->
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <a class="carousel-control-prev offer-slide" href="#carouselExampleIndicators" role="button"
+                    data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <a class="carousel-control-next offer-slide" href="#carouselExampleIndicators" role="button"
+                    data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
@@ -526,9 +925,10 @@
             <!-- 1st Row -->
             <div class="row">
                 <div class="col-md-12 text-center mb-5 d-block">
-                    <h2 class="text-capitalize">contact us</h2>
+                    <h2 class="text-capitalize contact-us-title">contact us</h2>
                     <p class="text-capitalize">for any queries or concerns</p>
-                    <div class="underline mt-3 m-auto" style="border-bottom: 4px solid tomato; width: 5rem; padding-top: 15px;"></div>
+                    <div class="underline mt-3 m-auto"
+                        style="border-bottom: 4px solid tomato; width: 5rem; padding-top: 15px;"></div>
                 </div>
             </div>
             <!-- 2nd Row -->
@@ -539,7 +939,7 @@
                     </div>
                     <h6 class="font-weight-bold">Address</h6>
                     <p class="text-muted">
-                        37 High Street, Cheshunt Waltham Cross,EN80BS
+                        37 High street Cheshunt, Waltham Cross, EN80BS, UK
                     </p>
                 </div>
                 <div class="col-md-4 d-block contact-col">
@@ -548,7 +948,7 @@
                     </div>
                     <h6 class="font-weight-bold">Phone Number</h6>
                     <p class="text-muted">
-                        +880199 2641 133
+                        01992 641133
                     </p>
                 </div>
                 <div class="col-md-4 d-block contact-col">
@@ -568,60 +968,68 @@
 
     <!--------------- Gellary Section ---------------->
     <section class="jumbotron contact-jumbo mb-4">
-        <div class="container">
+        <div class="">
             <!-- 1st Row -->
             <div class="row">
                 <div class="col-md-12 text-center mb-5 d-block" style="margin-bottom: 0 !important">
-                    <h2 class="text-capitalize">Gallery</h2>
+                    <h2 class="text-capitalize gellary-title">Gallery</h2>
                     <p class="text-capitalize">check gallery for our most popular dishes</p>
-                    <div class="underline mt-3 m-auto" style="border-bottom: 4px solid tomato; width: 5rem; padding-top: 15px;"></div>
+                    <div class="underline mt-3 m-auto"
+                        style="border-bottom: 4px solid tomato; width: 5rem; padding-top: 15px;"></div>
                 </div>
             </div>
             <!-- 2nd Row  The Popular Gellary Section of here-->
-            <div class="row text-center">
+            <div class="row text-center" style="overflow: unset !important;">
                 <div class="slideGellary hi-slide" style="overflow: unset !important;">
-                    <div class="hi-prev "></div>
-                    <div class="hi-next "></div>
+                    <!-- Next & Previos Buttons -->
+                    <a class="hi-prev carousel-control-prev" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="hi-next carousel-control-next" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
 
                     <ul>
                         <li>
-                            <img src="assets/img/gellary/ma1.jpg" alt="Img 1" />
+                            <img class="img-fluid" src="assets/img/gellary/ma1.jpg" alt="Img 1" />
                         </li>
 
                         <li>
-                            <img src="assets/img/gellary/ma2.jpg" alt="Img 2" />
+                            <img class="img-fluid" src="assets/img/gellary/ma2.jpg" alt="Img 2" />
                         </li>
 
                         <li>
-                            <img src="assets/img/gellary/ma3.jpg" alt="Img 3" />
+                            <img class="img-fluid" src="assets/img/gellary/ma3.jpg" alt="Img 3" />
                         </li>
 
                         <li>
-                            <img src="assets/img/gellary/ma3.jpg" alt="Img 4" />
+                            <img class="img-fluid" src="assets/img/gellary/ma4.jpg" alt="Img 4" />
                         </li>
 
                         <li>
-                            <img src="assets/img/gellary/ma4.jpg" alt="Img 5" />
+                            <img class="img-fluid" src="assets/img/gellary/ma5.jpg" alt="Img 5" />
                         </li>
 
                         <li>
-                            <img src="assets/img/gellary/ma5.jpg" alt="Img 6" />
+                            <img class="img-fluid" src="assets/img/gellary/ma6.jpg" alt="Img 6" />
                         </li>
 
                         <li>
-                            <img src="assets/img/gellary/ma6.jpg" alt="Img 7" />
+                            <img class="img-fluid" src="assets/img/gellary/ma7.jpg" alt="Img 7" />
                         </li>
 
                         <li>
-                            <img src="assets/img/gellary/ma8.jpg" alt="Img 8" />
+                            <img class="img-fluid" src="assets/img/gellary/ma8.jpg" alt="Img 8" />
                         </li>
 
                         <li>
-                            <img src="assets/img/gellary/ma9.jpg" alt="Img 9" />
+                            <img class="img-fluid" src="assets/img/gellary/ma9.jpg" alt="Img 9" />
                         </li>
 
                         <li>
-                            <img src="assets/img/gellary/ma10.jpg" alt="Img 10" />
+                            <img class="img-fluid" src="assets/img/gellary/ma10.jpg" alt="Img 10" />
                         </li>
                     </ul>
                 </div>
@@ -645,15 +1053,21 @@
                 <div class="col-md-8 col-xs-12 col-md-push-4 ml-4">
                     <div class="mt-5 subcription-to-phone-only">
                         <h2 style="color: #ff6347;">The Best MAITHAI Delivery App!</h2>
-                        <h5 class="mt-4">Download our free iOS, Windows phone and Android App and order food online the fastest way possible.</h5>
+                        <h5 class="mt-4">Download our free iOS, Windows phone and Android App and order food online the
+                            fastest way possible.</h5>
 
                         <!-- Buttons For Android, Apple, Microsoft -->
                         <div class="d-flex mt-4">
-                            <a href="#"><img src="assets/logo/apple-badge.png" alt="Download on app store" class="img img-fluid"></a>
+                            <a href="https://apps.apple.com/in/app/mai-thai/id1524480953"><img
+                                    src="assets/logo/apple-badge.png" alt="Download on app store"
+                                    class="img img-fluid"></a>
 
-                            <a href="#" class="ml-4"><img src="assets/logo/google-play-badge.png" alt="Get it on Google Play" class="img img-fluid"></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.eposhybrid.maithai&gl=GB"
+                                class="ml-4"><img src="assets/logo/google-play-badge.png" alt="Get it on Google Play"
+                                    class="img img-fluid"></a>
 
-                            <a href="#" class="ml-4"><img src="assets/logo/windows-badge.png" alt="Download from windows phone store" class="img img-fluid"></a>
+                            <!-- <a href="#" class="ml-4"><img src="assets/logo/windows-badge.png"
+                                    alt="Download from windows phone store" class="img img-fluid"></a> -->
                         </div>
                     </div>
                 </div>
@@ -666,8 +1080,31 @@
         <!---------- TOP black FOOTER -------->
         <div id="upper-footer" class="p-5">
             <div class="container">
-                <!-- One Section -->
-                <div class="row mb-2 footer-list-1st-heading">
+
+                <!-- Footers Top Menu -->
+                <div class="row mb-4">
+                    <div class="col-md-12 text-center">
+                        <ul class="footer-top-menu">
+                            <li>
+                                <a href="aboutUs.html">About</a>
+                                <span class="ml-2 mr-2 line"> - </span>
+                            </li>
+                            <li>
+                                <a href="termsPolicy.html">Refund Policy</a>
+                                <span class="ml-2 mr-2 line"> - </span>
+                            </li>
+                            <li>
+                                <a href="contactUs.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="border-bottom: 1px dotted gray;"></div>
+
+                <!-- Two Section -->
+                <!-- Address -->
+                <div class="row mb-2 footer-list-1st-heading mt-5">
                     <div class="col-md-12">
                         <h5 class="text-light text-capitalize">address :</h5>
                     </div>
@@ -675,76 +1112,87 @@
                 <div class="row mb-4 footer-list-1st-row">
                     <div class="col-md-4 text-capitalize">
                         <ul>
-                            <li>28 Jackson Blvd Ste 1020 Chicago</li>
-                            <li>IL 60604-2340</li>
+                            <li>35 High street Cheshunt, Waltham Cross</li>
+                            <li>EN80BS, UK.</li>
                         </ul>
                     </div>
                     <div class="col-md-4">
                         <ul>
-                            <li>Freephone: +1-800-559-1234</li>
-                            <li>Telephone: +1-800-603-9874</li>
+                            <li>Phone: 01992 641133</li>
+                            <li>E-mail: maithaikitchen@hotmail.com</li>
                         </ul>
                     </div>
                     <div class="col-md-4">
                         <ul>
-                            <li>FAX: +1-800-999-9898</li>
-                            <li>E-mail: mail@maithai.com</li>
+                            <li>Company Registration Number: 12333551</li>
+                            <li>VAT: 340075044</li>
                         </ul>
                     </div>
                 </div>
                 <br>
-                <div style="border-bottom: 1px dotted gray; width: 90%;"></div>
+                <div style="border-bottom: 1px dotted gray;"></div>
 
                 <!-- After Footers One Section -->
-                <div class="row mt-5 footer-list-2nd-row">
-                    <div class="col-md-4">
-                        <h5 class="text-capitalize mb-3">popular foods</h5>
-                        <ul class="text-capitalize">
-                            <li><a href="" class="text-light">masala pasta</a></li>
-                            <li><a href="" class="text-light">veep pasta</a></li>
-                            <li><a href="" class="text-light">chicken barger</a></li>
-                            <li><a href="" class="text-light">chines fish fry</a></li>
-                            <li><a href="" class="text-light">dhaka kacchi</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h5 class="text-capitalize mb-3">top rated foods</h5>
-                        <ul class="text-capitalize">
-                            <li><a href="" class="text-light">chinese masala</a></li>
-                            <li>
-                                <a href="" class="text-light"></a>
-                            </li>
-                            <li><a href="" class="text-light">bread & masala</a></li>
-                            <li><a href="" class="text-light">milk cream pizza</a></li>
-                            <li><a href="" class="text-light">veep noodles</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 business-hour">
-                        <h5 class="text-capitalize mb-3">business hour</h5>
+                <div class="row mt-5 footer-list-2nd-row mb-5">
+                    <div class="col-md-4 business-hour" id="time-table-bookmark">
+                        <h5 class="text-capitalize mb-3">opening time:</h5>
                         <ul>
                             <li>
-                                <span>monday</span>
-                                <div class="dotted-dateline ml-3 mr-3"></div>
-                                <span>closed</span>
+                                <span>Sunday - Saturday (Everyday)</span>
                             </li>
                             <li>
-                                <span>tue - fri</span>
+                                <span>Lunch Time</span>
                                 <div class="dotted-dateline ml-3 mr-3"></div>
-                                <span>9am - 10pm</span>
+                                <span>12pm - 3pm</span>
                             </li>
                             <li>
-                                <span>sat - sun</span>
+                                <span>Dinner Time</span>
                                 <div class="dotted-dateline ml-3 mr-3"></div>
-                                <span>7am - 11pm</span>
-                            </li>
-                            <li>
-                                <span>holidays</span>
-                                <div class="dotted-dateline ml-3 mr-3"></div>
-                                <span>7am - 11pm</span>
+                                <span>5pm - 10pm</span>
                             </li>
                         </ul>
                     </div>
+
+                    <div class="col-md-4 business-hour" id="time-table-bookmark">
+                        <h5 class="text-capitalize mb-3">delivery time:</h5>
+                        <ul>
+                            <li>
+                                <span>Everyday</span>
+                                <div class="dotted-dateline ml-3 mr-3"></div>
+                                <span>5pm - 10pm</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- The Footers Business Card's  -->
+                    <div class="col-md-4">
+                        <h5 class="text-capitalize mb-3">Payment Methods:</h5>
+
+                        <ul class="d-flex business-logo-section">
+                            <li class="business-logo">
+                                <img class="paypal" src="assets/logo/paypal.png" alt="">
+                            </li>
+                            <li class="business-logo">
+                                <img class="visa" src="assets/logo/visa.png" alt="">
+                            </li>
+                            <li class="business-logo">
+                                <img class="master" src="assets/logo/master.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
+
+                <div style="border-bottom: 1px dotted gray;"></div>
+
+                <div class="row mt-5">
+                    <div class="col-md-12 text-center">
+                        <span class="text-muted">
+                            <small>&copy; Copyright 2020, Mai Thai Kitchen. All Rights Reserved</small>
+                        </span>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -762,27 +1210,28 @@
                     <!-- Footer SOCIAL ICONS -->
                     <div class="col-md-4 footer-social-icons" style="display: inline-flex; justify-content: center;">
                         <div class="d-flex mt-4">
-                            <a href="" class="ml-4">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-
-                            <a href="" class="ml-4">
+                            <a href="https://www.facebook.com/mai1thaikitchen" class="ml-4">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
 
-                            <a href="" class="ml-4">
+                            <a href="https://www.instagram.com/maithaikitchencheshunt" class="ml-4">
                                 <i class="fab fa-instagram"></i>
                             </a>
 
-                            <a href="" class="ml-4">
+                            <a href="https://youtube.com/channel/UCDHzPwaAsL3CORkpLSf-JEQ" class="ml-4">
                                 <i class="fab fa-youtube"></i>
+                            </a>
+
+                            <a href="" class="ml-4">
+                                <i class="fab fa-twitter"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- QR-CODE Section -->
                     <div class="col-md-4 footer-qr-code" style="display: inline-flex; justify-content: flex-end;">
-                        <img class="img img-fluid img-thumbnail" src="assets/logo/qr-code.png" alt="QR-CODE">
+                        <img class="img img-fluid img-qr-code img-thumbnail" src="assets/logo/qr-code.png"
+                            alt="QR-CODE">
                     </div>
                 </div>
             </div>
@@ -791,18 +1240,30 @@
 </body>
 
 <!-- JS, Popper.js, and jQuery -->
+<!-- FontAwesome 5 -->
 <script src="/assets/fontAwesome/js/all.min.js"></script>
 <script src="/assets/fontAwesome/js/fontawesome.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<!-- Bootstrap jQuery (3.5.1) -->
+<script src="assets/bootstrap/jquery.min.js"></script>
+
+<!-- Bootstrap Popper.js (1.16.1) -->
+<script src="assets/bootstrap/popper.min.js"></script>
+
+<!-- Bootstrap bootstrap.min.js (4.5.2) -->
+<script src="assets/bootstrap/bootstrap.min.js"></script>
 
 <!--For Gellary Sliders Animation With JQuery-->
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!-- jQuery (1.12.4) for Gellary Animation this version is required -->
+<script src="assets/bootstrap/jqueryv2.min.js"></script>
+
+<!-- Gellary Sliders Custom JQuery File -->
 <script type="text/javascript" src="js/jquery.hislide.js"></script>
 <script>
     $('.slideGellary').hiSlide();
 </script>
+
+<!-- Shopping-Cart's Collapse -->
+<script src="js/collapse_button.js"></script>
 
 </html>

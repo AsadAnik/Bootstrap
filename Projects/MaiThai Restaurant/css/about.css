@@ -1,6 +1,22 @@
 /**********CSS FOR ABOUT US PAGE***************/
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
+
+/*** Form Style When Focus-In ***/
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #f3d1cb;
+    outline: 0;
+    box-shadow: none;
+}
+
+/**Common Font Color On headline for content text**/
+.headline-p{
+    color: #cf3d27;
+    /* font-family: 'Quicksand', sans-serif; */
+}
+
 section#about-cover .jumbotron{
     background: url('../assets/img/aboutUsCover.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -19,7 +35,7 @@ div.about-text-section div.about-cover{
 }
 
 /********ABOut Content********/
-section#about-content h1{   
+section#about-content h1, h3{   
     color: #cf3d27;
     font-weight: lighter;
     font-family: 'Quicksand', sans-serif;
@@ -27,6 +43,7 @@ section#about-content h1{
 section#about-content p{
     padding: 0 10px;
     font-size: 14px;
+    font-weight: lighter;
 }
 
 /*******About Content 2nd*********/
@@ -76,9 +93,11 @@ section#about-founders div.row div.underline-hr{
 
 /**-----------Animation with Image Hover-------------**/
 section#about-founders .image{
-	width: 200px;
-    height: 200px;
-    border-radius: 100%;
+	/* width: 200px;
+    max-height: 250px; */
+    width: 280px;
+    max-height: 280px;
+    border-radius: 0.5rem;
 	overflow: hidden;
 	cursor: pointer;
 }
@@ -88,9 +107,9 @@ section#about-founders .image-content {
     top: 0px;
     /* left: -13px; */
     /* width: 100%; */
-    height: 200px;
+    height: 250px;
     width: 200px;
-    border-radius: 100%;
+    border-radius: 0;
     /* padding: 2px; */
     box-sizing: border-box;
 }
@@ -150,6 +169,20 @@ section#about-founders .image-content::before {
 section#about-founders .image-content:hover::before{
 	height: 140px;
 }
+button.btn.btn-lg.text-light.text-uppercase {
+    background: rgb(255, 99, 71);
+    border: 1px solid;
+}
+button.btn.btn-lg.text-light.text-uppercas:hover{
+    background: none;
+    border: 1px solid  rgb(255, 99, 71);
+}
+
+/** Customized Some CSS of Bootstrap **/
+.btn.focus, .btn:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
 
 /**Media Queries for Mobile View**/
 /**iPhone 6,7,8 to Uppper Screens Confortable**/
@@ -171,11 +204,25 @@ section#about-founders .image-content:hover::before{
     section#about-content-2nd img{
         margin-top: 2rem;
     }
-    section#about-founders h1{
+    section#about-founders h1, h3{
         font-size: 2rem;
     }
-    section#about-content h1{
-        font-size: 3rem;
+    section#about-content h1, h3{
+        font-size: 2rem;
+    }
+    div.col-md-4{
+        display: grid;
+        justify-items: center;
+    }
+    section#about-founders div.row h5{
+        text-align: center;
+    }
+    
+    section#about-founders div.row p{
+        text-align: center;
+    }
+    section#about-founders div.row p.text-body-muted{
+        margin-top: 1rem;
     }
     section#about-founders div.col-md-3{
         padding: 0;
@@ -188,4 +235,24 @@ section#about-founders .image-content:hover::before{
         margin: auto;
     }
 
+    .contact-title{
+        font-size: 25px;
+    }
+
+    section#about-content-2nd ul li{
+        font-size: 12px;
+    }
+
+    section#about-content p{
+        font-size: 12px;
+    }
+    .founders-some-talk-text{
+        font-size: 12px;
+    }
+}
+
+/**For Google Map APi in website**/
+/**Fixed Viewing Of The Gooogle Map**/
+div{
+    overflow: unset;
 }

@@ -1,6 +1,13 @@
 /************TERMS & POLICY***********/
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
+
+/**Common Font Color On headline for content text**/
+.headline-p{
+    color: #cf3d27;
+    /* font-family: 'Quicksand', sans-serif; */
+}
+
 section#about-cover .jumbotron{
     background: url('../assets/img/aboutUsCover.jpg') no-repeat center center fixed;
     background-size: cover;

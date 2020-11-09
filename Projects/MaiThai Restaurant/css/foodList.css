@@ -22,6 +22,12 @@ section.food-list-home-banner .dark-bg {
     padding: 0 40px;
     box-sizing: border-box;
 }
+
+.search-dropdown-menu{
+    transform: translate(-64%, -24.3rem);
+}
+
+
 section#food-list div.food-list-header h2{
     color: tomato;
 }
@@ -32,18 +38,112 @@ section#food-list div.food-list-body div.select-input select{
     border: none;
     background: none;
     font-size: 15px;
+}
+section#food-list div.food-list-body div.select-input select{
     width: 100%;
 }
+
 section#food-list div.food-list-body input[type="text"]{
     width: 190px;
 }
-section#food-list div.food-list-body button{
-    width: 20px;
+section#food-list div.food-list-body button.btn-list-order{
+    width: 100px;
     padding-left: 10px;
+    Padding-right: 10px;
 }
 div.search-input,
 section#food-list div.food-list-body div.select-input{
     width: 250px !important;
+}
+
+/*****The Parent Menu Collapse****/
+div#accordion .card-header,
+div#accordion-2 .card-header,
+div#accordion-3 .card-header,
+div#accordion-4 .card-header,
+div#accordion-5 .card-header,
+div#accordion-6 .card-header,
+div#accordion-7 .card-header,
+div#accordion-8 .card-header,
+div#accordion-9 .card-header{
+    /* padding: 0 !important; */
+    margin-bottom: 0;
+    /* background: rgb(206 171 120); */
+    background: rgb(175,112,21);
+    background: linear-gradient(90deg, rgba(175,112,21,1) 0%, rgba(219,183,129,1) 55%, rgba(242,156,30,1) 100%);
+    border: 0 !important;
+    color: #fff;
+}
+div#accordion .card-header.food-package,
+div#accordion-2 .card-header.food-package,
+div#accordion-3 .card-header.food-package,
+div#accordion-4 .card-header.food-package,
+div#accordion-5 .card-header.food-package,
+div#accordion-6 .card-header.food-package,
+div#accordion-7 .card-header.food-package,
+div#accordion-8 .card-header.food-package,
+div#accordion-9 .card-header.food-package{
+    /* padding: 0 !important; */
+    margin-bottom: 0;
+    background: rgb(210 36 42);
+    border: 0 !important;
+    color: #fff;
+}
+
+div#accordion .card,
+div#accordion-2 .card,
+div#accordion-3 .card,
+div#accordion-4 .card,
+div#accordion-5 .card,
+div#accordion-6 .card,
+div#accordion-7 .card,
+div#accordion-8 .card,
+div#accordion-9 .card{
+    border: 0 !important;
+}
+div#accordion h6.text-capitalize,
+div#accordion-2 h6.text-capitalize,
+div#accordion-3 h6.text-capitalize,
+div#accordion-4 h6.text-capitalize,
+div#accordion-5 h6.text-capitalize,
+div#accordion-6 h6.text-capitalize,
+div#accordion-7 h6.text-capitalize,
+div#accordion-8 h6.text-capitalize,
+div#accordion-9 h6.text-capitalize{
+    cursor: default;
+    font-weight: bold;
+    font-size: 18px;
+}
+div#accordion img,
+div#accordion-2 img,
+div#accordion-3 img,
+div#accordion-4 img,
+div#accordion-5 img,
+div#accordion-6 img,
+div#accordion-7 img,
+div#accordion-8 img,
+div#accordion-9 img{
+    cursor: pointer;
+}
+
+div#accordion .card-body,
+div#accordion-2 .card-body,
+div#accordion-3 .card-body,
+div#accordion-4 .card-body,
+div#accordion-5 .card-body,
+div#accordion-6 .card-body,
+div#accordion-7 .card-body,
+div#accordion-8 .card-body,
+div#accordion-9 .card-body{
+    padding: 5px;
+    padding-bottom: 0;
+}
+
+/** Button of search in left Side Aside Section **/
+button.btn-food-search.left-side{
+    width: 20px;
+    padding-left: 10px;
+    Padding-right: 20px;
 }
 
 /**----Checkbox Of Filtering----**/
@@ -51,8 +151,17 @@ div.checkbox-list h6{
     font-size: 18px;
 }
 div.checkbox-list li span{
-    font-size: 16px;
+    font-size: 15px;
     letter-spacing: 0.5px;
+    font-weight: bold;
+}
+div.checkbox-list li.checkbox{
+    /* margin-left: 1rem; */
+    list-style: none;
+    background: linear-gradient(90deg, rgba(175,112,21,1) 0%, rgba(219,183,129,1) 55%, rgba(242,156,30,1) 100%);
+    color: #fff;
+    margin-bottom: 5px;
+    padding: 10px;
 }
 
 /****----Right Sides List Card----****/
@@ -75,6 +184,12 @@ div.list-area div.list-body ul li a{
 }
 div.list-area div.list-body ul li:first-child{
     padding: 0;
+}
+
+/********* Foood Package List Image Size ******/
+.list-img img {
+    width: 80px;
+    height: 80px;
 }
 
 /*The LIst Footer*/
@@ -155,14 +270,31 @@ div.grid-area div.grid-footer button.btn-grid-order:active{
     max-height: 150px;
 }
 
+/**Filter Items section Left Aside**/
+div.left-aside.filter-item{
+    background: rgb(210 36 42);
+    padding-top: 1rem;
+    border-radius: 5px;
+}
+div.filter-item-food-package{
+    background: rgb(175,112,21);
+    background: linear-gradient(90deg, rgba(175,112,21,1) 0%, rgba(219,183,129,1) 55%, rgba(242,156,30,1) 100%);
+    padding-top: 1rem;
+    border-radius: 5px;
+}
+
+
 /**The Media Quries for Mobile View**/
 /**iPhone 6,7,8 and Upper Screen Confortable**/
 @media only screen and (max-width: 720px){
     div#intro-section .intro-title{
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     section.food-list-home-banner{
-        max-height: 48vh;
+        max-height: 44vh;
+    }
+    section.food-list-home-banner .dark-bg {
+        top: 30% !important;
     }
     .checkbox-list.mt-3{
         margin-bottom: 3rem;
@@ -206,5 +338,57 @@ div.grid-area div.grid-footer button.btn-grid-order:active{
     }
     h3.text-capitalize.text-danger {
         font-size: 20px;
+    }
+    
+    .search-dropdown-menu {
+        top: 54rem !important;
+        left: 50rem !important;
+        transform: translate(-47.5rem, -22rem) !important;
+        /* width: 88.8% !important; */
+    }
+
+    /** Grid Area Filter Options For Mobile View **/
+    div.filter-item{
+        margin-bottom: 2rem;
+    }
+    .grid-card-img {
+        max-height: 250px;
+    }
+    .filter-item-food-package {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+    }
+    .filter-item.left-aside {
+        padding-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .search-dropdown-menu{
+        transform: translate(-64%, -25.8rem);
+    }
+}
+
+/****** iPhone 6/7/8 or 5/SE 1st Gen/2nd Gen *****/
+@media only screen and (max-width: 360px){
+    section.food-list-home-banner{
+        max-height: 55vh;
+    }
+}
+
+/*****Galaxy Fold New Smallest Screen Ever****/
+@media only screen and (max-width: 280px){
+    .search-dropdown-menu{
+        transform: translate(-47.5rem, -21rem) !important;
+    }
+}
+
+
+@media only screen and (max-width: 1366px){
+    section.food-list-home-banner .dark-bg{
+        top: 25%;
+    }
+    .search-dropdown-menu {
+        transform: translate(-64%, -27.3rem);
     }
 }

@@ -27,16 +27,31 @@ ul, li, a, h1, h2, h3, h4, h5, h6, p, span{
     border-radius: 0 !important;
 }
 /**-----------BUTTON----------**/
-.btn-custom{
+.btn-custom {
     font-size: 18px;
     border-radius: 0 !important;
-    margin-bottom: 4px;
+    margin-bottom: 5.5px;
     background: rgb(255, 99, 71) !important;
     color: #fff;
+    height: 43px;
+    border: 2px solid tomato;
 }
+.btn-custom:hover{
+    background: none !important;
+    border: 2px solid tomato;
+}
+a.bookmark-text{
+    text-decoration: none;
+    color: #333;
+}
+a.bookmark-text:hover{
+    text-decoration: none;
+    color: rgb(255, 99, 71);
+}
+
 /**--------Cart Styles--------**/
 .cart-img{
-    height: 220px;
+    height: 300px;
 }
 .card-img{
     height: 280px;
@@ -46,11 +61,15 @@ ul, li, a, h1, h2, h3, h4, h5, h6, p, span{
     width: 25px;
     position: absolute;
     background: tomato;
-    left: 20px;
+    left: 17rem;
+    float: right;
     box-shadow: 5px 5px 20px;
 }
 .card-title{
     font-family: 'Baloo 2', cursive;
+}
+h3.card-title {
+    color: tomato;
 }
 /**------Text Shadow-------**/
 .text-shadow{
@@ -64,6 +83,11 @@ span.badge-light{
     border-radius: 100%;
 }
 
+/******------- QR-CODE ------********/
+.img-qr-code{
+    padding: 0;
+}
+
 /****************Customize the CSS**************/
 header{
     background: rgb(210, 35, 42);
@@ -71,6 +95,7 @@ header{
 }
 header img{
     width: 80px;
+    height: 80px;
 }
 
 .leftHeaderItem{
@@ -115,7 +140,10 @@ header img{
 }
 .top-contact>div.phone-num-bar>.fa-phone-alt,
 .top-contact>div.cart-bar>.fa-shopping-cart,
-.top-contact>div.buisness-hour>.fa-clock{
+.top-contact>div.buisness-hour>.fa-clock,
+svg.svg-inline--fa.fa-phone-alt.fa-w-16.icon,
+svg.svg-inline--fa.fa-shopping-cart.fa-w-18,
+svg.svg-inline--fa.fa-clock.fa-w-16{
     color: #d2232a;
     background: #fff;
     padding: 10px;
@@ -129,6 +157,7 @@ header img{
     line-height: 20px;
     cursor: pointer;
     transition: 0.5s;
+    margin-right: 3px;
 }
 .top-contact>div.phone-num-bar>.fa-phone-alt:hover,
 .top-contact>div.cart-bar>.fa-shopping-cart:hover,
@@ -140,7 +169,7 @@ div.num, div.carts-section, div.time-table{
     cursor: pointer;
     color: darkslategray;
     background: #fff;
-    padding: 5px 10px;
+    padding: 7px 10px;
     border-radius: 20px;
     border: 2px solid tomato;
     font-size: 14px;
@@ -163,9 +192,20 @@ button.btn-custom-outline:hover{
     color: #fff;
 }
 
+/***New Added Here to solve problem***/
+.phone-num-bar, .cart-bar, .buisness-hour{
+    height: 40px;
+    display: inline-flex;
+}
+span.badge.badge-light {
+    height: 20px;
+    width: 20px;
+}
+
+
 /**------HOver the Carts Section----**/
 div.cart-bar:hover > div.cart-section{
-    display: inline-flex;
+    display: inline-block;
 }
 
 /**--------Cart Bedges Hover Effect-------**/
@@ -198,9 +238,305 @@ nav li.nav-item .active-now{
     background: rgb(210, 35, 42);
 }
 
+/****------- Shopping Cart Opening Bar --------****/
+section.stickyHeader{
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    width: 75px;
+    max-height: 100px;
+    background: #F5FCEB;
+    right: 0;
+    top: calc(110px + 30%);
+    box-shadow: 0 0 16px -1px rgba(0, 0, 0, .75);
+    display: block;
+    transition: .1s ease-in-out;
+    overflow: unset;
+    opacity: .8;
+}
+section.stickyHeader:hover{
+    opacity: 1;
+}
+.shopping-badget-items-counter {
+    display: grid;
+    justify-items: center;
+    background: rgb(210, 35, 42);
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+
+.shopping-badget-total {
+    text-align: center;
+    color: rgb(210, 35, 42);
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+
+p.shopping-cart-items {
+    font-size: 14px;
+}
+
+/******---------- shopping cart/bag CSS -----------******/
+div.shopping-cart{
+    position: fixed;
+    height: 100%;
+    width: 500px;
+    background: white;
+    box-sizing: border-box;
+    box-shadow: -2px 0 12px 0 rgba(143,143,143,.38);
+    transition: all 300ms;
+    z-index: 2000;
+    top: 0;
+    right: -50rem;
+    overflow: unset;
+}
+
+/**-- Shopping Cart Header --**/
+div.cart-header{
+    background: rgb(175,112,21);
+    background: linear-gradient(90deg, rgba(175,112,21,1) 0%, rgba(219,183,129,1) 55%, rgba(242,156,30,1) 100%);
+    margin: 0;
+    padding: 1rem;
+    color: #fff;
+    box-shadow: 0px 1px 3px #000000c4;
+    height: 60px;
+}
+div.left-header-item{
+    float: left;
+}
+div.left-header-item i{
+    font-size: 23px;
+}
+div.right-header-item{
+   position: absolute;
+   right: 1rem;
+}
+
+/** Shopping Cart Headers Close Button **/
+.shopping-car-close-btn{
+    background: orangered;
+    outline: 0;
+    border: 0;
+    color: #fff;
+    border-radius: 5px;
+    border: 2px solid tomato;
+}
+
+/*****-- Shopping Cart Arrow Close Button --*****/
+.shoppingCartButton {
+    cursor: pointer;
+    position: absolute;
+    left: -16px;
+    top: 45%;
+    margin: auto;
+    height: 70px;
+    width: 16px;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    color: #fff;
+    background-color:tomato;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.shoppingCartButton:before {
+    content: "";
+    width: 15px;
+    height: 4px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    -ms-transform: rotate(65deg);
+    -webkit-transform: rotate(65deg);
+    -moz-transform: rotate(65deg);
+    -o-transform: rotate(65deg);
+    transform: rotate(65deg);
+    margin-top: 26px;
+}
+
+.shoppingCartButton:after {
+    content: "";
+    width: 15px;
+    height: 4px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    -ms-transform: rotate(-65deg);
+    -webkit-transform: rotate(-65deg);
+    -moz-transform: rotate(-65deg);
+    -o-transform: rotate(-65deg);
+    transform: rotate(-65deg);
+    margin-top: 38px;
+}
+
+/**-- Shopping Cart Content/Body --**/
+/* (2) Section of this Shpping Cart Body */
+/* 1. Empty Shopping Bag */
+div.cart-content-empty{
+    padding: 1rem;
+    display: grid;
+    justify-items: center;
+}
+
+div.content-item-empty{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/** If got the icon on content bag is empty **/
+div.cart-content-empty i{
+    font-size: 8rem;
+    /* color: rgb(210, 35, 42); */
+    color: #EE3522;
+    padding: 50px;
+    border-radius: 100%;
+    background: rgb(175,112,21);
+    background: linear-gradient(90deg, rgba(175,112,21,1) 0%, rgba(219,183,129,1) 55%, rgba(242,156,30,1) 100%);
+}
+/** If Empty bag have Image instead of Icon **/
+div.cart-content-empty img{
+    padding: 50px;
+    border-radius: 1rem;
+    /* background: linear-gradient(90deg, rgba(175,112,21,1) 0%, rgba(219,183,129,1) 55%, rgba(242,156,30,1) 100%); */
+    height: 18rem;
+    width: 18rem;
+}
+
+div.cart-content-empty div.shopping-title-empty p{
+    text-align: center;
+    font-size: 17px;
+    color: tomato !important;
+    display: table;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/** Shopping Cart Body 2nd Template **/
+/* 2. Bag With Cart items */
+.cart-content {
+    overflow: scroll;
+    scroll-behavior: smooth;
+    height: 83%;
+}
+div.cart-content div.body-heading-title{
+        background: tomato;
+        color: #fff;
+        padding: 0.2rem 2rem;
+}
+div.content-title{
+    height: 30px !important;
+    margin: 0 !important;
+}
+/* Cart Items Nav */
+div.content-title.items-nav{
+    text-align: center;
+    background: rgb(230, 230, 230);
+    box-shadow: 0px 1px 3px lightgray;
+    font-size: 14px;
+    padding-top: 3px;
+}
+
+div.cart-content .counter-left-btn,
+.counter-right-btn {
+    background: none;
+    border: none;
+    /* background: tomato; */
+    padding: 10px;
+    padding: 5px 10px;
+    border-radius: 100%;
+    font-size: 13px;
+    /* color: #fff; */
+    font-weight: bold;
+}
+
+div.cart-content div.row{
+    height: 66px;
+    border-bottom: 1px solid lightgray;
+    margin: 5px;
+}
+div.cart-content div.delivery-img img{
+    width: 58px;
+    height: 58px;
+}
+div.delivery-counter, div.delivery-name, div.delivery-price{
+    padding-top: 0.8rem;
+    padding-bottom: 0.2rem;
+}
+
+/**-- Shopping carts Footer Section --**/
+div.cart-footer{
+    background: #EE3522;
+    margin: 0;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    color: #fff;
+    /* height: 60px; */
+}
+
+/***-- Special Code Section of Shopping-Cart Footer Area --***/
+.svg-inline--fa.fa-chevron-circle-up.fa-w-16,
+.svg-inline--fa.fa-chevron-circle-down.fa-w-16,
+.fa.fa-chevron-circle-up.mr-2,
+.fa.fa-chevron-circle-down.mr-2{
+    font-size: 20px;
+    color: #fff;
+}
+.special-code-card{
+   display: grid;
+   justify-items: center;
+}
+.special-code-title {
+    color: #fff;
+}
+input.special-input{
+    text-align: center;
+    font-size: 15px;
+    outline: none;
+    border: 0;
+    border: 2px solid orangered;
+}
+input.special-go{
+    font-size: 15px;
+    text-transform: uppercase;
+    background: tomato;
+    outline: none;
+    border: none;
+    border: 2px solid orangered;
+    color: white;
+    padding: 0px 20px;
+}
+input.special-go:hover{
+    background: orangered;
+    border: 2px solid #fff;
+}
+
+/**-- Footer Place Order --**/
+.place-order-footer {
+    background: oldlace;
+    border-radius: 5px;
+    width: 100%;
+}
+.place-order-footer a{
+    width: 100%;
+}
+.place-order-footer a:hover{
+    background: tomato !important;
+}
+
+.place-order-footer .svg-inline--fa.fa-cart-arrow-down.fa-w-18,
+.place-order-footer fa-cart-arrow-down{
+   font-size: 18px;
+}
+
 /*************Section Of Page Banner**************/
 /*--------Landing Page--------*/
-section#home-cover .jumbotron{
+section#home-cover .jumbotron,
+section#home-cover-2 .jumbotron{
 	width: 100%;
 	height: 600px;
 	background-color: #000;
@@ -209,6 +545,7 @@ section#home-cover .jumbotron{
     border-radius: 0 !important;
     margin-bottom: 0 !important;
 }
+
 section#home-cover .jumbotron::after{
 	content: "";
 	position: absolute;
@@ -216,11 +553,24 @@ section#home-cover .jumbotron::after{
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background: url('../assets/img/fast-food.jpg') no-repeat fixed;
+	background: url('../assets/img/home_thai.jpg') no-repeat fixed;
 	background-size: cover;
 	opacity: .3;
 	animation: asad 25s linear infinite;
 }
+section#home-cover-2 .jumbotron::after{
+    content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url('../assets/img/coverA.jpg') no-repeat fixed;
+	background-size: cover;
+	opacity: .3;
+	animation: asad 25s linear infinite;
+}
+
 @keyframes asad{
 	50%{
 		transform: scale(2);
@@ -240,13 +590,22 @@ section#home-cover .jumbotron::after{
 	text-align: center;
 	padding: 0 40px;
 	box-sizing: border-box;
+    overflow: unset;
 }
+
+div.carousel.slide:hover > a.carousel-control-prev.home-slide-prev{
+    visibility: visible;
+}
+div.carousel.slide:hover > a.carousel-control-next.home-slide-next{
+    visibility: visible;
+}
+
 div#intro-section .intro-title{
     color: #fff;
     font-family: 'Lato', sans-serif;
     font-size: 56px;
     font-weight: 600;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding-bottom: 0;
 }
 div#intro-section .intro-title small.small{
@@ -292,6 +651,67 @@ div.search-food .form-control{
     border-radius: 0 !important;
     border: none !important;
     outline: none !important;
+    height: 43px;
+}
+
+/*******The Search Items DropDown Controling******/
+.search-dropdown-menu {
+    position: absolute;
+/*    top: 82.8rem !important;*/
+    top: 50rem !important;
+    left: 50% !important;
+/*    transform: translate(-64%, -50rem);*/
+    transform: translate(-64%, -17.2rem);
+    width: 433px !important;
+    z-index: 1000;
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+/*    border: 1px solid rgba(0,0,0,.15);*/
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    max-height: 330px;
+    overflow: auto;
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/**DropDown Search Menu's Image, Name, Price**/
+img.search-bar-image{
+    width: 50px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+ul.search-dropdown-menu li.search-item a{
+    display: inline-flex;
+    width: 100%;
+    margin: 0;
+}
+ul.search-dropdown-menu li.search-item .name{
+    color: black;
+    font-size: 18px;
+}
+ul.search-dropdown-menu li.search-item .price{
+    color: red;
+    font-weight: bold;
+}
+
+/**Home Sections Slider control Buttons**/
+a.carousel-control-prev.home-slide-prev {
+    left: 10%;
+    visibility: hidden;
+}
+a.carousel-control-next.home-slide-next {
+    right: 10%;
+    visibility: hidden;
 }
 
 /***********Sections Jumbotron-One***********/
@@ -328,44 +748,52 @@ div.col-jumbo-one{
     text-align: center;
 }
 
-/***************OFFERS FOOD**************/
-div.row.carousel-item {
-    height: 60vh;
-}
-div#carouselExampleControls {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-div.carousel-image{
-    margin-right: 1rem;
+/*************** FOOD MENU Food-Menu **************/
+div.food-menu-carousel {
+    max-height: 48vh;
 }
 img.img-offer{
-    width: 80vh;
+    width: 44vh;
 }
-div.carousel-item h1{
-    justify-self: self-end;
+div.food-menu-list{
+    position: sticky;
+    /* bottom: 24rem; */
+    bottom: 10rem;
+    margin-top: 2rem;
 }
 ul.offer-list-ul{
     font-size: 14px;
     text-transform: capitalize;
     font-weight: bold;
+} 
+a.ml-5.carousel-control-prev,
+a.mr-5.carousel-control-next{
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #d2232a;
+    color: #fff;
+    transition: all 0.6s;
+    font-size: 20px;
+    font-weight: bold;
 }
-div.fast.food.row{
-    position: relative;
-    bottom: 5rem;
+a.ml-5.carousel-control-prev {
+    left: 6%;
 }
-div.indian-list, div.junk-list{
-    position: relative;
-    bottom: 20rem;
-}
-div.fast-list{
-    position: relative;
-    bottom: 25rem;
+a.mr-5.carousel-control-next {
+    right: 6%;
 }
 
 /*************SPECIAL FOOD MENU*****************/
 section.special-food-menu{
-    background: url('../assets/img/coverA.jpg') no-repeat center center fixed;
+    background: url('../assets/img/coverB.jpg') no-repeat center center fixed;
+    background-size: cover;
     padding: 0;
 }
 div.dark-bg-opacity{
@@ -394,7 +822,7 @@ div.card p.card-text.text-muted{
     font-size: 14.5px;
 }
 /*The Next and the Previous Button for Carousel*/
-.carousel-control-next:hover,
+/* .carousel-control-next:hover,
 .carousel-control-prev:hover {
     color: #fff;
     text-decoration: none;
@@ -402,6 +830,29 @@ div.card p.card-text.text-muted{
     opacity: .9;
     background: rgb(0 0 0 / 0.5);
     border-radius: 8px;
+} */
+a.carousel-control-prev,
+a.carousel-control-next{
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #d2232a;
+    color: #fff;
+    transition: all 0.6s;
+    font-size: 20px;
+    font-weight: bold;
+}
+a.carousel-control-prev {
+    left: 6%;
+}
+a.carousel-control-next{
+    right: 6%;
 }
 
 /*******************CONTACT US*********************/
@@ -431,6 +882,7 @@ svg.svg-inline--fa.fa-phone.fa-w-16:hover,
 svg.svg-inline--fa.fa-envelope.fa-w-16:hover{
     text-shadow: 5px 5px 10px #e97979;
     border: 5px solid;
+    padding: 15px;
 }
 
  /**********************FOOTER***********************/
@@ -451,6 +903,7 @@ svg.svg-inline--fa.fa-envelope.fa-w-16:hover{
  }
  div#bottom-footer img{
      width: 80px;
+     Height: 80px;
  }
  div.footer-social-icons a{
     text-decoration: none;
@@ -483,21 +936,59 @@ svg.svg-inline--fa.fa-envelope.fa-w-16:hover{
     transition: 1s;
  }
 
+
+ /**The Footer Top Menu**/
+ footer ul.footer-top-menu{
+     display: inline-flex;
+     list-style: none;
+ }
+ footer ul.footer-top-menu li a{
+     text-decoration: none;
+     color: #fff;
+ }
+ footer ul.footer-top-menu li a:hover{
+     text-decoration: none;
+     color: rgb(210, 35, 42);
+ }
+
  footer div.footer-list-1st-heading h5{
-     font-size: 25px;
+     font-size: 24px;
  }
  footer div.footer-list-1st-row li{
      list-style: none;
-     font-size: 18px;
+     font-size: 16px;
  }
  footer div.footer-list-2nd-row h5{
-     font-size: 25px;
+     font-size: 22px;
  }
  footer div.footer-list-2nd-row li{
     list-style: none;
  }
  footer div.footer-list-2nd-row li a{
-     font-size: 13px;
+     font-size: 15px;
+ }
+
+ footer .business-logo-section{
+     margin-top: 2rem;
+     display: flex;
+     justify-content: flex-start;
+ }
+
+ footer li.business-logo img.paypal{
+    width: 60px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+ }
+ footer li.business-logo img.visa{
+    width: 92px;
+    height: 44px;
+    object-fit: cover;
+ }
+ footer li.business-logo img.master{
+    width: 93px;
+    height: 50px;
+    object-fit: cover;
  }
 
 
@@ -506,7 +997,7 @@ div.business-hour ul li{
     display: inline-flex;
     text-transform: capitalize;
     font-weight: 100;
-    font-size: 18px;
+    font-size: 15px;
 }
 div.dotted-dateline{
     border-bottom: 1px dotted lightgray;
@@ -517,6 +1008,14 @@ div.dotted-dateline{
 /*****The Media Queries for this way****/
 /**---iPhone 6,7,8 or Higher Screen Comportable ---**/
 @media only screen and (max-width: 720px){
+    /**All Sections Title Text Style, Font-size**/
+    .our-food-style-title, 
+    .food-menu-title, 
+    .contact-us-title,
+    .gellary-title{
+        font-size: 30px;
+    }
+
     div.leftHeaderItem{
         display: flex;
         float: none;
@@ -558,6 +1057,7 @@ div.dotted-dateline{
     }
     header img{
         width: 60px;
+        height: 64px;
     }
     
     /***NavBar POsition In Mobile ***/
@@ -583,6 +1083,13 @@ div.dotted-dateline{
         margin-left: 0 !important;
     }
     
+    /**Home Slide Intro 2nd Page Title**/
+    .home-slide-intro-2,
+    .home-slide-intro-3{
+        font-size: 30px !important;
+    }
+
+
     /**Title Of Delivery ShowCase**/
     div.row{
         justify-content: center;
@@ -624,36 +1131,22 @@ div.dotted-dateline{
         margin-top: 0 !important;
         margin-bottom: 0 !important;
     }
+    .card.special-food-card {
+        min-height: 535px;
+        margin: auto;
+    }
 
-    /**Food Menu Tab**/
-    div#carouselExampleControls{
-        margin-bottom: 3rem;
-        text-align: center;
-    }
-    div.carousel-item{
-        height: 95vh !important;
-    }
-    div.carousel-item div.col-md-6{
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-    div.indian-list, div.junk-list{
-        position: unset;
-        bottom: 0;
-        text-align: center;
-    }
-    div.fast-list{
-        position: relative;
-        bottom: 2rem;
-    }
-    li.list-group-item{
-        position: unset;
-        display: grid;
-        text-align: center;
-        justify-items: center;
+    /**Cart Image Size of Our Food Styles Section**/
+    img.food-style-cart{
+        height: 380px;
     }
 
     /**The Special Food Offer Section**/
+    /*** Special Offers Section Title ****/
+    section.special-food-menu div.carousel-title h1{
+        font-size: 2rem;
+    }
+
     div.cards-group{
         display: -webkit-box !important;
     }
@@ -673,6 +1166,20 @@ div.dotted-dateline{
     section.special-food-menu .carousel-control-prev:hover{
         background: none;
     }
+    section.jumbotron.special-food-menu {
+        max-height: 130vh;
+    }
+    div.special-card {
+        max-height: 90vh !important;
+    }
+
+    section.special-food-menu .carousel-control-next:hover, section.special-food-menu .carousel-control-prev:hover {
+        background: #000;
+    }
+
+    a.carousel-control-prev.offer-slide, a.carousel-control-next.offer-slide {
+        display: none;
+    }
 
     /**CONTACT US**/
     div.contact-col p{
@@ -686,7 +1193,14 @@ div.dotted-dateline{
 
     /**Top Footer**/
     div.business-hour ul li{
-        font-size: 14px;
+        font-size: 11px;
+    }
+    .newsletters-phone {
+        display: grid;
+        justify-items: center;
+    }
+    .newsletters-phone img {
+        max-width: 250px;
     }
 
     /**Bottom Foooter**/
@@ -696,13 +1210,329 @@ div.dotted-dateline{
     div.col-md-4.footer-qr-code{
         justify-content: center !important;
     }
+
+    div.row.carousel-item {
+        min-height: 80vh;
+        max-height: 135vh !important;
+    }
+    img.img-offer{
+        width: 44vh;
+    }
+    a.ml-5.carousel-control-prev.menu-btn {
+        left: -5% !important;
+    }
+    a.mr-5.carousel-control-next.menu-btn {
+        right: -5% !important;
+    }
+    a.mr-5.carousel-control-prev.menu-btn.menu-btn,
+    a.mr-5.carousel-control-next.menu-btn.menu-btn{
+        top: 24.5rem;
+    }
+    a.ml-5.carousel-control-prev.menu-btn, 
+    a.mr-5.carousel-control-next.menu-btn{
+        top: 24.5rem ;
+    }
+    .display-2 {
+        font-size: 4rem;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+    h1.text-uppercase.display-2.text-shadow {
+        text-align: center;
+        margin-left: 10%;
+        font-size: 2.5rem;
+    }
+    .d-flex.offer-list{
+        justify-content: center;
+    }
+    .col-md-6.carousel-image {
+        padding-left: 20px !important;
+        padding-right: 0 !important;
+    }
+    li.list-group-item {
+        font-size: 12px;
+    }
+    
+   /**Search DropDown Menu**/ 
+    .search-dropdown-menu{
+        top: 54rem !important;
+        left: 50rem !important;
+        transform: translate(-47.5rem, -17rem) !important;
+        width: 88.8% !important;
+    }
+
+    /**Home Sections Slider control Buttons**/
+    a.carousel-control-prev.home-slide-prev {
+        display: none;
+    }
+    a.carousel-control-next.home-slide-next {
+        display: none;
+    }
+
+    /***Food Menu Carousels Buttons***/
+    a.mr-5.carousel-control-prev.menu-btn, a.mr-5.carousel-control-next.menu-btn {
+        top: 27rem !important;
+    }
+    a.ml-5.carousel-control-prev {
+        left: -5% ;
+    }
+
+    a.ml-5.carousel-control-prev, a.mr-5.carousel-control-next {
+        top: 27rem !important;
+    }
+    a.mr-5.carousel-control-next {
+        right: -5% ;
+    }
+
+
+   /**Footers Sections (Row's) Items**/ 
+    footer div.footer-list-1st-heading h5 {
+        font-size: 22px;
+        margin-bottom: 0.5rem;
+    }
+    footer div.footer-list-1st-row li{
+        font-size: 13px;
+    }
+    .row.mb-4.footer-list-1st-row {
+        padding-left: 5px;
+    }
+    footer div.footer-list-2nd-row li a {
+        font-size: 13px;
+    }
+
+    footer ul.footer-top-menu li a {
+        font-size: 13px;
+        text-align: center;
+    }
+    div#time-table-bookmark {
+        margin-bottom: 3rem;
+    }
+    footer .business-logo-section{
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    footer ul.footer-top-menu li a{
+        font-size: 12px;
+    }
+
+    /**Make Every Footer List to Center**/
+    div.footer-list-1st-heading,
+    div.footer-list-1st-row,
+    div.footer-list-2nd-row{
+        text-align: center;
+    }
+
+    section.stickyHeader{
+        display: none !important;
+    }
+
+    /** Manage the Shopping cart Items list **/
+    div.content-title.items-nav div{
+        width: unset !important;
+    }
+
+    div.delivery-counter, 
+    div.delivery-img,
+    div.delivery-name, 
+    div.delivery-price{
+        width: unset !important;
+        margin-left: -20px;
+    }
+    div.delivery-name h6 {
+        font-size: 14px;
+    }
+    div.delivery-price span {
+        font-size: 14px;
+    }
+    div.cart-content div.delivery-img img {
+        width: 50px;
+        height: 50px;
+    }
+    div.content-title, div.content-items-list{
+        display: flex;
+        flex-direction: column;
+    }
+    div.delivery-price {
+        align-self: flex-end;
+    }
+    div.delivery-counter {
+        align-self: flex-start;
+    }
+    div.delivery-img{
+        align-self: flex-start;
+    }
+    div.delivery-name {
+        align-self: center;
+    }
+
 }
 
-@media only screen and (max-width: 1366px){
-    div.row.carousel-item{
-        height: 70vh;
+/**The Median Mobile Screens Width About Search Bar Relative Items Section*/
+@media only screen and (max-width: 530px){
+    .search-dropdown-menu{
+        width: 81% !important;
     }
+
+    div.food-menu-list{
+        margin-top: 12rem;
+    }
+}
+
+/***iPhone 6,7,8 type Mobiles Screen***/
+@media only screen and (max-width: 380px){
+    .search-dropdown-menu{
+        top: 54rem !important;
+        left: 50rem !important;
+        transform: translate(-47.5rem, -16.2rem) !important;
+        width: 79% !important;
+    }
+
+     /***Food Menu Carousels Buttons***/
+     a.mr-5.carousel-control-prev.menu-btn, a.mr-5.carousel-control-next.menu-btn {
+        top: 24.5rem !important;
+    }
+    a.ml-5.carousel-control-prev {
+        left: -5%;
+    }
+
+    a.ml-5.carousel-control-prev, a.mr-5.carousel-control-next {
+        top: 24.5rem !important;
+    }
+    a.mr-5.carousel-control-next {
+        right: -5%
+    }
+
+    div.food-menu-list{
+        margin-top: 2rem;
+        bottom: 2rem;
+    }
+}
+
+/********* iPhone 5/SE/5s World Smallest **********/
+@media only screen and (max-width: 330px){
+    /***Food Menu Carousels Buttons***/
+    a.mr-5.carousel-control-prev.menu-btn, a.mr-5.carousel-control-next.menu-btn {
+        top: 21rem !important;
+    }
+    a.ml-5.carousel-control-prev {
+        left: -10%;
+    }
+
+    a.ml-5.carousel-control-prev, a.mr-5.carousel-control-next {
+        top: 21rem !important;
+    }
+    a.mr-5.carousel-control-next {
+        right: -10%
+    }
+
+    div.food-menu-list{
+        margin-top: 4rem;
+        bottom: 2rem;
+    }
+    div.delivery-name h6 {
+        font-size: 13px;
+    }
+    div.delivery-price span {
+        font-size: 13px;
+    }
+    div.cart-content div.delivery-img img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/***iPad Pro type tab Screen***/
+@media only screen and (max-width: 1024px){
+    .search-dropdown-menu{
+        transform: translate(-64%, -15.8rem);
+    }
+}
+@media only screen and (max-width: 768px){
+    .search-dropdown-menu{
+        transform: translate(-64%, -17rem);
+    }
+}
+
+/*****Galaxy Fold New Smallest Screen Ever****/
+@media only screen and (max-width: 280px){
+    .search-dropdown-menu{
+        transform: translate(-48rem, -13.8rem) !important;
+        width: 80% !important;
+    }
+    div.food-menu-list{
+        margin-top: 5rem;
+    }
+    a.mr-5.carousel-control-next.menu-btn {
+        right: -12% !important;
+    }
+    a.ml-5.carousel-control-prev.menu-btn {
+        left: -12% !important;
+    }
+    .food-menu-carousel ul li.list-group-item{
+        font-size: 10px;
+    }
+}
+
+/***** For The Minimal Screen ****/
+@media only screen and (max-width: 1366px){
     div.special-card {
         max-height: 74vh;
     }
+    div.row.carousel-item {
+        max-height: 60vh;
+    }
+    img.img-offer{
+        width: 60vh;
+    }
+    a.ml-5.carousel-control-prev {
+        left: 0;
+    }
+    a.mr-5.carousel-control-next {
+        right: 0;
+    }
+    a.carousel-control-prev {
+        left: 2%;
+    }
+    a.carousel-control-next{
+        right: 0;
+    }
+    a.carousel-control-next{
+        right: 0;
+    }
+    a.carousel-control-prev, a.carousel-control-next {
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
+    a.ml-5.carousel-control-prev, a.mr-5.carousel-control-next{
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
 }
+/**For 8:9 screen ratio size metter**/
+@media only screen and (max-width: 1440px){
+    a.ml-5.carousel-control-prev {
+        left: 0;
+    }
+    a.mr-5.carousel-control-next {
+        right: 0;
+    }
+    div.indian-list, div.junk-list, div.fast-list {
+        bottom: 21rem;
+    }
+    a.carousel-control-prev {
+        left: 0;
+    }
+    a.carousel-control-next {
+        right: 0;
+    }
+    .hi-slide .hi-prev {
+        left: -10rem !important;
+    }
+    .hi-slide .hi-next {
+        right: -10rem !important;
+    }
+}
+	

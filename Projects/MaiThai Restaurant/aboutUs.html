@@ -8,10 +8,12 @@
   <link rel="icon" href="assets/logo/logo.png">
 
   <!-- CSS only -->
+  <!-- FontAwesome -->
   <link rel="stylesheet" href="assets/fontAwesome/css/all.min.css">
   <link rel="stylesheet" href="assets/fontAwesome/css/fontawesome.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/css/tether.min.css">
+
+  <!-- Bootstrap (4.5.2) -->
+  <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
 
   <!-- Style.css -->
   <link rel="stylesheet" href="css/style.css">
@@ -33,9 +35,8 @@
           <!-- Top Menu -->
           <div class="topMenu">
             <ul>
-              <li><a href="#" class="text-capitalize">help</a></li>
-              <li><a href="#" class="text-capitalize">request call back</a></li>
-              <li><a href="loginRegister.html" class="text-capitalize">register</a></li>
+              <li><a href="contactUs.html" class="text-capitalize">request call back</a></li>
+              <li><a href="register.html" class="text-capitalize">register</a></li>
               <li><a href="loginRegister.html" class="text-capitalize">login</a></li>
             </ul>
           </div>
@@ -50,16 +51,24 @@
               <i class="fas fa-shopping-cart"></i>
               <span class="badge badge-light">4</span>
               <div class="carts-section text-uppercase">
-                <span class="mr-2">total carts: <span class="text-danger font-weight-bold">4</span></span>
+                <!-- <span class="mr-2">total carts: <span class="text-danger font-weight-bold">4</span></span>
                 <div style="border-left: 2px solid tomato;"></div>
-                <span>price amount: <span class="text-danger font-weight-bold">1200TK</span></span>
+                <span>price amount: <span class="text-danger font-weight-bold">1200TK</span></span> -->
+
+                <span class="text-uppercase font-weight-bold">
+                  total carts: <span class="text-danger font-weight-bold">4</span>
+                  <span class="ml-2 mr-2"> | </span>
+                  price amount: <span class="text-danger font-weight-bold">1200TK</span>
+                </span>
               </div>
             </div>
             <!-- Clock for Opening and closing time -->
             <div class="ml-3 buisness-hour">
               <i class="far fa-clock"></i>
               <div class="time-table">
-                <span class="text-uppercase font-weight-bold">GET ON 5 DAYS A WEEK FROM 10.00 AM TO 6PM IST</span>
+                <a href="#time-table-bookmark" class="bookmark-text">
+                  <span class="text-uppercase font-weight-bold">opening time & delivery time slot</span>
+                </a>
               </div>
             </div>
 
@@ -68,11 +77,183 @@
 
         <!-- QR-Code Section -->
         <div class="qr-code">
-          <img class="img img-thumbnail img-fluid" src="assets/logo/qr-code.png" alt="QR-CODE">
+          <img class="img img-thumbnail img-qr-code img-fluid" src="assets/logo/qr-code.png" alt="QR-CODE">
         </div>
       </div>
     </div>
   </header>
+
+
+   <!-----****** The Shopping Cart Drawer System... ******------>
+   <div class="shopping-cart sticky">
+    <!-- Close Icons Button -->
+    <div class="shoppingCartButton"></div>
+
+    <!-- Drawer Opening Button When Drawer will close this will appear -->
+    <!-- Showing Icon and Drawer opening Bar(When Drawer is Close) -->
+    <section class="stickyHeader sticky-open-btn">
+        <!-- Item Couter with Icon SVG -->
+        <div class="shopping-badget-items-counter">
+            <!-- The Shopping Bag Icon -->
+            <svg version="1.1" id="Calque_1" x="0px" y="0px" style="fill:#FDD670; stroke:#FDD670;" width="16px"
+                height="24px" viewBox="0 0 100 160.13">
+                <polygon points="11.052,154.666 21.987,143.115 35.409,154.666"></polygon>
+                <path
+                    d="M83.055,36.599c-0.323-7.997-1.229-15.362-2.72-19.555c-2.273-6.396-5.49-7.737-7.789-7.737   c-6.796,0-13.674,11.599-16.489,25.689l-3.371-0.2l-0.19-0.012l-5.509,1.333c-0.058-9.911-1.01-17.577-2.849-22.747   c-2.273-6.394-5.49-7.737-7.788-7.737c-8.618,0-17.367,18.625-17.788,37.361l-13.79,3.336l0.18,1.731h-0.18v106.605l17.466-17.762   l18.592,17.762V48.06H9.886l42.845-10.764l2.862,0.171c-0.47,2.892-0.74,5.865-0.822,8.843l-8.954,1.75v106.605l48.777-10.655   V38.532l0.073-1.244L83.055,36.599z M36.35,8.124c2.709,0,4.453,3.307,5.441,6.081c1.779,5.01,2.69,12.589,2.711,22.513   l-23.429,5.667C21.663,23.304,30.499,8.124,36.35,8.124z M72.546,11.798c2.709,0,4.454,3.308,5.44,6.081   c1.396,3.926,2.252,10.927,2.571,18.572l-22.035-1.308C61.289,21.508,67.87,11.798,72.546,11.798z M58.062,37.612l22.581,1.34   c0.019,0.762,0.028,1.528,0.039,2.297l-23.404,4.571C57.375,42.986,57.637,40.234,58.062,37.612z M83.165,40.766   c-0.007-0.557-0.01-1.112-0.021-1.665l6.549,0.39L83.165,40.766z">
+                </path>
+            </svg>
+            <p class="shopping-cart-items">
+                <span class="mr-1">4</span>
+                <span>ITEMS</span>
+            </p>
+        </div>
+        <!-- Shopping Badgets Bottom -->
+        <div class="total shopping-badget-total">
+            <span class="dollar">$</span>
+            <span class="price">1200</span>
+        </div>
+    </section><!--END of The Drawer Opening Button-->
+
+    <!-- Shopping Cart Header -->
+    <div class="cart-header d-flex">
+        <div class="left-header-item">
+            <!-- Shopping bag Icon -->
+            <svg class="mr-1" version="1.1" id="Calque_1" x="0px" y="0px" style="fill:#fff; stroke:#fff; margin-top: -1px;" width="20px"
+                height="30px" viewBox="0 0 100 160.13">
+                <polygon points="11.052,154.666 21.987,143.115 35.409,154.666"></polygon>
+                <path
+                    d="M83.055,36.599c-0.323-7.997-1.229-15.362-2.72-19.555c-2.273-6.396-5.49-7.737-7.789-7.737   c-6.796,0-13.674,11.599-16.489,25.689l-3.371-0.2l-0.19-0.012l-5.509,1.333c-0.058-9.911-1.01-17.577-2.849-22.747   c-2.273-6.394-5.49-7.737-7.788-7.737c-8.618,0-17.367,18.625-17.788,37.361l-13.79,3.336l0.18,1.731h-0.18v106.605l17.466-17.762   l18.592,17.762V48.06H9.886l42.845-10.764l2.862,0.171c-0.47,2.892-0.74,5.865-0.822,8.843l-8.954,1.75v106.605l48.777-10.655   V38.532l0.073-1.244L83.055,36.599z M36.35,8.124c2.709,0,4.453,3.307,5.441,6.081c1.779,5.01,2.69,12.589,2.711,22.513   l-23.429,5.667C21.663,23.304,30.499,8.124,36.35,8.124z M72.546,11.798c2.709,0,4.454,3.308,5.44,6.081   c1.396,3.926,2.252,10.927,2.571,18.572l-22.035-1.308C61.289,21.508,67.87,11.798,72.546,11.798z M58.062,37.612l22.581,1.34   c0.019,0.762,0.028,1.528,0.039,2.297l-23.404,4.571C57.375,42.986,57.637,40.234,58.062,37.612z M83.165,40.766   c-0.007-0.557-0.01-1.112-0.021-1.665l6.549,0.39L83.165,40.766z">
+                </path>
+            </svg>
+            <span class="mr-1 mt-2">4</span>
+            <span class="text-uppercase mt-2">items</span>
+        </div>
+
+        <div class="right-header-item">
+            <button class="shopping-car-close-btn">
+                close
+            </button>
+        </div>
+    </div><!--END of Shopping-Cart Header-->
+
+    <!-- Shopping cart Content (When Bag Is Empty!) -->
+    <div class="cart-content-empty">
+      <div class="content-item-empty">
+          <img src="assets/logo/shopping-beg-1.png" alt="">
+
+          <div class="shopping-title-empty text-capitalize">
+              <p class="text-muted">Your shopping bag is empty!</p>
+          </div>
+      </div>
+  </div>
+
+  <!-- Shopping cart Content/Body (When Bag Is Not-Empty!) -->
+  <!-- <div class="cart-content">
+      <div class="row content-title">
+          <div class="col-md-12 body-heading-title">
+              <p>Your delivery items</p>
+          </div>
+      </div>
+
+      <div class="row content-title items-nav sticky-top">
+          <div class="col-md-3">Quantity</div>
+          <div class="col-md-3">Image</div>
+          <div class="col-md-3">Name</div>
+          <div class="col-md-3">Price</div>
+      </div>
+
+      <div class="row content-items-list">
+          <div class="col-md-3 delivery-counter">
+              <button type="button" class="counter-left-btn">
+                  <span>
+                      < </span>
+              </button>
+              <span class="counter-num font-weight-bold">1</span>
+              <button type="button" class="counter-right-btn">
+                  <span> > </span>
+              </button>
+          </div>
+
+          <div class="col-md-3 delivery-img">
+              <img src="assets/img/gellary/ma1.jpg" alt="maiThai-1">
+          </div>
+
+          <div class="col-md-3 delivery-name">
+              <h6>Thai Italian Masala</h6>
+          </div>
+
+          <div class="col-md-3 delivery-price">
+              <span class="text-danger font-weight-bold">$40</span>
+              <span class="text-muted"><del>$70</del></span>
+          </div>
+      </div>
+
+      <div class="row content-items-list">
+          <div class="col-md-3 delivery-counter">
+              <button type="button" class="counter-left-btn">
+                  <span> < </span>
+              </button>
+              <span class="counter-num">2</span>
+              <button type="button" class="counter-right-btn">
+                  <span> > </span>
+              </button>
+          </div>
+          <div class="col-md-3 delivery-img">
+              <img src="assets/img/gellary/ma1.jpg" alt="maiThai-1">
+          </div>
+          <div class="col-md-3 delivery-name">
+              <h6>Petty Rice</h6>
+          </div>
+          <div class="col-md-3 delivery-price">
+              <span class="text-danger font-weight-bold">$120</span>
+              <span class="text-muted"><del>$150</del></span>
+          </div>
+      </div>
+  </div> -->
+
+    <!-- Shopping Cart Footer -->
+    <div class="cart-footer">
+
+        <div class="accordion shopping-special-code" id="accordionExample">
+            <div class="special-code-card">
+              <div id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-block text-left toggle-special-code" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <span class="special-code-arrow-up">
+                        <i class="fa fa-chevron-circle-up mr-2" aria-hidden="true"></i>
+                    </span>
+                    <span class="special-code-arrow-down">
+                        <i class="fa fa-chevron-circle-down mr-2" aria-hidden="false"></i>
+                    </span>
+                    <span class="special-code-title">Have a special code?</span>
+                  </button>
+                </h2>
+              </div>
+          
+              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <form action="" method="" class="special-code-form">
+                        <input type="text" placeholder="Special Code" name="special-code" class="special-input">
+                        <input type="submit" name="special-go" value="Go" class="special-go">
+                    </form>
+                </div>
+              </div>
+            </div>
+        </div><!---END of Accordion for Speicial Code Send-->
+        
+        <!-- Place Order Footer -->
+        <div class="place-order-footer">
+          <a href="" class="btn btn-outline-danger text-capitalize">
+              <span class="mr-2">
+                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+              </span>
+              <span>place order</span>
+          </a>
+      </div>
+      <!-- END of Place-Order's Footer -->
+    </div><!--END of Shopping-Cart's Footer-->
+</div><!--END of Shopping Cart Drawer-->
+
 
   <!-------------------- NAVBAR ----------------------->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
@@ -84,20 +265,20 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto">
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="index.html">home</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link active-now" href="#">about us <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="foodOrder.html">food order</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="foodList.html">food list</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="foodGird.html">food grid</a>
+            <a class="nav-link" href="foodPackage.html">food package</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="loginRegister.html">login & register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active-now" href="#">about us <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contactUs.html">contact us</a>
@@ -116,7 +297,7 @@
       <div class="about-text-section">
         <div class="about-cover text-light text-capitalize text-center">
           <h1 class="display-3">about <br> maiThai!</h1>
-          <p>MaiThai is an online portal.</p>
+          <p>MaiThai is a restaurant.</p>
           <p>Ordering Food & Delivery from restaurants of choice.</p>
           <p>Table booking & Restaurants.</p>
           <p>Deals & Discounts</p>
@@ -130,17 +311,17 @@
   <!--------------- About Pages Content ---------------->
   <section id="about-content" class="mb-5 mt-5">
     <div class="container text-center">
-      <h1 class="text-capitalize text-center display-4 mb-4">What Does MaiThai ?</h1>
+      <h1 class="text-capitalize text-center display-4 mb-4">What Does MaiThai do</h1>
 
       <p class="text-muted">
-        At mai thai, we follow strict standard codes on service, quality and presentation. We ever use the finest ingredients in all of our delicacies to ensure that every dish we serve is delicious and nutritious.
+        At mai thai, we follow strict standard codes on service, quality and presentation. We always use the finest
+        ingredients in all of our delicacies to ensure that every dish we serve is delicious and nutritious.
       </p>
       <br>
 
       <p class="text-muted">
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at
-        its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
-        opposed to using 'Content here, content here', making it look like readable English.
+        Authentic traditional Thai dishes are prepared by our experienced chef using only excellent ingredients, making
+        every dish from our kitchen full of the true flavor’s of original Thai food.
 
       </p>
     </div>
@@ -148,134 +329,152 @@
 
   <!-------------- About pages 2nd Content -------------->
   <section id="about-content-2nd" class="mb-5">
-      <div class="container">
-        <div class="row mt-5">
-          <div class="col-md-6">
-            <ul>
-              <li>Over 10,000 restaurants in 500+ cities - with more being added each week.</li>
-              <li>Email, call or message us – 24 hours a day, every day.</li>
-              <li>A service that's 100% free and insanely intuitive to use.</li>
-              <li>A 100% free and insanely intuitive mobile site.</li>
-              <li>Easy re-ordering and pre-ordering for users.</li>
-              <li>Cash back for future orders through Paytmm.</li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-              <img src="assets/img/mai.png" alt="" class="img img-fluid img-thumbnail" style="height: 280px; width: 450px;">
-          </div>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <ul>
+            <li>Email, call or message us – 24 hours a day, every day.</li>
+            <li>A service that's 100% free and insanely intuitive to use.</li>
+            <li>A 100% free and insanely intuitive mobile site.</li>
+            <li>Easy re-ordering and pre-ordering for users.</li>
+            <li>Cash back for future orders through Paytmm.</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <img src="assets/img/mai.png" alt="" class="img img-fluid img-thumbnail" style="height: 280px; width: 450px;">
         </div>
       </div>
+      <br>
+      <hr>
+    </div>
+  </section>
+
+  <!----------- About pages 3rd Content ------------>
+  <section id="about-content" class="mb-5">
+    <div class="container text-center">
+      <!-- About Many Contents -->
+      <h3 class="text-capitalize text-center mb-4">"Authentic Meal for Every Man Jack"</h3>
+
+      <p class="text-muted">
+        <span class="headline-p">"Mai Thai Kitchen”</span> are more famous from UK at a celebration of the all variety
+        and abundance offered by the
+        seas, mountains, valleys and central plains. This wondrous bounty of fish, meats, vegetables, fruits, flowers
+        and spices have been meticulously utilized to create the 'traditionally modern' cuisine of Mai Thai Kitchen.
+        At Mai Thai kitchen, authentic traditional Thai dishes are prepared by our experienced chef using only excellent
+        ingredients, making every dish from our kitchen full of the true flavor’s of original Thai food.
+        We offer seasonal tasting menus that offer a journey throughout the different regions of the country, as well as
+        our chef’s creative versions of traditional favourite dishes.
+        <br> <br>
+        The seasonal menus feature the freshest and most flavorful offerings of the spring, summer, fall, and winter
+        times of the year. The crops these changing season's produce vary due to the temperatures and rainfall of the
+        country. Mai Thai kitchen celebrates all the wonderful foods from all the regions of the country that UK offers.
+        If you are looking for an exquisite Thai restaurant to welcome your friends from overseas, Mai Thai kitchen is
+        the best choice to impress your friends with Traditional Thai Dishes.
+      </p>
+      <br>
+
+      <h3 class="text-capitalize text-center mb-4 mt-5">"Banquet Theory"</h3>
+      <p class="text-muted">
+        <span class="headline-p">"Short of screaming-hot Thai food, Everything can be suitable for kids too"</span>. We
+        believe that the distinct delicacy, refinement, and elegance is the charm and uniqueness of the Thai culture
+        echoed in Thai food. At Mai Thai Kitchen, only the best quality of seasonal ingredients are selected to create
+        our distinctive Thai dishes that capture the essence of the traditional charm, so that each dish reflects
+        authentic Thai culture.
+      </p>
+      <br>
+
+      <h3 class="text-capitalize text-center mb-4 mt-5">“Private VIP Events”</h3>
+      <p class="text-muted">
+        We will deliver bites that spark conversation and bring people together. Whatever your event, be it a special
+        occasion, a wedding, a birthday, or just that evening with family and friends, we are there for you. Our private
+        catering service takes into account all the factors that you consider when planning your party: the budget (big
+        or small), the size, the setting, and what you want to achieve for your special get- together.
+      </p>
+      <br>
+
+      <h3 class="text-capitalize text-center mb-4 mt-5">“Special Events”</h3>
+      <p class="text-muted">
+        Thai Rice Spoon knows you want your party to be talked about. We will bring our creativity to provide you with a
+        totally unique service. Tell us your plans and we'll go to the kitchen and create a fun and delicious menu
+        experience for your event.
+        <br> <br>
+        You've been meaning to do for months and we are here for you.
+      </p>
+      <br>
+
+      <h3 class="text-capitalize text-center mb-4 mt-5">“Wedding Receptions”</h3>
+      <p class="text-muted">
+        You've said, 'I do'. Now we will too.
+        <br> <br>
+        Thai Rice Spoon are true romantics. We understand that your big day is one of the most important days in your
+        life.
+        <br> <br>
+        Thai Food is one of the best treats for your guests.
+      </p>
+      <br>
+
+      <h3 class="text-capitalize text-center mb-4 mt-5">“Beyond Pad Thai”</h3>
+      <p class="text-muted">
+        Thai food has been popular in the United States for decades. But recently there has been a renaissance in
+        regional Thai. What were once greasy and sugary pad Thais, coconut-heavy curries and bland chicken satay dishes
+        have become green papaya salads from the Northeast, rich and complex noodle dishes from around Bangkok, and
+        mouth-searing Indian-influenced curries from the South. Looking to go beyond the old takeout? Here’s where to
+        find great regional Thai across the country.
+      </p>
+    </div>
   </section>
   <br>
 
   <!--------- Founders Section of About Page ------------>
   <section id="about-founders">
-      <div class="jumbotron">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h1 class="text-capitalize text-center display-4 mb-5">founders of maiThai</h1>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3">
-              <div class="image middle">
-                <img src="assets/img/chef_1.jpg" alt="!" class="img img-fluid">
-              <!--The Image-Content Area-->	
-                <div class="image-content">
-                <!--iCons of the page-->	
-                  <div class="icons">
-                    <a href="#" class="icon fab fa-facebook"></a>
-                    <a href="#" class="icon fab fa-twitter"></a>
-                    <a href="#" class="icon fab fa-instagram"></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="image-title content">
-                <h5 class="text-capitalize">Md.Abul Bashar</h5>
-                <p class="text-capitalize">co-founder</p>
-                <div class="underline-hr"></div>
-                <p class="text-body-muted">
-                  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="image middle">
-                <img src="assets/img/chef_2.jpg" alt="" class="img img-fluid">
-              <!--The Image-Content Area-->	
-                <div class="image-content">
-                <!--iCons of the page-->	
-                  <div class="icons">
-                    <a href="#" class="icon fab fa-facebook"></a>
-                    <a href="#" class="icon fab fa-twitter"></a>
-                    <a href="#" class="icon fab fa-instagram"></a>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="image-title content">
-                <h5 class="text-capitalize">Md.Aliaz Khan Era</h5>
-                <p class="text-capitalize">co-founder</p>
-                <div class="underline-hr"></div>
-                <p class="text-body-muted">
-                  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="image middle">
-                <img src="assets/img/chef_3.jpg" alt="" class="img img-fluid">
-              <!--The Image-Content Area-->	
-                <div class="image-content">
-                <!--iCons of the page-->	
-                  <div class="icons">
-                    <a href="#" class="icon fab fa-facebook"></a>
-                    <a href="#" class="icon fab fa-twitter"></a>
-                    <a href="#" class="icon fab fa-instagram"></a>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="image-title content">
-                <h5 class="text-capitalize">Abdullah-Al Jafoor</h5>
-                <p class="text-capitalize">co-founder</p>
-                <div class="underline-hr"></div>
-                <p class="text-body-muted">
-                  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="image middle">
-                <img src="assets/img/chef_4.jpg" alt="" class="img img-fluid">
-              <!--The Image-Content Area-->	
-                <div class="image-content">
-                <!--iCons of the page-->	
-                  <div class="icons">
-                    <a href="#" class="icon fab fa-facebook"></a>
-                    <a href="#" class="icon fab fa-twitter"></a>
-                    <a href="#" class="icon fab fa-instagram"></a>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="image-title content">
-                <h5 class="text-capitalize">Md.Bashar Mojumder</h5>
-                <p class="text-capitalize">co-founder</p>
-                <div class="underline-hr"></div>
-                <p class="text-body-muted">
-                  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                </p>
-              </div>
-            </div>
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-capitalize text-center display-4 mb-5">founder of maiThai</h1>
           </div>
         </div>
+
+        <div class="row">
+          <!-- Col-1 -->
+          <div class="col-md-4">
+            <div class="image middle">
+              <img src="assets/img/founder.jpg" alt="" class="img img-fluid img-thumbnail">
+
+              <!-------------The Image-Content Area------------->
+              <!-- Founders Hover Social Icons Here -->
+              <!-- <div class="image-content">
+                  <div class="icons">
+                    <a href="#" class="icon fab fa-facebook"></a>
+                    <a href="#" class="icon fab fa-twitter"></a>
+                    <a href="#" class="icon fab fa-instagram"></a>
+                  </div>
+                </div> -->
+
+            </div>
+          </div>
+
+          <!-- Col-2 -->
+          <div class="col-md-8">
+            <div class="image-title content">
+              <p class="text-capitalize">founder</p>
+              <div class="underline-hr"></div>
+              <p class="text-body-muted founders-some-talk-text">
+                I Moved from BURIRAM to UK 2008. When I Focus on Thai Restaurant i try to maintain Proper Service and
+                Well Food and also Dream to open own Thai cuisine. I'm food lover, Chef, and Tradeswoman. I was
+                looking for open up my own shop for a while Excited got an opportunity to open at CHESHUNT, Broxbourne
+                And Mai Thai Kitchen. I'm Super Excited to meet all my new customers and working with them
+                Tasty's great Meal. By the way, All my customers are important to me, i like to know thier thought,
+                Feedback and Suggestion. Please Don't Hesitate to let us know.
+                Regards
+                BEE
+              </p>
+            </div>
+          </div>
+
+        </div>
       </div>
+    </div>
   </section>
 
 
@@ -284,8 +483,31 @@
     <!---------- TOP black FOOTER -------->
     <div id="upper-footer" class="p-5">
       <div class="container">
-        <!-- One Section -->
-        <div class="row mb-2 footer-list-1st-heading">
+
+        <!-- Footers Top Menu -->
+        <div class="row mb-4">
+          <div class="col-md-12 text-center">
+            <ul class="footer-top-menu">
+              <li>
+                <a href="aboutUs.html">About</a>
+                <span class="ml-2 mr-2 line"> - </span>
+              </li>
+              <li>
+                <a href="termsPolicy.html">Refund Policy</a>
+                <span class="ml-2 mr-2 line"> - </span>
+              </li>
+              <li>
+                <a href="contactUs.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="border-bottom: 1px dotted gray;"></div>
+
+        <!-- Two Section -->
+        <!-- Address -->
+        <div class="row mb-2 footer-list-1st-heading mt-5">
           <div class="col-md-12">
             <h5 class="text-light text-capitalize">address :</h5>
           </div>
@@ -293,74 +515,86 @@
         <div class="row mb-4 footer-list-1st-row">
           <div class="col-md-4 text-capitalize">
             <ul>
-              <li>28 Jackson Blvd Ste 1020 Chicago</li>
-              <li>IL 60604-2340</li>
+              <li>35 High street Cheshunt, Waltham Cross</li>
+              <li>EN80BS, UK.</li>
             </ul>
           </div>
           <div class="col-md-4">
             <ul>
-              <li>Freephone: +1-800-559-1234</li>
-              <li>Telephone: +1-800-603-9874</li>
+              <li>Phone: 01992 641133</li>
+              <li>E-mail: maithaikitchen@hotmail.com</li>
             </ul>
           </div>
           <div class="col-md-4">
             <ul>
-              <li>FAX: +1-800-999-9898</li>
-              <li>E-mail: mail@maithai.com</li>
+              <li>Company Registration Number: 12333551</li>
+              <li>VAT: 340075044</li>
             </ul>
           </div>
         </div>
         <br>
-        <div style="border-bottom: 1px dotted gray; width: 90%;"></div>
+        <div style="border-bottom: 1px dotted gray;"></div>
 
         <!-- After Footers One Section -->
-        <div class="row mt-5 footer-list-2nd-row">
-          <div class="col-md-4">
-            <h5 class="text-capitalize mb-3">popular foods</h5>
-            <ul class="text-capitalize">
-              <li><a href="" class="text-light">masala pasta</a></li>
-              <li><a href="" class="text-light">veep pasta</a></li>
-              <li><a href="" class="text-light">chicken barger</a></li>
-              <li><a href="" class="text-light">chines fish fry</a></li>
-              <li><a href="" class="text-light">dhaka kacchi</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h5 class="text-capitalize mb-3">top rated foods</h5>
-            <ul class="text-capitalize">
-              <li><a href="" class="text-light">chinese masala</a></li>
-              <li><a href="" class="text-light"></a></li>
-              <li><a href="" class="text-light">bread & masala</a></li>
-              <li><a href="" class="text-light">milk cream pizza</a></li>
-              <li><a href="" class="text-light">veep noodles</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4 business-hour">
-            <h5 class="text-capitalize mb-3">business hour</h5>
+        <div class="row mt-5 footer-list-2nd-row mb-5">
+          <div class="col-md-4 business-hour" id="time-table-bookmark">
+            <h5 class="text-capitalize mb-3">opening time:</h5>
             <ul>
               <li>
-                <span>monday</span>
-                <div class="dotted-dateline ml-3 mr-3"></div>
-                <span>closed</span>
+                <span>Sunday - Saturday (Everyday)</span>
               </li>
               <li>
-                <span>tue - fri</span>
+                <span>Lunch Time</span>
                 <div class="dotted-dateline ml-3 mr-3"></div>
-                <span>9am - 10pm</span>
+                <span>12pm - 3pm</span>
               </li>
               <li>
-                <span>sat - sun</span>
+                <span>Dinner Time</span>
                 <div class="dotted-dateline ml-3 mr-3"></div>
-                <span>7am - 11pm</span>
+                <span>5pm - 10pm</span>
               </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 business-hour" id="time-table-bookmark">
+            <h5 class="text-capitalize mb-3">delivery time:</h5>
+            <ul>
               <li>
-                <span>holidays</span>
+                <span>Everyday</span>
                 <div class="dotted-dateline ml-3 mr-3"></div>
-                <span>7am - 11pm</span>
+                <span>5pm - 10pm</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- The Footers Business Card's  -->
+          <div class="col-md-4">
+            <h5 class="text-capitalize mb-3">Payment Methods:</h5>
+
+            <ul class="d-flex business-logo-section">
+              <li class="business-logo">
+                <img class="paypal" src="assets/logo/paypal.png" alt="">
+              </li>
+              <li class="business-logo">
+                <img class="visa" src="assets/logo/visa.png" alt="">
+              </li>
+              <li class="business-logo">
+                <img class="master" src="assets/logo/master.png" alt="">
               </li>
             </ul>
           </div>
         </div>
+
+        <div style="border-bottom: 1px dotted gray;"></div>
+
+        <div class="row mt-5">
+          <div class="col-md-12 text-center">
+            <span class="text-muted">
+              <small>&copy; Copyright 2020, Mai Thai Kitchen. All Rights Reserved</small>
+            </span>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -378,27 +612,27 @@
           <!-- Footer SOCIAL ICONS -->
           <div class="col-md-4 footer-social-icons" style="display: inline-flex; justify-content: center;">
             <div class="d-flex mt-4">
-              <a href="" class="ml-4">
-                <i class="fab fa-twitter"></i>
-              </a>
-
-              <a href="" class="ml-4">
+              <a href="https://www.facebook.com/mai1thaikitchen" class="ml-4">
                 <i class="fab fa-facebook-f"></i>
               </a>
 
-              <a href="" class="ml-4">
+              <a href="https://www.instagram.com/maithaikitchencheshunt" class="ml-4">
                 <i class="fab fa-instagram"></i>
               </a>
 
-              <a href="" class="ml-4">
+              <a href="https://youtube.com/channel/UCDHzPwaAsL3CORkpLSf-JEQ" class="ml-4">
                 <i class="fab fa-youtube"></i>
+              </a>
+
+              <a href="" class="ml-4">
+                <i class="fab fa-twitter"></i>
               </a>
             </div>
           </div>
 
           <!-- QR-CODE Section -->
           <div class="col-md-4 footer-qr-code" style="display: inline-flex; justify-content: flex-end;">
-            <img class="img img-fluid img-thumbnail" src="assets/logo/qr-code.png" alt="QR-CODE">
+            <img class="img img-fluid img-qr-code img-thumbnail" src="assets/logo/qr-code.png" alt="QR-CODE">
           </div>
         </div>
       </div>
@@ -407,15 +641,22 @@
 </body>
 
 <!-- JS, Popper.js, and jQuery -->
+<!-- FontAwesome 5 -->
 <script src="/assets/fontAwesome/js/all.min.js"></script>
 <script src="/assets/fontAwesome/js/fontawesome.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<!-- Bootstrap jQuery (3.5.1) -->
+<script src="assets/bootstrap/jquery.min.js"></script>
+
+<!-- Bootstrap Popper.js (1.16.1) -->
+<script src="assets/bootstrap/popper.min.js"></script>
+
+<!-- Bootstrap bootstrap.min.js (4.5.2) -->
+<script src="assets/bootstrap/bootstrap.min.js"></script>
+
+<!-- Custom JS for FoodList DropDown CheckBar Filtering Items -->
+<!-- Also for Shopping-Carts Carousels Control -->
+<script src="js/collapse_button.js"></script>
 
 
 </html>
